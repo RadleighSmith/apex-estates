@@ -132,6 +132,12 @@ By following this approach, we ensure that our development efforts are organized
 
 ### The Structure Plane
 
+We meticulously outline the architectural framework and navigation flow of our website to ensure a seamless user experience. The site follows a modern MVC (Model-View-Controller) architecture, with a robust front-end built using HTML, CSS, and JavaScript for dynamic interactions. Our back-end leverages Django, a powerful Python framework, to handle data management, user authentication, and CRUD operations for property listings. Navigation throughout the site is intuitive, with a hierarchical structure starting from the engaging landing page, guiding users to explore property listings, view their personalized dashboard, and access essential pages like the About Us and Contact Us sections.
+
+![Apex Estates Logo](docs/logo/lucid-chart-siteplan.png)
+
+Database info here
+
 ### The Skeleton Plane
 
 ### The Surface Plane
