@@ -134,10 +134,192 @@ By following this approach, we ensure that our development efforts are organized
 
 We meticulously outline the architectural framework and navigation flow of our website to ensure a seamless user experience. The site follows a modern MVC (Model-View-Controller) architecture, with a robust front-end built using HTML, CSS, and JavaScript for dynamic interactions. Our back-end leverages Django, a powerful Python framework, to handle data management, user authentication, and CRUD operations for property listings. Navigation throughout the site is intuitive, with a hierarchical structure starting from the engaging landing page, guiding users to explore property listings, view their personalized dashboard, and access essential pages like the About Us and Contact Us sections.
 
-![Apex Estates Logo](docs/logo/lucid-chart-siteplan.png)
+![Apex Estates Logo](docs/lucidchart/lucid-chart-siteplan.png)
 
 Database info here
 
 ### The Skeleton Plane
+
+#### Wireframes
+
+We created wireframes for desktop, tablet, and mobile views to provide a visual representation of our website's layout and design across different devices. Wireframes serve as a blueprint for our site's structure, illustrating the placement of elements, navigation flow, and overall user interface design. By creating wireframes, we can effectively communicate our design concepts and collaborate with stakeholders to gather feedback and make informed decisions before moving into the development phase.
+
+We utilized [Uizard](https://uizard.io/), an innovative wireframing tool, to streamline the wireframing process and accelerate our design iteration cycles. [Uizard's](https://uizard.io/) intuitive interface enable us to quickly translate our ideas into tangible wireframes, saving time and effort in the design phase. With [Uizard](https://uizard.io/), we can easily experiment with different layouts, iterate on design variations, and visualize how our website will look and function across various devices.
+
+
+
+Landing / Home Page
+
+<details>
+<summary>
+Desktop
+</summary>
+
+![Desktop Landing Page Wireframes](docs/wireframes/desktop/landing-page.png)
+</details>
+<details>
+<summary>
+Tablet
+</summary>
+ 
+![Tablet Landing Page Wireframes](docs/wireframes/tablet/landing-page-tablet.png)
+</details>
+<details>
+<summary>
+Mobile
+</summary>
+
+![Mobile Landing Page Wireframes](docs/wireframes/mobile/landing-page-mobile.png)
+</details>
+
+<br>
+About Us Page
+
+<details>
+<summary>
+Desktop
+</summary>
+
+![Desktop About Us Page Wireframes](docs/wireframes/desktop/about-us-page.png)
+</details>
+<details>
+<summary>
+Tablet
+</summary>
+
+![Tablet About Us Page Wireframes](docs/wireframes/tablet/about-us-page-tablet.png)
+</details>
+<details>
+<summary>
+Mobile
+</summary>
+
+![Mobile About Us Page Wireframes](docs/wireframes/mobile/about-us-page-mobile.png)
+</details>
+
+<br>
+Contact Us Page
+
+<details>
+<summary>
+Desktop
+</summary>
+
+![Desktop Contact Us Page Wireframes](docs/wireframes/desktop/contact-us-page.png)
+</details>
+<details>
+<summary>
+Tablet
+</summary>
+
+![Tablet Contact Us Page Wireframes](docs/wireframes/tablet/contact-us-page-tablet.png)
+</details>
+<details>
+<summary>
+Mobile
+</summary>
+
+![Mobile Contact Us Page Wireframes](docs/wireframes/mobile/request-valutaion-page-mobile.png)
+</details>
+
+<br>
+Request Valuation Page
+
+<details>
+<summary>
+Desktop
+</summary>
+
+![Desktop Request Valuation Page Wireframes](docs/wireframes/desktop/request-valuation-page.png)
+</details>
+<details>
+<summary>
+Tablet
+</summary>
+
+![Tablet Request Valuation Page Wireframes](docs/wireframes/tablet/request-valuation-page-tablet.png)
+</details>
+<details>
+<summary>
+Mobile
+</summary>
+
+![Mobile Request Valuation Page Wireframes](docs/wireframes/mobile/request-valutaion-page-mobile.png)
+</details>
+
+<br>
+Login Page
+
+<details>
+<summary>
+Desktop
+</summary>
+
+![Desktop Login Page Wireframes](docs/wireframes/desktop/log-in-page.png)
+</details>
+<details>
+<summary>
+Tablet
+</summary>
+
+![Tablet Login Page Wireframes](docs/wireframes/tablet/log-in-page-tablet.png)
+</details>
+<details>
+<summary>
+Mobile
+</summary>
+
+![Mobile Login Page Wireframes](docs/wireframes/mobile/log-in-page-mobile.png)
+</details>
+
+<br>
+Register Page
+
+<details>
+<summary>
+Desktop
+</summary>
+
+![Desktop Register Page Wireframes](docs/wireframes/desktop/register-page.png)
+</details>
+<details>
+<summary>
+Tablet
+</summary>
+
+![Tablet Register Page Wireframes](docs/wireframes/tablet/register-page-tablet.png)
+</details>
+<details>
+<summary>
+Mobile
+</summary>
+
+![Mobile Register Page Wireframes](docs/wireframes/mobile/register-page-mobile.png)
+</details>
+
+<br>
+Account / Dashboard Page
+
+<details>
+<summary>
+Desktop
+</summary>
+
+![Desktop Dashboard Page Wireframes](docs/wireframes/desktop/dashboard-page.png)
+</details>
+<details>
+<summary>
+Tablet
+</summary>
+
+![Tablet Dashboard Page Wireframes](docs/wireframes/tablet/dashboard-page-tablet.png)
+</details>
+<details>
+<summary>
+Mobile
+</summary>
+
+![Mobile Dashboard Page Wireframes](docs/wireframes/mobile/dashboard-page-mobile.png)
+</details>
 
 ### The Surface Plane
