@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from property.views import property_list
+from valuation.views import valuation_request
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('property_listings', property_list, name='property_listings'),
+    path('valuation_request', valuation_request, name='valuation_request'),
 ]
