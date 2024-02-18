@@ -22,6 +22,5 @@ from valuation.views import valuation_request
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('property_listings', property_list, name='property_listings'),
-    path('valuation_request', valuation_request, name='valuation_request'),
+    path('', include('django.contrib.auth.urls')),
 ]
