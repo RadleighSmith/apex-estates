@@ -16,11 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from property.views import property_list
-from valuation.views import valuation_request
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+    path('', include('property.urls')),
     path('', include('django.contrib.auth.urls')),
 ]

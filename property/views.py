@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
-def property_list(request):
-    return HttpResponse("This will be the property listings page")
+def property_listings(request):
+    return render(request, 'property_listings.html')
