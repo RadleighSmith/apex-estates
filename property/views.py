@@ -12,3 +12,7 @@ class PropertyList(generic.ListView):
     queryset = Property.objects.all()
     template_name = "property_listings/property_listings.html"
     paginate_by = 8
+
+class PropertyDetail(generic.DetailView):
+    model = Property
+    template_name = 'property_detail/property_detail.html'

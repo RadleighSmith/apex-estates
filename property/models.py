@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 from django.contrib.auth.models import User
 
 PROPERTY_TYPE_CHOICES= (
@@ -24,11 +25,16 @@ class Property(models.Model):
     description = models.TextField()
     listed_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    
+    slug = models.SlugField(unique=True, blank=True)
+
     class Meta:
         verbose_name_plural = "Properties"
         ordering = ["-listed_on"]
-    
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.location)
+        super().save(*args, **kwargs)
+
     def __str__(self):
         property_type_display = dict(PROPERTY_TYPE_CHOICES).get(self.property_type, 'Unknown Property Type')
         return f"{property_type_display} in {self.location}"
