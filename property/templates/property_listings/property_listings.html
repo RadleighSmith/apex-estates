@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Property Listings{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+            <h1>Property Listings</h1>
+        </div>
+    </div>
+    <!-- Property List Cards -->
+    <div class="row">
+        {% for property in property_list %}
+        <div class="col-lg-3 col-md-4">
+            <div class="card mb-4 p-2">
+                <div>
+                    <div class="image-container">
+                        <img class="card-img-top" src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
+                    </div>
+                    <div class="details">
+                        <a href="#" class="card-link">
+                            <h2 class="card-title pt-2">{{ property.title }} - {{ property.location }}</h2>
+                        </a>
+                        <p class="price">£{{ property.price }}</p>
+                        <p class="features">
+                            {{ property.bedrooms }} <i class="fa-solid fa-bed"></i>
+                            {{ property.bathrooms }} <i class="fa-solid fa-toilet"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
