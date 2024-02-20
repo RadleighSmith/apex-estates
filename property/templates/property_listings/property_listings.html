@@ -20,7 +20,7 @@
                         <img class="card-img-top" src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
                     </div>
                     <div class="details">
-                        <a href="#" class="card-link">
+                        <a href="{% url 'property_detail' slug=property.slug %}" class="card-link">
                             <h2 class="card-title pt-2">{{ property.title }} - {{ property.location }}</h2>
                         </a>
                         <p class="price">£{{ property.price }}</p>

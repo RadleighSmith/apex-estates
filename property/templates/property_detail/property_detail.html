@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{property.location}}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Property Details</h5>
+            <p class="card-text">Property Type: <strong>{{ property.property_type }}</strong></p>
+            <p class="card-text">Location: <strong>{{ property.location }}</strong></p>
+            <p class="card-text">Price: <strong>£{{ property.price }}</strong></p>
+            <p class="card-text">Bedrooms: <strong>{{ property.bedrooms }}</strong></p>
+            <p class="card-text">Bathrooms: <strong>{{ property.bathrooms }}</strong></p>
+            <p class="card-text">Garage: <strong>{{ property.garage }}</strong></p>
+            <p class="card-text">Parking: <strong>{{ property.parking }}</strong></p>
+            <p class="card-text">Description: <br>{{ property.description }}</p>
+          </div>
+        </div>
+    </div>
+  </div>
+{% endblock %}
