@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-STRUCTURE_CATEGORY = (
+PROPERTY_TYPE_CHOICES= (
     (0, "Detached House"),
     (1, "Semi-Detached House"),
     (2, "Terraced House"),
@@ -13,8 +13,9 @@ STRUCTURE_CATEGORY = (
 )
 
 class Property(models.Model):
-    property_type = models.IntegerField(choices=STRUCTURE_CATEGORY, default=0)
-    location = models.CharField(max_length=100)
+    title = models.CharField(default="Title", max_length=200)
+    property_type = models.IntegerField(choices=PROPERTY_TYPE_CHOICES, default=0)
+    location = models.CharField(max_length=100, unique=True)
     price = models.IntegerField()
     bedrooms = models.PositiveIntegerField(default=0)
     bathrooms = models.PositiveIntegerField(default=0)
@@ -26,3 +27,8 @@ class Property(models.Model):
     
     class Meta:
         verbose_name_plural = "Properties"
+        ordering = ["-listed_on"]
+    
+    def __str__(self):
+        property_type_display = dict(PROPERTY_TYPE_CHOICES).get(self.property_type, 'Unknown Property Type')
+        return f"{property_type_display} in {self.location}"
