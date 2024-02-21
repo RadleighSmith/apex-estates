@@ -16,7 +16,7 @@
             <p class="card-text">Bathrooms: <strong>{{ property.bathrooms }}</strong></p>
             <p class="card-text">Garage: <strong>{{ property.garage }}</strong></p>
             <p class="card-text">Parking: <strong>{{ property.parking }}</strong></p>
-            <p class="card-text">Description: <br>{{ property.description }}</p>
+            <p class="card-text">Description: <br>{{ property.description|safe }}</p>
           </div>
         </div>
     </div>
