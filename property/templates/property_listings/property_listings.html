@@ -23,7 +23,7 @@
                         <a href="{% url 'property_detail' slug=property.slug %}" class="card-link">
                             <h2 class="card-title pt-2">{{ property.title }} - {{ property.location }}</h2>
                         </a>
-                        <p class="price">£{{ property.price }}</p>
+                        <p class="price">£{{ property.formatted_price }}</p>
                         <p class="features">
                             {{ property.bedrooms }} <i class="fa-solid fa-bed"></i>
                             {{ property.bathrooms }} <i class="fa-solid fa-toilet"></i>
