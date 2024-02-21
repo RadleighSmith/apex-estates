@@ -16,7 +16,7 @@ PROPERTY_TYPE_CHOICES= (
 class Property(models.Model):
     title = models.CharField(default="Title", max_length=200)
     property_type = models.IntegerField(choices=PROPERTY_TYPE_CHOICES, default=0)
-    location = models.CharField(max_length=100, unique=True)
+    address = models.CharField(max_length=100, unique=True)
     price = models.IntegerField()
     bedrooms = models.PositiveIntegerField(default=0)
     bathrooms = models.PositiveIntegerField(default=0)
@@ -32,9 +32,9 @@ class Property(models.Model):
         ordering = ["-listed_on"]
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.location)
+        self.slug = slugify(self.address)
         super().save(*args, **kwargs)
 
     def __str__(self):
         property_type_display = dict(PROPERTY_TYPE_CHOICES).get(self.property_type, 'Unknown Property Type')
-        return f"{property_type_display} in {self.location}"
+        return f"{property_type_display} in {self.address}"

@@ -21,7 +21,7 @@
                     </div>
                     <div class="details">
                         <a href="{% url 'property_detail' slug=property.slug %}" class="card-link">
-                            <h2 class="card-title pt-2">{{ property.title }} - {{ property.location }}</h2>
+                            <h2 class="card-title pt-2">{{ property.title }} - {{ property.address }}</h2>
                         </a>
                         <p class="price">£{{ property.formatted_price }}</p>
                         <p class="features">
