@@ -8,6 +8,13 @@
     <div class="row">
         <div class="card">
           <div class="card-body">
+            <div class="image-container">
+              {% if "placeholder-home" in property.main_image.url %}
+                  <img class="card-img-top" src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
+              {% else %}
+                  <img class="card-img-top" src="{{ property.main_image.url }}" alt="{{ property.title }}">
+              {% endif %}
+          </div>
             <h5 class="card-title">Property Details</h5>
             <p class="card-text">Property Type: <strong>{{ property.property_type }}</strong></p>
             <p class="card-text">Address: <strong>{{ property.address }}</strong></p>

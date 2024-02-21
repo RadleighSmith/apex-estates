@@ -17,7 +17,11 @@
             <div class="card mb-4 p-2">
                 <div>
                     <div class="image-container">
-                        <img class="card-img-top" src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
+                        {% if "placeholder-home" in property.main_image.url %}
+                            <img class="card-img-top" src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
+                        {% else %}
+                            <img class="card-img-top" src="{{ property.main_image.url }}" alt="{{ property.title }}">
+                        {% endif %}
                     </div>
                     <div class="details">
                         <a href="{% url 'property_detail' slug=property.slug %}" class="card-link">

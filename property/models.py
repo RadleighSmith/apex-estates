@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 PROPERTY_TYPE_CHOICES= (
     (0, "Detached House"),
@@ -15,6 +16,7 @@ PROPERTY_TYPE_CHOICES= (
 
 class Property(models.Model):
     title = models.CharField(default="Title", max_length=200)
+    main_image = CloudinaryField('image', default='placeholder-home')
     property_type = models.IntegerField(choices=PROPERTY_TYPE_CHOICES, default=0)
     address = models.CharField(max_length=100, unique=True)
     price = models.IntegerField()
