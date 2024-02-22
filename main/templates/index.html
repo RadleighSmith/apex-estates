@@ -1,7 +1,36 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Home{% endblock %}
 
+{% block navbar_class %}navbar-home{% endblock %}
+
 {% block content %}
-<h1>This will be the home page</h1>
+    <!-- Hero Image -->
+    <section class="hero-image-container">
+        <img id="hero-image" class="img-fluid" src="{% static 'images/hero-image.jpg' %}" alt="">
+        <div class="hero-content">
+            <h1>Welcome to Apex Estates, The Pinnacle of London Real Estate.</h1>
+            <h2>Find Your Perfect Home Today.</h2>
+            <a href="/property_listings" class="btn call-to-action">Property Listings</a>
+        </div>
+    </section>
+    <!-- Featured Properties -->
+    <div class="row">
+        2
+    </div>
+    <!-- Property Listings CTA -->
+    <div class="row">
+        3
+    </div>
+    <!-- Valuation CTA -->
+    <div class="row">
+        4
+    </div>
+    <!-- Review -->
+    <div class="row">
+        5
+    </div>
+    <!-- Newsletter -->
+
 {% endblock %}

@@ -45,11 +45,23 @@ h2 {
   transform: scale(1.05);
 }
 
+.btn:hover {
+    background-color: var(--call-to-action);
+}
+
 /* BASE.HTML */
 
 /* Navbar */
 
-.navbar {
+.navbar-home {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,1));
+    z-index: 1;
+}
+
+.navbar-colour {
     background-color: var(--dark-grey);
 }
 
@@ -73,6 +85,44 @@ h2 {
     width: 50px;
     height: 50px;
     margin: 0 5px;
+}
+
+/* INDEX.HTML */
+
+/* Hero Image */
+
+.hero-image-container {
+    width: 100%;
+    max-width: 100%;
+    height: 50rem;
+    overflow: hidden; 
+    position: relative; 
+}
+
+#hero-image {
+    width: 100%; 
+    height: 100%; 
+    max-width: none;
+    max-height: none;
+    display: block; 
+    object-fit: cover; 
+    object-position: center;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
 }
 
 
