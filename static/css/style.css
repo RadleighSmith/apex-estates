@@ -1,3 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Variables */
+
+
+/* Body */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+/* Headings */
+
+h1,
+h2 {
+    font-family: 'Monserrat', sans-serif;
+}
+
+/* BASE.HTML */
+
+/* Navbar */
+
+#navbar-logo {
+    width: 75%;
+    height: auto;
+}
+
+
+/* Footer */
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+}
+
+/* PROPERTY_LISTINGS.HTML */
+
 /* Property Listing Cards*/
 .card {
     border: 1px solid #ccc;
