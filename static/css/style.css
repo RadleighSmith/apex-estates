@@ -2,12 +2,27 @@
 
 /* Global Variables */
 
+:root {
+    /* Colors */
+
+    --black: #000;
+    --white: #fff;
+    --dark-grey: #282928;
+    --orange: #f5793a;
+    --beige: #E0E0DB;
+
+
+
+    /* Global Button Styling */
+
+    --call-to-action: #f5793a;
+}
 
 /* Body */
 
 body {
     font-family: 'Lato', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* Headings */
@@ -17,12 +32,29 @@ h2 {
     font-family: 'Monserrat', sans-serif;
 }
 
+/* Button Styling */
+
+.call-to-action {
+    background-color: var(--call-to-action);
+    border-radius: 10%;
+    color: var(--white);
+    transition: transform 0.2s ease-in-out;
+}
+
+.call-to-action:hover {
+  transform: scale(1.05);
+}
+
 /* BASE.HTML */
 
 /* Navbar */
 
+.navbar {
+    background-color: var(--dark-grey);
+}
+
 #navbar-logo {
-    width: 75%;
+    width: 50%;
     height: auto;
 }
 
@@ -42,6 +74,7 @@ h2 {
     height: 50px;
     margin: 0 5px;
 }
+
 
 /* PROPERTY_LISTINGS.HTML */
 
