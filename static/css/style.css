@@ -173,6 +173,19 @@ h2 {
     align-items: center;
 }
 
+/* Review */
+.review-image {
+    height: 350px;
+    object-fit: cover; 
+    object-position: center;
+    overflow: hidden;
+}
+
+.overlay-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+}
+
 /* PROPERTY_LISTINGS.HTML */
 
 /* Property Listing Cards*/
