@@ -20,30 +20,7 @@
             <h2 class="heading-underline text-center pt-3">Latest Properties</h2>
             <div class="row justify-content-center">
                 {% for property in latest_properties %}
-                <div class="col-lg-3 col-md-4">
-                    <div class="card mb-4 p-2">
-                        <div>
-                            <div class="image-container">
-                                {% if "placeholder-home" in property.main_image.url %}
-                                    <img class="card-img-top" src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
-                                {% else %}
-                                    <img class="card-img-top" src="{{ property.main_image.url }}" alt="{{ property.title }}">
-                                {% endif %}
-                            </div>
-                            <div class="details">
-                                <a href="{% url 'property_detail' slug=property.slug %}" class="card-link">
-                                    <h2 class="card-title pt-2">{{ property.title }} - {{ property.address }}</h2>
-                                </a>
-                                <p class="price">£{{ property.formatted_price }}</p>
-                                <p class="features">
-                                    {{ property.bedrooms }} <i class="fa-solid fa-bed"></i>
-                                    {{ property.bathrooms }} <i class="fa-solid fa-toilet"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    {% include 'property_listings/property_cards.html' %}
                 {% endfor %}
             </div>
         </section>

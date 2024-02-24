@@ -1,0 +1,28 @@
+{% load static %}
+
+<div class="col-lg-3 col-md-4 mb-4">
+    <a href="{% url 'property_detail' slug=property.slug %}" class="card-link">
+        <div class="card mb-4 p-2">
+            <div class="card-image-container">
+                {% if "placeholder-home" in property.main_image.url %}
+                    <img class="card-img-top" src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
+                {% else %}
+                    <img class="card-img-top" src="{{ property.main_image.url }}" alt="{{ property.title }}">
+                {% endif %}
+            </div>
+            <div class="card-details">
+                <h2 class="card-title pt-2">{{ property.title }} - {{ property.address }}</h2>
+            </div>
+            <div class="card-container">
+                <div class="card-price">£{{ property.formatted_price }}</div>
+                <div class="card-features">
+                    <span>{{ property.bedrooms }} <i class="fa-solid fa-bed"></i></span>
+                    <span>{{ property.bathrooms }} <i class="fa-solid fa-toilet"></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+

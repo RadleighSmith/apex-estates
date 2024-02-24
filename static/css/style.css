@@ -188,36 +188,55 @@ h2 {
 
 /* PROPERTY_LISTINGS.HTML */
 
-/* Property Listing Cards*/
+/* Property Listing Cards */
+
 .card {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     height: 100%;
-    margin: 5px
+    width: 95%;
+    position: relative;
 }
 
-.image-container {
-    height: 300px;
-    overflow: hidden; 
+.card-image-container {
+    height: 200px;
+    overflow: hidden;
 }
 
-.image-container img {
+.card-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.details {
-    margin-top: auto;
+.card-details {
+    padding: 10px;
+    height: 120px;
+    overflow: hidden;
 }
 
-.price {
+.card-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-price {
     font-size: 18px;
 }
 
-.features {
-    font-size: 14px;
+.card-features {
+    font-size: 16px;
+}
+
+.card-features span {
+    margin-right: 10px;
 }
 
 .card-link {
@@ -226,6 +245,6 @@ h2 {
 }
 
 .card-title {
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
