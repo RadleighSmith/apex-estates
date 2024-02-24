@@ -2,6 +2,12 @@
 
 /* Global Variables */
 
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 :root {
     /* Colors */
 
@@ -25,6 +31,16 @@ body {
     font-weight: 400;
 }
 
+/* Bootstrap Container Styling */
+
+.container-fluid {
+    --bs-gutter-x: 0; 
+}
+
+.row {
+    --bs-gutter-x: 0;
+}
+
 /* Headings */
 
 h1,
@@ -32,13 +48,22 @@ h2 {
     font-family: 'Monserrat', sans-serif;
 }
 
+.heading-underline {
+    border-bottom: 2px solid var(--black);
+    width: 50%; 
+    margin: 0 auto 20px;
+}
+
 /* Button Styling */
 
 .call-to-action {
     background-color: var(--call-to-action);
-    border-radius: 10%;
+    width: auto;
+    display: inline-block;
+    
+    border-radius: 5px;
     color: var(--white);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;  
 }
 
 .call-to-action:hover {
@@ -47,6 +72,16 @@ h2 {
 
 .btn:hover {
     background-color: var(--call-to-action);
+}
+
+/* Horizontal Rule */
+
+.horizontal-rule {
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--beige);
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* BASE.HTML */
@@ -125,6 +160,31 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Latest Properties */
+
+#latest-properties {
+    background-color: var(--beige);
+    padding-bottom: 3rem;
+}
+
+#latest-properties-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Review */
+.review-image {
+    height: 350px;
+    object-fit: cover; 
+    object-position: center;
+    overflow: hidden;
+}
+
+.overlay-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+}
 
 /* PROPERTY_LISTINGS.HTML */
 
@@ -134,10 +194,11 @@ h2 {
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     height: 100%;
+    margin: 5px
 }
 
 .image-container {
-    height: 200px;
+    height: 300px;
     overflow: hidden; 
 }
 
