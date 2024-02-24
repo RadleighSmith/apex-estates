@@ -25,11 +25,23 @@ body {
     font-weight: 400;
 }
 
+/* Bootstrap Container Styling */
+
+.container-fluid{
+    --bs-gutter-x: 0;
+}
+
 /* Headings */
 
 h1,
 h2 {
     font-family: 'Monserrat', sans-serif;
+}
+
+.heading-underline {
+    border-bottom: 2px solid var(--black); /* Adjust the color as needed */
+    width: 50%; /* Adjust the width of the line */
+    margin: 0 auto 20px; /* Adjust margin as needed */
 }
 
 /* Button Styling */
@@ -125,6 +137,18 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Latest Properties */
+
+#latest-properties {
+    background-color: var(--beige);
+    padding-bottom: 3rem;
+}
+
+#latest-properties-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* PROPERTY_LISTINGS.HTML */
 
@@ -137,7 +161,7 @@ h2 {
 }
 
 .image-container {
-    height: 200px;
+    height: 300px;
     overflow: hidden; 
 }
 
