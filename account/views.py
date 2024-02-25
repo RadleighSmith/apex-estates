@@ -15,7 +15,7 @@ def sign_up(request):
     else:
         form = RegisterForm()
 
-    return render(request, 'user-auth/sign_up.html', {'form': form})
+    return render(request, 'registration/sign_up.html', {'form': form})
 
 @login_required
 def user_dashboard(request):
