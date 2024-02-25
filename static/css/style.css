@@ -50,7 +50,7 @@ h2 {
 
 .heading-underline {
     border-bottom: 2px solid var(--black);
-    width: 50%; 
+    width: 90%; 
     margin: 0 auto 20px;
 }
 
@@ -62,7 +62,8 @@ h2 {
     display: inline-block;
     
     border-radius: 5px;
-    color: var(--white);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    color: var(--black);
     transition: transform 0.2s ease-in-out;  
 }
 
@@ -81,6 +82,14 @@ h2 {
     border-radius: 5px;
     background-color: var(--beige);
     width: 90%;
+    margin: 0 auto;
+}
+
+.horizontal-rule-2 {
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--beige);
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -148,7 +157,7 @@ h2 {
     position: absolute;
     bottom: 10%;
     left: 5%;
-    color: white;
+    color: var(--white);
 }
 
 .hero-content h2 {
@@ -191,9 +200,9 @@ h2 {
 /* Property Listing Cards */
 
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid var(--beige);
     border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     height: 100%;
     width: 95%;
     position: relative;
@@ -247,4 +256,35 @@ h2 {
 .card-title {
     font-size: 18px;
     margin-bottom: 10px;
+}
+
+/* PROPERTY_DETAIL.HTML */
+
+.property-detail-img {
+    border: 1px solid var(--beige);
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.property-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formatted-price {
+    font-size: 1.5rem;
+}
+
+.small-text {
+    font-size: 0.9rem;
+}
+
+.list-group, .list-group-item{
+    border: none;
 }

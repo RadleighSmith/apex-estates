@@ -37,6 +37,8 @@ class Property(models.Model):
         self.slug = slugify(self.address)
         super().save(*args, **kwargs)
 
+    def get_property_type_display(self):
+        return dict(PROPERTY_TYPE_CHOICES).get(self.property_type, 'Unknown Property Type')
+
     def __str__(self):
-        property_type_display = dict(PROPERTY_TYPE_CHOICES).get(self.property_type, 'Unknown Property Type')
-        return f"{property_type_display} in {self.address}"
+        return f"{self.get_property_type_display()} in {self.address}"

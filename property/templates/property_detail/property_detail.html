@@ -1,31 +1,59 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}{{property.address}}{% endblock %}
+{% block title %}{{ property.title }}{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <div class="row">
-        <div class="card">
-          <div class="card-body">
-            <div class="image-container">
-              {% if "placeholder-home" in property.main_image.url %}
-                  <img class="card-img-top" src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
-              {% else %}
-                  <img class="card-img-top" src="{{ property.main_image.url }}" alt="{{ property.title }}">
-              {% endif %}
-          </div>
-            <h5 class="card-title">Property Details</h5>
-            <p class="card-text">Property Type: <strong>{{ property.property_type }}</strong></p>
-            <p class="card-text">Address: <strong>{{ property.address }}</strong></p>
-            <p class="card-text">Price: <strong>£{{ property.formatted_price }}</strong></p>
-            <p class="card-text">Bedrooms: <strong>{{ property.bedrooms }}</strong></p>
-            <p class="card-text">Bathrooms: <strong>{{ property.bathrooms }}</strong></p>
-            <p class="card-text">Garage: <strong>{{ property.garage }}</strong></p>
-            <p class="card-text">Parking: <strong>{{ property.parking }}</strong></p>
-            <p class="card-text">Description: <br>{{ property.description|safe }}</p>
-          </div>
-        </div>
+<div class="container page-container py-3">
+  <!-- Title -->
+  <div class="row">
+    <div class="col-lg-12 text-center mt-3">
+      <h1 class="heading-underline">{{ property.title }}</h1>
+    </div>
+    <a href="{% url 'property_listings' %}" class="btn call-to-action mb-3">Back to Property Listings</a>
+  </div>
+  <!-- Image -->
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      {% if "placeholder-home" in property.main_image.url %}
+      <img class="property-detail-img" src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
+      {% else %}
+      <img class="property-detail-img" src="{{ property.main_image.url }}" alt="{{ property.title }}">
+      {% endif %}
     </div>
   </div>
+  <!-- Price and Address -->
+  <div class="row mt-3">
+    <div class="col-lg-12">
+      <p>Address: <strong>{{ property.address }}</strong></p>
+    </div>
+    <div>
+      <p>Guide Price</p>
+    </div>
+    <div class="property-details">
+      <p class="formatted-price"><strong>£{{ property.formatted_price }}</strong></p>
+      <p class="small-text">Listed on: {{ property.listed_on }}</p>
+    </div>
+    <!-- Property Features -->
+    <div class="horizontal-rule-2"></div>
+  </div>
+  <div class="row mt-3">
+    <ul class="list-group list-group-horizontal d-flex w-100">
+      <li class="list-group-item flex-fill">Property Type: {{ property.get_property_type_display }}</li>
+      <li class="list-group-item flex-fill">Bedrooms: {{ property.bedrooms }}</li>
+      <li class="list-group-item flex-fill">Bathrooms: {{ property.bathrooms }}</li>
+      <li class="list-group-item flex-fill">Parking: {% if property.parking %}Yes{% else %}No{% endif %}</li>
+      <li class="list-group-item flex-fill">Garage: {% if property.garage %}Yes{% else %}No{% endif %}</li>
+    </ul>
+  </div>
+  <div class="horizontal-rule-2 mt-4"></div>
+  <!-- Description -->
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <h5>Description</h5>
+      <p>{{ property.description|safe}}</p>
+    </div>
+  </div>
+  <a href="{% url 'property_listings' %}" class="btn call-to-action">Back to Property Listings</a>
+</div>
 {% endblock %}
