@@ -13,4 +13,7 @@ def sign_up(request):
     else:
         form = RegisterForm()
 
-    return render(request, 'registration/sign_up.html', {'form': form})
+    return render(request, 'user-auth/sign_up.html', {'form': form})
+
+def user_dashboard(request):
+    return render(request, 'dashboard/dashboard.html')
