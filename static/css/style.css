@@ -288,3 +288,11 @@ h2 {
 .list-group, .list-group-item{
     border: none;
 }
+
+/* ABOUT.HTML */
+
+.agent-img {
+    border-radius: 50%;
+    max-width: 100px; 
+    box-shadow: 0 0 20px var(--orange);
+}
