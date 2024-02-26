@@ -296,3 +296,22 @@ h2 {
     max-width: 100px; 
     box-shadow: 0 0 20px var(--orange);
 }
+
+/* LOGON AND REGISTER PAGES */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
+.auth-container{
+    max-width: 100%;
+}
+
+.auth-btn {
+    width: 50%;
+}
