@@ -42,3 +42,14 @@ class Property(models.Model):
 
     def __str__(self):
         return f"{self.get_property_type_display()} in {self.address}"
+    
+class Favourite(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    property = models.ForeignKey(Property, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ['user', 'property']
+
+    def __str__(self):
+        return f"{self.user.username}'s Favourite: {self.property.address}"
