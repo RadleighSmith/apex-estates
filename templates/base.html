@@ -52,14 +52,21 @@
                         <a class="nav-link" href="/logout">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link call-to-action {% if request.path == '/dashboard/' %}active{% endif %}" href="/dashboard">Dashboard</a>
+                        <a class="nav-link nav-link call-to-action {% if request.path == '/dashboard/' %}active{% endif %}"
+                            href="/dashboard">Dashboard</a>
                     </li>
+                    {% if user.is_superuser or user.is_staff %}
+                    <li class="nav-item">
+                        <a class="nav-link nav-link call-to-action ms-2" href="/admin">Admin</a>
+                    </li>
+                    {% endif %}
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/login/' %}active{% endif %}" href="/login">Log in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link call-to-action {% if request.path == '/sign_up/' %}active{% endif %}" href="/sign_up">Register</a>
+                        <a class="nav-link call-to-action {% if request.path == '/sign_up/' %}active{% endif %}"
+                            href="/sign_up">Register</a>
                     </li>
                     {% endif %}
                 </ul>
