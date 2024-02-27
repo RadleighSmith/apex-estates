@@ -48,12 +48,6 @@ h2 {
     font-family: 'Monserrat', sans-serif;
 }
 
-.heading-underline {
-    border-bottom: 3px solid var(--black);
-    width: 40%; 
-    margin: 0 auto 20px;
-}
-
 /* Button Styling */
 
 .call-to-action {
