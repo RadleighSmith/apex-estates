@@ -3,5 +3,105 @@
 {% block title %}Contact us{% endblock %}
 
 {% block content %}
-<h1>This will be the contact us page</h1>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="container mt-5 shadow p-4">
+                <div class="row">
+                    <!-- Contact Information Section -->
+                    <div class="col-lg-8">
+                        <div class="container p-4">
+                            <div class="row">
+                                <div class="col">
+                                    <h1>Contact Information</h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><i class="fa-solid fa-phone"></i> Phone</p>
+                                    <p>07123 456789</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><i class="fa-solid fa-envelope"></i> Email</p>
+                                    <p>info@apexestates.com</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><i class="fa-solid fa-map"></i> Address</p>
+                                    <p>123 Elmwood Avenue, London, SW1A 1AA, United Kingdom.</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><i class="fa-solid fa-share"></i> Follow us</p>
+                                    <div class="mb-4">
+                                        <!-- Social Media Icons -->
+                                        <a class="contact-social-buttons" href="https://facebook.com" target="_blank"
+                                            rel="noopener" aria-label="Opens Apex Estates Facebook page (opens new tab on third party website)">
+                                            <i class="fa-brands fa-facebook-f fa-lg"></i>
+                                        </a>
+                                        <a class="contact-social-buttons" href="https://youtube.com" target="_blank"
+                                            rel="noopener" aria-label="Opens Apex Estates YouTube page (opens new tab on third party website)">
+                                            <i class="fa-brands fa-youtube fa-lg"></i></i>
+                                        </a>
+                                        <a class="contact-social-buttons" href="https://instagram.com"
+                                            target="_blank" rel="noopener"
+                                            aria-label="Opens Apex Estates Instagram page (opens new tab on third party website)">
+                                            <i class="fa-brands fa-instagram fa-xl"></i>
+                                        </a>
+                                        <a class="contact-social-buttons" href="https://twitter.com" target="_blank"
+                                            rel="noopener" aria-label="Opens Apex Estates X page (opens new tab on third party website)">
+                                            <i class="fa-brands fa-x-twitter fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Location Map Section -->
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <h2>Location</h2>
+                                    <div>
+                                        <!-- Google Map -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Section -->
+                    <div class="col-lg-4">
+                        <div class="container message-section text-white p-4">
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Send Us a Message</h2>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="form-group p-2">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                                </div>
+                                <div class="form-group p-2">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                                </div>
+                                <div class="form-group p-2">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group p-2">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn call-to-action">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
