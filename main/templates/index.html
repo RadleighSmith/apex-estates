@@ -15,15 +15,17 @@
     </section>
 
     <div class="container-fluid">
-        <!-- Latest Properties -->
+        <!-- Latest Properties --> 
         <section id="latest-properties">
             <h2 class="heading-underline text-center pt-3">Latest Properties</h2>
-            <div class="row justify-content-center">
-                {% for property in latest_properties %}
-                    {% include 'property_listings/property_cards.html' %}
-                {% endfor %}
-            </div>
+                <div class="row justify-content-center align-items-center">
+                    {% for property in latest_properties %}
+                        {% include 'property_listings/property_cards.html' %}
+                    {% endfor %}
+                </div>
         </section>
+    </div>
+    <div class="container">
         <!-- Property Listings CTA -->
         <section class="row align-items-center">
             <div class="col-md-6 p-5">
@@ -48,19 +50,23 @@
                 <a href="#" class="btn call-to-action">Free Valuation</a>
             </div>
         </section>
+    </div>
+    <div class="container-fluid">
         <!-- Review -->
         <div class="row position-relative text-center">
             <img src="{% static 'images/review-banner.jpg' %}" alt="London Townhouses at dusk" class="img-fluid review-image">
         
-            <div class="overlay-text position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-                <h4 class="p-2">
+            <div class="overlay-background position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                <h4 class="p-2 overlay-text">
                     "Apex Estates made finding my dream home a seamless and delightful journey; 
                     their personalized approach and attention to detail ensured every step was not just a transaction 
                     but a meaningful experience."
                 </h4>
-                <p>- David Miller</p>
+                <p class="overlay-text">- David Miller</p>
             </div>
         </div>
+    </div>
+    <div class="container">
         <!-- Newsletter -->
         <div class="row  align-items-center py-5">
             <div class="col-md-6 text-center">

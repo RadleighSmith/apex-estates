@@ -49,8 +49,8 @@ h2 {
 }
 
 .heading-underline {
-    border-bottom: 2px solid var(--black);
-    width: 90%; 
+    border-bottom: 3px solid var(--black);
+    width: 40%; 
     margin: 0 auto 20px;
 }
 
@@ -69,10 +69,7 @@ h2 {
 
 .call-to-action:hover {
   transform: scale(1.05);
-}
-
-.btn:hover {
-    background-color: var(--call-to-action);
+  background-color: var(--call-to-action);
 }
 
 /* Horizontal Rule */
@@ -93,7 +90,7 @@ h2 {
     margin: 0 auto;
 }
 
-/* BASE.HTML */
+/* BASE STYLING */
 
 /* Navbar */
 
@@ -131,7 +128,7 @@ h2 {
     margin: 0 5px;
 }
 
-/* INDEX.HTML */
+/* INDEX PAGE */
 
 /* Hero Image */
 
@@ -190,12 +187,16 @@ h2 {
     overflow: hidden;
 }
 
-.overlay-text {
+.overlay-background {
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--white);
 }
 
-/* PROPERTY_LISTINGS.HTML */
+.overlay-text {
+    max-width: 1320px;
+}
+
+/* PROPERTY LISTINGS PAGE */
 
 /* Property Listing Cards */
 
@@ -205,6 +206,7 @@ h2 {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     height: 100%;
     width: 95%;
+    max-width: 20rem;
     position: relative;
 }
 
@@ -258,7 +260,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* PROPERTY_DETAIL.HTML */
+/* PROPERTY DETAIL PAGE */
 
 .property-detail-img {
     border: 1px solid var(--beige);
@@ -289,7 +291,7 @@ h2 {
     border: none;
 }
 
-/* ABOUT.HTML */
+/* ABOUT PAGE */
 
 .agent-img {
     border-radius: 50%;
@@ -314,4 +316,17 @@ h2 {
 
 .auth-btn {
     width: 50%;
+}
+
+/* CONTACT US PAGE */
+
+.contact-social-buttons{
+    text-decoration: none;
+    color: inherit;
+    padding: 5px;
+}
+
+.message-section{
+    background-color: var(--dark-grey);
+    border-radius: 1rem;
 }
