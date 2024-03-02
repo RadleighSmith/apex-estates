@@ -1,60 +1,89 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg navbar-dark {% if request.path == '/' %}navbar-home{% else %}navbar-colour{% endif %}">
-    <div class="container-fluid">
-        <!-- Logo -->
-        <div class="col-md-4 text-center">
-            <a href="/">
-                <img id="navbar-logo" src="{% static 'images/apex-logo-coloured.png' %}" alt="Apex Estates Logo">
-            </a>
+<nav
+    class="navbar navbar-expand-xl navbar-dark {% if request.path == '/' %}navbar-home{% else %}navbar-colour{% endif %}">
+    <div class="container-fluid text-center mx-5">
+        <div class="col-xl-4 col-11 d-flex justify-content-start">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/"><img id="navbar-logo" src="{% static 'images/apex-logo-coloured.png' %}"
+                    alt="Apex Estates Logo"></a>
         </div>
-        <!-- Center Nav Links -->
-        <div class="col-md-4 text-center">
-            <ul class="navbar-nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/property_listings/' %}active{% endif %}" href="/property_listings">Property Listings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/about_us/' %}active{% endif %}" href="/about_us">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/contact_us/' %}active{% endif %}" href="/contact_us">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/request_valuation/' %}active{% endif %}" href="#">Request Valuation</a>
-                </li>
-            </ul>
-        </div>
-         <!-- Right Auth Links -->
-        <div class="col-md-4 d-flex justify-content-center align-items-center text-center">
-            <ul class="navbar-nav">
-                {% if user.is_authenticated %}
-                <span class="navbar-text">Logged in as {{user.first_name}} | </span>
-                <li class="nav-item">
-                    <a class="nav-link" href="/logout">Logout</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link call-to-action {% if request.path == '/dashboard/' %}active{% endif %}"
-                        href="/dashboard">Dashboard</a>
-                </li>
-                {% if user.is_superuser or user.is_staff %}
-                <li class="nav-item">
-                    <a class="nav-link nav-link call-to-action ms-2" href="/admin">Admin</a>
-                </li>
-                {% endif %}
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/login/' %}active{% endif %}" href="/login">Log in</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link call-to-action {% if request.path == '/sign_up/' %}active{% endif %}"
-                        href="/sign_up">Register</a>
-                </li>
-                {% endif %}
-            </ul>
+        <div class="col-xl-8 col-1">
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Sidebar -->
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+
+                <!-- Sidebar Logo -->
+                <div class="offcanvas-header">
+                    <img class="offcanvas-img" id="offcanvasDarkNavbarLabel"
+                        src="{% static 'images/apex-logo-white.png' %}"></img>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- Sidebar Body -->
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/property_listings/' %}active{% endif %}"
+                                href="/property_listings">Property Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/about_us/' %}active{% endif %}"
+                                href="/about_us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/contact_us/' %}active{% endif %}"
+                                href="/contact_us">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/request_valuation/' %}active{% endif %}"
+                                href="#">Request Valuation</a>
+                        </li>
+                    </ul>
+
+                    <!-- User Auth -->
+                    {% if user.is_authenticated %}
+                    <span class="navbar-text">Logged in as | {{user.first_name}}</span>
+                    {% endif %}
+                    <div class="d-flex justify-content-center align-items-center gap-3 mt-auto">
+                        <ul class="navbar-nav">
+                            {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-link call-to-action {% if request.path == '/dashboard/' %}active{% endif %}"
+                                    href="/dashboard">Dashboard</a>
+                            </li>
+                            {% if user.is_superuser or user.is_staff %}
+                            <li class="nav-item">
+                                <a class="nav-link nav-link call-to-action" href="/admin">Admin</a>
+                            </li>
+                            {% endif %}
+                            {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == '/login/' %}active{% endif %}" href="/login">Log in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link call-to-action {% if request.path == '/sign_up/' %}active{% endif %}"
+                                    href="/sign_up">Register</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </nav>

@@ -101,10 +101,19 @@ h2 {
 }
 
 #navbar-logo {
-    width: 50%;
-    height: auto;
+    width: 100%;
+    max-width: 350px
 }
 
+.offcanvas-img {
+    width: 80%;
+}
+
+.sidebar {
+    background-color: var(--call-to-action);
+}
+
+/* Navbar Media Queries */
 
 /* Footer */
 
