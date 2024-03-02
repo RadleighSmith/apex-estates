@@ -15,68 +15,11 @@
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark {% if request.path == '/' %}navbar-home{% else %}navbar-colour{% endif %}">
-        <div class="container-fluid">
-            <!-- Logo -->
-            <div class="col-md-4 text-center">
-                <a href="/">
-                    <img id="navbar-logo" src="{% static 'images/apex-logo-coloured.png' %}" alt="Apex Estates Logo">
-                </a>
-            </div>
-            <!-- Center Nav Links -->
-            <div class="col-md-4 text-center">
-                <ul class="navbar-nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/property_listings/' %}active{% endif %}" href="/property_listings">Property Listings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/about_us/' %}active{% endif %}" href="/about_us">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/contact_us/' %}active{% endif %}" href="/contact_us">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/request_valuation/' %}active{% endif %}" href="#">Request Valuation</a>
-                    </li>
-                </ul>
-            </div>
-             <!-- Right Auth Links -->
-            <div class="col-md-4 d-flex justify-content-center align-items-center text-center">
-                <ul class="navbar-nav">
-                    {% if user.is_authenticated %}
-                    <span class="navbar-text">Logged in as {{user.first_name}} | </span>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/logout">Logout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link call-to-action {% if request.path == '/dashboard/' %}active{% endif %}"
-                            href="/dashboard">Dashboard</a>
-                    </li>
-                    {% if user.is_superuser or user.is_staff %}
-                    <li class="nav-item">
-                        <a class="nav-link nav-link call-to-action ms-2" href="/admin">Admin</a>
-                    </li>
-                    {% endif %}
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/login/' %}active{% endif %}" href="/login">Log in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link call-to-action {% if request.path == '/sign_up/' %}active{% endif %}"
-                            href="/sign_up">Register</a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    {% include 'header.html' %}
+    
     <!-- Page Content -->
-        {% block content %}
-        {% endblock %}
+    {% block content %}
+    {% endblock %}
 
     <!-- Footer -->
     <footer class="mt-auto bg-dark text-white">
