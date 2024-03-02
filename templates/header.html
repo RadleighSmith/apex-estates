@@ -2,7 +2,7 @@
 
 <nav
     class="navbar navbar-expand-xl navbar-dark {% if request.path == '/' %}navbar-home{% else %}navbar-colour{% endif %}">
-    <div class="container-fluid text-center mx-5">
+    <div class="container-fluid text-center m-4">
         <div class="col-xl-4 col-11 d-flex justify-content-start">
             <!-- Logo -->
             <a class="navbar-brand" href="/"><img id="navbar-logo" src="{% static 'images/apex-logo-coloured.png' %}"
@@ -29,8 +29,8 @@
                 </div>
 
                 <!-- Sidebar Body -->
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end">
+                <div class="offcanvas-body d-flex flex-column flex-xl-row">
+                    <ul class="navbar-nav justify-content-start flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
                         </li>
@@ -53,30 +53,29 @@
                     </ul>
 
                     <!-- User Auth -->
-                    {% if user.is_authenticated %}
-                    <span class="navbar-text">Logged in as | {{user.first_name}}</span>
-                    {% endif %}
-                    <div class="d-flex justify-content-center align-items-center gap-3 mt-auto">
+                    <div class="d-flex justify-content-center align-items-center mt-auto">
                         <ul class="navbar-nav">
                             {% if user.is_authenticated %}
+                            <span class="navbar-text">Logged in as | {{user.first_name}}</span>
                             <li class="nav-item">
                                 <a class="nav-link" href="/logout">Logout</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link nav-link call-to-action {% if request.path == '/dashboard/' %}active{% endif %}"
+                                <a class="nav-link btn call-to-action btn-nav {% if request.path == '/dashboard/' %}active{% endif %}"
                                     href="/dashboard">Dashboard</a>
                             </li>
                             {% if user.is_superuser or user.is_staff %}
                             <li class="nav-item">
-                                <a class="nav-link nav-link call-to-action" href="/admin">Admin</a>
+                                <a class="nav-link nav-link btn call-to-action btn-nav" href="/admin">Admin</a>
                             </li>
                             {% endif %}
                             {% else %}
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == '/login/' %}active{% endif %}" href="/login">Log in</a>
+                                <a class="nav-link {% if request.path == '/login/' %}active{% endif %}"
+                                    href="/login">Log in</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link call-to-action {% if request.path == '/sign_up/' %}active{% endif %}"
+                                <a class="nav-link btn call-to-action {% if request.path == '/sign_up/' %}active{% endif %}"
                                     href="/sign_up">Register</a>
                             </li>
                             {% endif %}
