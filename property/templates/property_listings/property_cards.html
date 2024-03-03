@@ -1,8 +1,7 @@
 {% load static %}
-
-<div class="col-xl-3 col-md-6 mb-4">
-    <a href="{% url 'property_detail' slug=property.slug %}" class="card-link d-flex justify-content-center align-items-center"> <!-- Added d-flex, justify-content-center, and align-items-center -->
-        <div class="card mb-4 p-2">
+<div class="col-xxl-3 col-md-6 mb-3 d-flex justify-content-center align-items-center">
+    <div class="card m-3 ">
+        <a href="{% url 'property_detail' slug=property.slug %}" class="card-link">
             <div class="card-image-container">
                 {% if "placeholder-home" in property.main_image.url %}
                     <img src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
@@ -10,17 +9,17 @@
                     <img src="{{ property.main_image.url }}" alt="{{ property.title }}">
                 {% endif %}
             </div>
-            <div class="card-details">
-                <h2 class="card-title pt-2">{{ property.title }} - {{ property.address }}</h2>
+            <div class="card-body">
+                <h2 class="card-title">{{ property.title }} - {{ property.address }}</h2>
             </div>
-            <div class="card-container">
-                <div class="card-price">£{{ property.formatted_price }}</div>
-                <div class="card-features">
-                    <span>{{ property.bedrooms }} <i class="fa-solid fa-bed"></i></span>
-                    <span>{{ property.bathrooms }} <i class="fa-solid fa-toilet"></i></span>
-                    <span><i class="fa-regular fa-star"></i></span>
-                </div>
+        </a>
+        <div class="card-container">
+            <div class="card-price">£{{ property.formatted_price }}</div>
+            <div class="card-features">
+                <span>{{ property.bedrooms }} <i class="fa-solid fa-bed"></i></span>
+                <span>{{ property.bathrooms }} <i class="fa-solid fa-toilet"></i></span>
+                <span><i class="fa-regular fa-star"></i></span>
             </div>
         </div>
-    </a>
+    </div>
 </div>
