@@ -1,9 +1,34 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}My Dashboard{% endblock %}
-
-{% load crispy_forms_tags %}
+{% block title %}Dashboard{% endblock %}
 
 {% block content %}
-<h1>This is the dashboard</h1>
+<div class="container">
+  <h1>Welcome, {{ user.first_name }}!</h1>
+  <h2>Favourite Properties</h2>
+
+  <div class="row">
+    {% for property in page_obj %}
+      {% include 'property_listings/property_cards.html' with property=property %}
+    {% endfor %}
+  </div>
+
+  <!-- Pagination links -->
+  <div class="text-center">
+      <ul class="pagination justify-content-center mt-4">
+        {% if page_obj.has_previous %}
+        <li>
+            <a href="?page={{ page_obj.previous_page_number }}" class="btn call-to-action m-1">&laquo; PREV</a>
+        </li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li>
+            <a href="?page={{ page_obj.next_page_number }}" class="btn call-to-action m-1">NEXT &raquo;</a>
+        </li>
+        {% endif %}
+    </ul>
+    </span>
+  </div>
+</div>
 {% endblock %}

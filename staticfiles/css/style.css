@@ -16,6 +16,7 @@
     --dark-grey: #282928;
     --orange: #f5793a;
     --beige: #E0E0DB;
+    --red: #dc3545;
 
 
 
@@ -125,6 +126,7 @@ h2 {
         padding: 10px;
     }
 }
+
 /* Footer */
 
 .social-buttons {
@@ -217,13 +219,14 @@ h2 {
     border: 1px solid var(--beige);
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    height: 100%;
+    height: 25rem;
     width: 95%;
     max-width: 20rem;
     position: relative;
 }
 
 .card-image-container {
+    padding: .5rem;
     height: 15rem;
     overflow: hidden;
 }
@@ -236,12 +239,6 @@ h2 {
     border-radius: 0.5rem;
 }
 
-.card-details {
-    padding: 10px;
-    height:  12rem;
-    overflow: hidden;
-}
-
 .card-container {
     position: absolute;
     bottom: 0;
@@ -250,6 +247,11 @@ h2 {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .card-price {
@@ -269,9 +271,17 @@ h2 {
     color: inherit;
 }
 
-.card-title {
-    font-size: 18px;
-    margin-bottom: 10px;
+@media(max-width: 330px){
+    .card {
+        height: 28rem;
+    }
+}
+
+/* Favourite Button Styling */
+
+.fa-heart:hover {
+    color: var(--red);
+    transform: scale(1.3);
 }
 
 /* PROPERTY DETAIL PAGE */
@@ -291,6 +301,10 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.property-details .formatted-price {
+    margin: 0;
 }
 
 .formatted-price {

@@ -57,7 +57,7 @@ class PropertyDetail(generic.DetailView):
 def favourite_property(request, slug):
     """
     Toggles the favourite status of a property for a logged-in user.
-    Redirects back to the appropriate page (either property detail page or property listings page).
+    Redirects back to the appropriate page (either property detail page, dashboard, or property listings page).
     """
     # Get the property object based on the slug
     property = get_object_or_404(Property, slug=slug)
@@ -74,9 +74,20 @@ def favourite_property(request, slug):
     if referer and referer == request.build_absolute_uri(reverse('home')):
         # Redirect to home page if referred from there
         return redirect(reverse('home'))
+    elif referer and referer == request.build_absolute_uri(reverse('dashboard')):
+        # Redirect to dashboard page if referred from there
+        return redirect(reverse('dashboard'))
     elif referer and reverse('property_detail', kwargs={'slug': slug}) in referer:
         # Redirect to property detail page if referred from there
         return redirect(reverse('property_detail', kwargs={'slug': slug}))
+    elif referer and referer.startswith(request.build_absolute_uri(reverse('dashboard'))):
+        # Redirect to the dashboard page with the appropriate page number if referred from there
+        page_number_index = referer.find('?page=')
+        if page_number_index != -1:
+            page_number = referer[page_number_index + len('?page='):]
+            return redirect(reverse('dashboard') + f'?page={page_number}')
+        else:
+            return redirect(reverse('dashboard'))
     else:
         # Otherwise, redirect to the property listings page
         redirect_url = reverse('property_listings')
