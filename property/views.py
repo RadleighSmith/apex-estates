@@ -1,6 +1,5 @@
 from django.views import generic
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
 from django.contrib.humanize.templatetags.humanize import intcomma
 from .models import Property
@@ -54,16 +53,34 @@ class PropertyDetail(generic.DetailView):
             context['is_favourite'] = False
         return context
     
+
 def favourite_property(request, slug):
     """
     Toggles the favourite status of a property for a logged-in user.
-    Redirects back to the property detail page.
+    Redirects back to the appropriate page (either property detail page or property listings page).
     """
+    # Get the property object based on the slug
     property = get_object_or_404(Property, slug=slug)
+    
+    # Toggle favourite status for the logged-in user
     if request.user.is_authenticated:
         if property.favourite.filter(id=request.user.id).exists():
             property.favourite.remove(request.user)
         else:
             property.favourite.add(request.user)
-    # Redirect back to the property detail page
-    return HttpResponseRedirect(reverse('property_detail', kwargs={'slug': slug}))
+
+    # Determine the appropriate redirect URL based on the referer
+    referer = request.META.get('HTTP_REFERER')
+    if referer and reverse('property_detail', kwargs={'slug': slug}) in referer:
+        # Redirect to property detail page if referred from there
+        return redirect(reverse('property_detail', kwargs={'slug': slug}))
+    else:
+        # Otherwise, redirect to the property listings page
+        redirect_url = reverse('property_listings')
+        if '?page=' in referer:
+            # If the referer URL contains a page parameter, extract it and append it to the redirect URL
+            page_number_index = referer.index('?page=') + len('?page=')
+            page_number = referer[page_number_index:]
+            redirect_url += f'?page={page_number}'
+
+        return redirect(redirect_url)
