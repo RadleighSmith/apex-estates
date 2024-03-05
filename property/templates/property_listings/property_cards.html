@@ -1,6 +1,7 @@
 {% load static %}
+
 <div class="col-xxl-3 col-md-6 mb-3 d-flex justify-content-center align-items-center">
-    <div class="card m-3 ">
+    <div class="card m-3">
         <a href="{% url 'property_detail' slug=property.slug %}" class="card-link">
             <div class="card-image-container">
                 {% if "placeholder-home" in property.main_image.url %}
@@ -18,7 +19,13 @@
             <div class="card-features">
                 <span>{{ property.bedrooms }} <i class="fa-solid fa-bed"></i></span>
                 <span>{{ property.bathrooms }} <i class="fa-solid fa-toilet"></i></span>
-                <span><i class="fa-regular fa-star"></i></span>
+                {% if request.user.is_authenticated %}
+                    {% if property.is_favourite %}
+                        <span id="favourite-property"><a href="{% url 'favourite_property' property.slug %}"><i class="fa-solid fa-heart fa-lg"></i></a></span>
+                    {% else %}
+                        <span id="favourite-property"><a href="{% url 'favourite_property' property.slug %}"><i class="fa-regular fa-heart fa-lg"></i></a></span>
+                    {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>

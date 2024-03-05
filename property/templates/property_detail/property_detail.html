@@ -32,6 +32,11 @@
     </div>
     <div class="property-details">
       <p class="formatted-price"><strong>£{{ property.formatted_price }}</strong></p>
+      {% if is_favourite %}
+        <span id="favourite-property"><a href="{% url 'favourite_property' property.slug %}"><i class="fa-solid fa-heart fa-lg"></i></a></span>
+      {% else %}
+        <span id="favourite-property"><a href="{% url 'favourite_property' property.slug %}"><i class="fa-regular fa-heart fa-lg"></i></a></span>
+      {% endif %}
       <p class="small-text">Listed on: {{ property.listed_on }}</p>
     </div>
     <!-- Property Features -->
