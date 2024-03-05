@@ -11,5 +11,5 @@ class PropertyAdmin(SummernoteModelAdmin):
     summernote_fields = ('description',)
     
     def total_favorites(self, obj):
-        return obj.favourite_set.count()
+        return obj.favourite.count()
     total_favorites.short_description = "Total Favorites"
