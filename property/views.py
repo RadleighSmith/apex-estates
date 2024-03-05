@@ -71,7 +71,10 @@ def favourite_property(request, slug):
 
     # Determine the appropriate redirect URL based on the referer
     referer = request.META.get('HTTP_REFERER')
-    if referer and reverse('property_detail', kwargs={'slug': slug}) in referer:
+    if referer and referer == request.build_absolute_uri(reverse('home')):
+        # Redirect to home page if referred from there
+        return redirect(reverse('home'))
+    elif referer and reverse('property_detail', kwargs={'slug': slug}) in referer:
         # Redirect to property detail page if referred from there
         return redirect(reverse('property_detail', kwargs={'slug': slug}))
     else:

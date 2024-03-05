@@ -7,7 +7,11 @@ from property.models import Property
 def home(request):
     latest_properties = Property.objects.order_by('-listed_on')[:4]
     for property in latest_properties:
-        property.formatted_price = intcomma(property.price) 
+        property.formatted_price = intcomma(property.price)
+        if request.user.is_authenticated:
+            property.is_favourite = property.favourite.filter(id=request.user.id).exists()
+        else:
+            property.is_favourite = False
     return render(request, 'index.html', {'latest_properties': latest_properties})
 
 def about(request):
