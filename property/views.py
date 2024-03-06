@@ -1,8 +1,11 @@
 from django.views import generic
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.humanize.templatetags.humanize import intcomma
 from .models import Property
+from .forms import PropertyForm
 
 class PropertyList(generic.ListView):
     """
@@ -98,3 +101,17 @@ def favourite_property(request, slug):
             redirect_url += f'?page={page_number}'
 
         return redirect(redirect_url)
+    
+
+@login_required
+@staff_member_required
+def create_property(request):
+    if request.method == 'POST':
+        form = PropertyForm(request.POST, request.FILES)
+        if form.is_valid():
+            property = form.save(commit=False)
+            property.save()
+            return redirect('property_detail', slug=property.slug)
+    else:
+        form = PropertyForm()
+    return render(request, 'property_listings/create_property.html', {'form': form})
