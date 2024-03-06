@@ -1,5 +1,6 @@
 from django.views import generic
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
@@ -128,3 +129,17 @@ def edit_property(request, slug):
     else:
         form = PropertyForm(instance=property)
     return render(request, 'property_listings/edit_property.html', {'form': form, 'property': property})
+
+
+@login_required
+@staff_member_required
+def delete_property(request, slug):
+    property = get_object_or_404(Property, slug=slug)
+    if request.method == 'POST':
+        try:
+            property.delete()
+            messages.success(request, 'Property deleted successfully.')
+            return redirect('property_listings')
+        except Exception as e:
+            messages.error(request, f'Error deleting property: {str(e)}')
+    return render(request, 'property_listings/property_detail.html', {'property': property})
