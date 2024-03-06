@@ -4,14 +4,14 @@
 {% block title %}Property Listings{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container">    
     <div class="row m-4">
         <div class="text-center">
             <h1 class="border-bottom">Property Listings</h1>
         </div>
         {% if user.is_superuser or user.is_staff %}
-        <div class="text-center"> 
-            <a class="btn call-to-action" href="/create">Create Lisiting</a>
+        <div class="text-center mt-3"> 
+            <a class="btn call-to-action" href="/create">Create Listing</a>
         </div>
         {% endif %}
     </div>
@@ -37,5 +37,4 @@
 
 </div>
 {% endblock %}
-
 
