@@ -10,8 +10,11 @@
     <div class="col-md-12 text-center mt-3">
       <h1 class="border-bottom">{{ property.title }}</h1>
     </div>
-    <div class="col-md-12 text-center">
-      <a href="{% url 'property_listings' %}" class="btn call-to-action mb-3">Back to Property Listings</a>
+    <div class="col-md-12 d-flex justify-content-center">
+      <a href="{% url 'property_listings' %}" class="btn call-to-action m-3">Back to Property Listings</a>
+      {% if user.is_superuser or user.is_staff %}
+        <a class="btn call-to-action m-3" href="{% url 'edit_property' property.slug %}">Edit this lisiting</a>
+      {% endif %}
     </div>
   </div>
   <!-- Image -->
