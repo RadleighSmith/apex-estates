@@ -9,6 +9,11 @@
         <div class="text-center">
             <h1 class="border-bottom">Property Listings</h1>
         </div>
+        {% if user.is_superuser or user.is_staff %}
+        <div class="text-center"> 
+            <a class="btn call-to-action" href="/create">Create Lisiting</a>
+        </div>
+        {% endif %}
     </div>
     <!-- Property List Cards -->
     <div class="row">
