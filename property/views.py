@@ -115,3 +115,16 @@ def create_property(request):
     else:
         form = PropertyForm()
     return render(request, 'property_listings/create_property.html', {'form': form})
+
+@login_required
+@staff_member_required
+def edit_property(request, slug):
+    property = get_object_or_404(Property, slug=slug)
+    if request.method == 'POST':
+        form = PropertyForm(request.POST, request.FILES, instance=property)
+        if form.is_valid():
+            form.save()
+            return redirect('property_detail', slug=property.slug)
+    else:
+        form = PropertyForm(instance=property)
+    return render(request, 'property_listings/edit_property.html', {'form': form, 'property': property})
