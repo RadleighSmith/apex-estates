@@ -19,16 +19,14 @@
 
     <!-- Messages -->
     {% if messages %}
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
-        <ul class="mb-0">
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
+    <div class="alert alert-info alert-dismissible fade show position-absolute w-100 text-center" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            {% for message in messages %}
+                <div>{{ message }}</div>
+            {% endfor %}
     </div>
     {% endif %}
-
+    
     <!-- Page Content -->
     {% block content %}
     {% endblock %}
@@ -119,5 +117,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8770ea99b5.js" crossorigin="anonymous"></script>
     <script src="{% static 'js/script.js' %}"></script>
-</body>
+    <script>
+        // JavaScript to close the popup when the close button is clicked
+        document.getElementById('closeButton').addEventListener('click', function() {
+            document.getElementById('alertPopup').style.display = 'none';
+        });
+    </script>
 </html>
