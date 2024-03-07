@@ -1,6 +1,14 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import ValuationRequestForm
 
-# Create your views here.
 def valuation_request(request):
-    return HttpResponse("This will be the valuation requests page")
+    if request.method == 'POST':
+        form = ValuationRequestForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thank you! We have received your valuation request. We will contact you shortly.')
+            return redirect('valuation_request')
+    else:
+        form = ValuationRequestForm()
+    return render(request, 'valuation.html', {'form': form})
