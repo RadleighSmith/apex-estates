@@ -15,7 +15,7 @@ PROPERTY_TYPE_CHOICES= (
 )
 
 class Property(models.Model):
-    title = models.CharField(default="Title", max_length=200)
+    title = models.CharField(default="Title", max_length=200, unique=True)
     main_image = CloudinaryField('image', default='placeholder-home')
     property_type = models.IntegerField(choices=PROPERTY_TYPE_CHOICES, default=0)
     address = models.CharField(max_length=100, unique=True)
