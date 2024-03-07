@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block title %}Contact us{% endblock %}
 
@@ -74,21 +75,23 @@
                 </div>
             </div>
             <!-- Right Section -->
-            <!-- Contact Form Section -->
+            <!-- Message Us Form -->
             <div class="col-lg-4">
-                <div class="container message-section text-white p-4">
-                    <div class="row">
-                        <div class="col text-center">
-                            <h2>Send Us a Message</h2>
+                <div class="container">
+                    <div class="container message-section text-white p-4">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h2>Send Us a Message</h2>
+                            </div>
                         </div>
+                        <form method="POST" action="{% url 'send_message' %}">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div class="d-grid">
+                                <button type="submit" class="btn call-to-action">Send</button>
+                            </div>
+                        </form>
                     </div>
-                    <form method="post" action="{% url 'send_message' %}">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <div class="d-grid">
-                            <button type="submit" class="btn call-to-action">Send</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
