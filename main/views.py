@@ -3,7 +3,8 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.humanize.templatetags.humanize import intcomma
 from property.models import Property
-from .forms import MessageForm
+from .forms import MessageForm, NewsletterSubscriptionForm
+
 
 def home(request):
     latest_properties = Property.objects.order_by('-listed_on')[:4]
@@ -13,14 +14,27 @@ def home(request):
             property.is_favourite = property.favourite.filter(id=request.user.id).exists()
         else:
             property.is_favourite = False
-    return render(request, 'index.html', {'latest_properties': latest_properties})
+
+    if request.method == 'POST':
+        form = NewsletterSubscriptionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'You have successfully signed up for the newsletter!')
+            return redirect('home')
+    else:
+        form = NewsletterSubscriptionForm()
+
+    return render(request, 'index.html', {'latest_properties': latest_properties, 'form': form})
+
 
 def about(request):
     return render(request, 'about.html')
 
+
 def contact(request):
     form = MessageForm()
     return render(request, 'contact.html', {'form': form})
+
 
 def send_message(request):
     if request.method == 'POST':
