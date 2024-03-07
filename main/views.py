@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.http import HttpResponse
 from django.contrib.humanize.templatetags.humanize import intcomma
 from property.models import Property
-
-# Create your views here.
+from .forms import MessageForm
 
 def home(request):
     latest_properties = Property.objects.order_by('-listed_on')[:4]
@@ -18,4 +19,16 @@ def about(request):
     return render(request, 'about.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    form = MessageForm()
+    return render(request, 'contact.html', {'form': form})
+
+def send_message(request):
+    if request.method == 'POST':
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your message has been sent successfully!')
+            return redirect('contact_us')
+        else:
+            messages.error(request, 'There was an error with your message. Please try again.')
+    return HttpResponse("Invalid request method", status=400)
