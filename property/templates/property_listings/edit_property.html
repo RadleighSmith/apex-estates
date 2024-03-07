@@ -2,13 +2,17 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/summernote/dist/summernote.min.css" rel="stylesheet">
+{% endblock %}
+
 {% block title %}Edit Property - {{ property.title }}{% endblock %}
 
 {% block content %}
 <div class="position-relative">
     <img class="background-image" src="{% static 'images/log-on-background.jpg' %}" alt="Background Image">
     <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="auth-container bg-white p-4 rounded shadow my-5">
+        <div class="container-lg bg-white p-4 rounded shadow my-5">
             <h1 class="mb-4 text-center">Edit Property - {{ property.title }}</h1>
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -20,4 +24,10 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block script %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote/dist/summernote.min.js"></script>
+<script src="{% static 'js/property_description.js' %}"></script>
 {% endblock %}

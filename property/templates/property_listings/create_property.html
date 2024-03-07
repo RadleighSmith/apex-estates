@@ -2,6 +2,10 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/summernote/dist/summernote.min.css" rel="stylesheet">
+{% endblock %}
+
 {% block title %}Create Property Listing{% endblock %}
 
 {% block content %}
@@ -20,4 +24,10 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block script %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote/dist/summernote.min.js"></script>
+<script src="{% static 'js/property_description.js' %}"></script>
 {% endblock %}
