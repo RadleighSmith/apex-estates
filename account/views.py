@@ -6,6 +6,8 @@ from django.contrib.humanize.templatetags.humanize import intcomma
 from django.core.paginator import Paginator
 from property.models import Property
 from .forms import RegisterForm
+from main.models import Message
+from valuation.models import ValuationRequest
 
 # Create your views here.
 
@@ -35,4 +37,18 @@ def user_dashboard(request):
         property.formatted_price = intcomma(property.price)
         property.is_favourite = True
 
-    return render(request, 'dashboard/dashboard.html', {'page_obj': page_obj})
+    user_messages = []
+    requested_valuations = []
+
+    # Fetch messages if user is superuser or staff
+    if request.user.is_superuser or request.user.is_staff:
+        user_messages = Message.objects.all()
+
+    # Fetch valuation requests for all users
+    requested_valuations = ValuationRequest.objects.all()
+
+    return render(request, 'dashboard/dashboard.html', {
+        'page_obj': page_obj,
+        'user_messages': user_messages,
+        'requested_valuations': requested_valuations,
+    })
