@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
+from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
 from django.contrib.humanize.templatetags.humanize import intcomma
 from django.core.paginator import Paginator
@@ -52,3 +53,19 @@ def user_dashboard(request):
         'user_messages': user_messages,
         'requested_valuations': requested_valuations,
     })
+
+@login_required
+@staff_member_required
+def delete_message(request, message_id):
+    message = get_object_or_404(Message, pk=message_id)
+    if request.method == 'POST':
+        message.delete()
+        return redirect('dashboard')
+
+@login_required
+@staff_member_required
+def delete_valuation(request, valuation_id):
+    valuation = get_object_or_404(ValuationRequest, pk=valuation_id)
+    if request.method == 'POST':
+        valuation.delete()
+        return redirect('dashboard')
