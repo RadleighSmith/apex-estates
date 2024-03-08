@@ -17,12 +17,11 @@
     --orange: #f5793a;
     --beige: #E0E0DB;
     --red: #dc3545;
-
-
-
+    
     /* Global Button Styling */
 
     --call-to-action: #f5793a;
+    --active-orange: #c1461a;
 }
 
 /* Body */
@@ -115,6 +114,10 @@ h2 {
     z-index: 3;
 }
 
+.btn.active {
+    background-color: var(--active-orange);
+}
+
 /* Navbar Media Queries */
 @media(min-width: 1200px){
     .btn-nav{
@@ -132,7 +135,7 @@ h2 {
 
 #messages{
     z-index: 2;
-    top: 100px;
+    top: 80px;
 }
 
 /* Footer */
