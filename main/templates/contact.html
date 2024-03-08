@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% load crispy_forms_tags %}
 
 {% block title %}Contact us{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="container shadow my-5 p-4">
+<div class="container-fluid background-image-container">
+    <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Background Image">
+    <div class="container bg-white rounded shadow my-5 p-4">
         <div class="row">
             <!-- Contact Information Section -->
             <div class="col-lg-8">
@@ -18,19 +21,18 @@
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <p><i class="fa-solid fa-phone"></i> Phone</p>
-                            <p><a class="text-decoration-none" href="tel:07123456789">07123 456789</a></p>
+                            <p><a class="text-black" href="tel:07123456789">07123 456789</a></p>
                         </div>
                         <div class="col-md-6">
                             <p><i class="fa-solid fa-envelope"></i> Email</p>
-                            <p><a class="text-decoration-none"
+                            <p><a class="text-black"
                                     href="mailto:info@apexestates.com">info@apexestates.com</a></p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <p><i class="fa-solid fa-map"></i> Address</p>
-                            <p><a class="text-decoration-none" href="geo:51.520318,-0.103105">18 Cowcross St, London,
-                                    EC1M 6DU</a></p>
+                            <p>18 Cowcross St, London, EC1M 6DU</p>
                         </div>
                         <div class="col-md-6">
                             <p><i class="fa-solid fa-share"></i> Follow us</p>
