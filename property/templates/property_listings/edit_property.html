@@ -9,19 +9,17 @@
 {% block title %}Edit Property - {{ property.title }}{% endblock %}
 
 {% block content %}
-<div class="position-relative">
-    <img class="background-image" src="{% static 'images/log-on-background.jpg' %}" alt="Background Image">
-    <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="container-lg bg-white p-4 rounded shadow my-5">
-            <h1 class="mb-4 text-center">Edit Property - {{ property.title }}</h1>
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <div class="text-center">
-                    <button type="submit" class="btn call-to-action auth-btn">Save Changes</button>
-                </div>
-            </form>
-        </div>
+<div class="container-fluid background-image-container">
+    <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Background Image">
+    <div class="container bg-white rounded shadow my-5 p-4">
+        <h1 class="mb-4 text-center border-bottom">Edit Property - {{ property.title }}</h1>
+        <form method="POST" enctype="multipart/form-data" class="px-5">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="text-center d-grid gap-2 py-3">
+                <button type="submit" class="btn call-to-action auth-btn">Save Changes</button>
+            </div>
+        </form>
     </div>
 </div>
 {% endblock %}
