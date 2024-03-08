@@ -66,6 +66,24 @@ h2 {
   background-color: var(--call-to-action);
 }
 
+/* Background Image */
+
+.background-image-container{
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
 /* Horizontal Rule */
 
 .horizontal-rule {
@@ -360,15 +378,6 @@ h2 {
 }
 
 /* LOGON AND REGISTER PAGES */
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; 
-}
 
 .auth-container{
     max-width: 100%;

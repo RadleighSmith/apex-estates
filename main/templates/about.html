@@ -5,91 +5,93 @@
 {% block title %}About us{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h1 class="mt-4 mb-4 text-center border-bottom">About Us</h1>
+<div class="container-fluid background-image-container">
+    <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Background Image">
+    <div class="container shadow bg-white rounded my-4">
+        <h1 class="text-center border-bottom py-3">About Us</h1>
 
-    <!-- First Paragraph (100% width) -->
-    <div class="row">
-        <div class="col">
-            <p>
-                Established in 2010, Apex Estates is not just a real estate agency; we are your partners in unlocking the doors to extraordinary homes and unparalleled experiences. As connoisseurs of the London property scene, we pride ourselves on curating a diverse portfolio of homes that reflect the vibrancy and diversity of this dynamic city.
-            </p>
+        <!-- First Paragraph (100% width) -->
+        <div class="row">
+            <div class="col mx-3">
+                <p>
+                    Established in 2010, Apex Estates is not just a real estate agency; we are your partners in unlocking the doors to extraordinary homes and unparalleled experiences. As connoisseurs of the London property scene, we pride ourselves on curating a diverse portfolio of homes that reflect the vibrancy and diversity of this dynamic city.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <!-- Second Paragraph (50% width with image) -->
-    <div class="row mt-4">
-        <div class="col-lg-6 col-md-12">
-            <p>
-                Our journey began with a simple yet powerful vision: to redefine the way people experience real estate. We understand that a home is more than a structure; it's a reflection of your lifestyle, aspirations, and unique story. That's why, at Apex Estates, every property in our carefully selected collection tells a tale of luxury, sophistication, and comfort.
-            </p>
-            <p>
-                Navigating the intricacies of the real estate market can be daunting, but with Apex Estates, it becomes a seamless and exciting journey. Our team of dedicated professionals brings a wealth of experience and local expertise to ensure you find the perfect property or unlock the full potential of your investment.
-            </p>
-            <p>
-                What sets us apart is not just our listings but the personalized touch we bring to every interaction. We take the time to understand your individual needs, offering tailor-made solutions that resonate with your vision of the ideal home. Your satisfaction is our priority, and we take pride in building lasting relationships with our clients.
-            </p>
+        <!-- Second Paragraph (50% width with image) -->
+        <div class="row mx-3">
+            <div class="col-lg-6 col-md-12">
+                <p>
+                    Our journey began with a simple yet powerful vision: to redefine the way people experience real estate. We understand that a home is more than a structure; it's a reflection of your lifestyle, aspirations, and unique story. That's why, at Apex Estates, every property in our carefully selected collection tells a tale of luxury, sophistication, and comfort.
+                </p>
+                <p>
+                    Navigating the intricacies of the real estate market can be daunting, but with Apex Estates, it becomes a seamless and exciting journey. Our team of dedicated professionals brings a wealth of experience and local expertise to ensure you find the perfect property or unlock the full potential of your investment.
+                </p>
+                <p>
+                    What sets us apart is not just our listings but the personalized touch we bring to every interaction. We take the time to understand your individual needs, offering tailor-made solutions that resonate with your vision of the ideal home. Your satisfaction is our priority, and we take pride in building lasting relationships with our clients.
+                </p>
+            </div>
+            <div class="col-lg-6 col-md-12 p-4">
+                <img src="{% static 'images/about-us.jpg' %}" class="img-fluid property-detail-img" alt="Image">
+            </div>
         </div>
-        <div class="col-lg-6 col-md-12 p-4">
-            <img src="{% static 'images/about-us.jpg' %}" class="img-fluid property-detail-img" alt="Image">
-        </div>
-    </div>
 
-    <div class="horizontal-rule-2 mb-3"></div>
+        <div class="horizontal-rule-2 mb-3"></div>
 
-    <!-- Meet the Team section -->
-    <h2 class="mb-5 text-center">Meet the Team</h2>
-    
-    <div class="row text-center">
-        <!-- Team member 1 -->
-        <div class="col-lg-3 col-sm-6 mb-2">
-            <img src="{% static 'images/agents/max-turner.jpg' %}" class="agent-img mb-2" alt="Team Member 1">
-            <p class="fw-bold">Max Turner</p>
-            <p>Founder and Principal Agent</p>
-        </div>
-        <!-- Team member 2 -->
-        <div class="col-lg-3 col-sm-6 mb-2">
-            <img src="{% static 'images/agents/lily-evans.jpg' %}" class="agent-img mb-2" alt="Team Member 2">
-            <p class="fw-bold">Lily Evans</p>
-            <p>Property Consultant</p>
-        </div>
-        <!-- Team member 3 -->
-        <div class="col-lg-3 col-sm-6 mb-2">
-            <img src="{% static 'images/agents/owen-baker.jpg' %}" class="agent-img mb-2" alt="agent-img mb-2">
-            <p class="fw-bold">Owen Baker</p>
-            <p>Marketing Coordinator</p>
-        </div>
-        <!-- Team member 4 -->
-        <div class="col-lg-3 col-sm-6 mb-2">
-            <img src="{% static 'images/agents/mia-hart.jpg' %}" class="agent-img mb-2" alt="Team Member 1">
-            <p class="fw-bold">Mia Hart</p>
-            <p>Administrative Assistant</p>
-        </div>
-        <!-- Team member 5 -->
-        <div class="col-lg-3 col-sm-6 mb-2">
-            <img src="{% static 'images/agents/jake-foster.jpg' %}" class="agent-img mb-2" alt="Team Member 2">
-            <p class="fw-bold">Jake Foster</p>
-            <p>Client Services Specialist</p>
-        </div>
-        <!-- Team member 6 -->
-        <div class="col-lg-3 col-sm-6 mb-2">
-            <img src="{% static 'images/agents/zoe-carr.jpg' %}" class="agent-img mb-2" alt="Team Member 1">
-            <p class="fw-bold">Zoe Carr</p>
-            <p>Property Photographer and Listings Coordinator</p>
-        </div>
-        <!-- Team member 7 -->
-        <div class="col-lg-3 col-sm-6 mb-2">
-            <img src="{% static 'images/agents/alex-martin.jpg' %}" class="agent-img mb-2" alt="Team Member 2">
-            <p class="fw-bold">Alex Martin</p>
-            <p>Finance and Admin Support</p>
-        </div>
-        <!-- Team member 8 -->
-        <div class="col-lg-3 col-sm-6 mb-2">
-            <img src="{% static 'images/agents/lucy-shaw.jpg' %}" class="agent-img mb-2" alt="Team Member 1">
-            <p class="fw-bold">Lucy Shaw</p>
-            <p>Customer Relations Associate</p>
+        <!-- Meet the Team section -->
+        <h2 class="mb-5 text-center">Meet the Team</h2>
+        
+        <div class="row text-center">
+            <!-- Team member 1 -->
+            <div class="col-lg-3 col-sm-6 mb-2">
+                <img src="{% static 'images/agents/max-turner.jpg' %}" class="agent-img mb-2" alt="Team Member 1">
+                <p class="fw-bold">Max Turner</p>
+                <p>Founder and Principal Agent</p>
+            </div>
+            <!-- Team member 2 -->
+            <div class="col-lg-3 col-sm-6 mb-2">
+                <img src="{% static 'images/agents/lily-evans.jpg' %}" class="agent-img mb-2" alt="Team Member 2">
+                <p class="fw-bold">Lily Evans</p>
+                <p>Property Consultant</p>
+            </div>
+            <!-- Team member 3 -->
+            <div class="col-lg-3 col-sm-6 mb-2">
+                <img src="{% static 'images/agents/owen-baker.jpg' %}" class="agent-img mb-2" alt="agent-img mb-2">
+                <p class="fw-bold">Owen Baker</p>
+                <p>Marketing Coordinator</p>
+            </div>
+            <!-- Team member 4 -->
+            <div class="col-lg-3 col-sm-6 mb-2">
+                <img src="{% static 'images/agents/mia-hart.jpg' %}" class="agent-img mb-2" alt="Team Member 1">
+                <p class="fw-bold">Mia Hart</p>
+                <p>Administrative Assistant</p>
+            </div>
+            <!-- Team member 5 -->
+            <div class="col-lg-3 col-sm-6 mb-2">
+                <img src="{% static 'images/agents/jake-foster.jpg' %}" class="agent-img mb-2" alt="Team Member 2">
+                <p class="fw-bold">Jake Foster</p>
+                <p>Client Services Specialist</p>
+            </div>
+            <!-- Team member 6 -->
+            <div class="col-lg-3 col-sm-6 mb-2">
+                <img src="{% static 'images/agents/zoe-carr.jpg' %}" class="agent-img mb-2" alt="Team Member 1">
+                <p class="fw-bold">Zoe Carr</p>
+                <p>Property Photographer and Listings Coordinator</p>
+            </div>
+            <!-- Team member 7 -->
+            <div class="col-lg-3 col-sm-6 mb-2">
+                <img src="{% static 'images/agents/alex-martin.jpg' %}" class="agent-img mb-2" alt="Team Member 2">
+                <p class="fw-bold">Alex Martin</p>
+                <p>Finance and Admin Support</p>
+            </div>
+            <!-- Team member 8 -->
+            <div class="col-lg-3 col-sm-6 mb-2">
+                <img src="{% static 'images/agents/lucy-shaw.jpg' %}" class="agent-img mb-2" alt="Team Member 1">
+                <p class="fw-bold">Lucy Shaw</p>
+                <p>Customer Relations Associate</p>
+            </div>
         </div>
     </div>
 </div>
-
 {% endblock %}
