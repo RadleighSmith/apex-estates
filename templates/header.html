@@ -61,7 +61,7 @@
                             </li>
                             {% if user.is_superuser or user.is_staff %}
                             <li class="nav-item">
-                                <a class="nav-link nav-link btn call-to-action btn-nav" href="/admin">Admin</a>
+                                <a class="nav-link btn call-to-action btn-nav" href="/admin">Admin</a>
                             </li>
                             {% endif %}
                             {% else %}
@@ -70,7 +70,7 @@
                                     href="/login">Log in</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn call-to-action {% if request.path == '/sign_up/' %}active{% endif %}"
+                                <a class="nav-link btn call-to-action btn-nav {% if request.path == '/sign_up/' %}active{% endif %}"
                                     href="/sign_up">Register</a>
                             </li>
                             {% endif %}
