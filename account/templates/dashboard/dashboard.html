@@ -4,106 +4,117 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
-<div class="container">
-  <h1 class="border-bottom my-3">Welcome, {{ user.first_name }}!</h1>
+<div class="container-fluid background-image-container">
+    <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Background Image">
+    <div class="container bg-white shadow rounded my-5 p-4">
+    <h1 class="border-bottom my-3">Welcome, {{ user.first_name }}!</h1>
 
-  {% if user.is_superuser or user.is_staff %}
-   <!-- User Messages Table -->
-   <h2 class="m-3">User Messages</h2>
-   <div class="table-responsive">
-       <table class="table table-striped table-hover align-middle">
-           <thead class="table-dark text-center">
-               <tr>
-                   <th>#</th>
-                   <th>First Name</th>
-                   <th>Last Name</th>
-                   <th>Email</th>
-                   <th>Message</th>
-                   <th>Sent On</th>
-                   <th>Actions</th>
-               </tr>
-           </thead>
-           <tbody>
-               {% for message in user_messages %}
-                   <tr>
-                       <td>{{ forloop.counter }}</td>
-                       <td>{{ message.first_name }}</td>
-                       <td>{{ message.last_name }}</td>
-                       <td>{{ message.email }}</td>
-                       <td>{{ message.message }}</td>
-                       <td>{{ message.created_at }}</td>
-                       <td>
-                           <form action="{% url 'delete_message' message.id %}" method="post">
-                               {% csrf_token %}
-                               <button type="submit" class="btn btn-danger">Delete</button>
-                           </form>
-                       </td>
-                   </tr>
-               {% endfor %}
-           </tbody>
-       </table>
-   </div>
-   <div class="horizontal-rule-2 my-4"></div>
-   <!-- Valuation Requests Table -->
-   <h2 class="m-3">Valuation Requests</h2>
-   <div class="table-responsive">
-       <table class="table table-striped table-hover align-middle">
-           <thead class="table-dark text-center">
-               <tr>
-                   <th>#</th>
-                   <th>Name</th>
-                   <th>Contact Number</th>
-                   <th>Property Address</th>
-                   <th>Email</th>
-                   <th>Property Type</th>
-                   <th>Actions</th>
-               </tr>
-           </thead>
-           <tbody>
-               {% for valuation_request in requested_valuations %}
-                   <tr>
-                       <td>{{ forloop.counter }}</td>
-                       <td>{{ valuation_request.name }}</td>
-                       <td>{{ valuation_request.contact_number }}</td>
-                       <td>{{ valuation_request.property_address }}</td>
-                       <td>{{ valuation_request.email }}</td>
-                       <td>{{ valuation_request.property_type }}</td>
-                       <td>
-                           <form action="{% url 'delete_valuation' valuation_request.id %}" method="post">
-                               {% csrf_token %}
-                               <button type="submit" class="btn btn-danger">Delete</button>
-                           </form>
-                       </td>
-                   </tr>
-               {% endfor %}
-           </tbody>
-       </table>
-   </div>
-   <div class="horizontal-rule-2 my-4"></div>
-  {% endif %}
-  <!-- Display favourite properties-->
-  <h2 class="border-bottom">My Favourite Properties</h2>
-  <div class="row">
-    {% for property in page_obj %}
-    {% include 'property_listings/property_cards.html' with property=property %}
-    {% endfor %}
-  </div>
+    {% if user.is_superuser or user.is_staff %}
+    <!-- User Messages Table -->
+    <h2 class="m-3 text-center">User Messages</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Sent On</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for message in user_messages %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ message.first_name }}</td>
+                        <td>{{ message.last_name }}</td>
+                        <td>{{ message.email }}</td>
+                        <td>{{ message.message }}</td>
+                        <td>{{ message.created_at }}</td>
+                        <td>
+                            <form action="{% url 'delete_message' message.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="horizontal-rule-2 my-4"></div>
+    <!-- Valuation Requests Table -->
+    <h2 class="m-3 text-center">Valuation Requests</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Contact Number</th>
+                    <th>Property Address</th>
+                    <th>Email</th>
+                    <th>Property Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for valuation_request in requested_valuations %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ valuation_request.name }}</td>
+                        <td>{{ valuation_request.contact_number }}</td>
+                        <td>{{ valuation_request.property_address }}</td>
+                        <td>{{ valuation_request.email }}</td>
+                        <td>{{ valuation_request.property_type }}</td>
+                        <td>
+                            <form action="{% url 'delete_valuation' valuation_request.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="horizontal-rule-2 my-4"></div>
+    {% endif %}
+    <!-- Check if there are favorite properties -->
+    {% if page_obj %}
+        <!-- Display favourite properties-->
+        <h2 class="border-bottom text-center">My Favourite Properties</h2>
+        <div class="row">
+        {% for property in page_obj %}
+            {% include 'property_listings/property_cards.html' with property=property %}
+        {% endfor %}
+        </div>
 
-  <!-- Pagination links -->
-  <div class="text-center">
-    <ul class="pagination justify-content-center mt-4">
-      {% if page_obj.has_previous %}
-      <li>
-        <a href="?page={{ page_obj.previous_page_number }}" class="btn call-to-action m-1">&laquo; PREV</a>
-      </li>
-      {% endif %}
-      {% if page_obj.has_next %}
-      <li>
-        <a href="?page={{ page_obj.next_page_number }}" class="btn call-to-action m-1">NEXT &raquo;</a>
-      </li>
-      {% endif %}
-    </ul>
-  </div>
+        <!-- Pagination links -->
+        <div class="text-center">
+        <ul class="pagination justify-content-center mt-4">
+            {% if page_obj.has_previous %}
+            <li>
+                <a href="?page={{ page_obj.previous_page_number }}" class="btn call-to-action m-1">&laquo; PREV</a>
+            </li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li>
+                <a href="?page={{ page_obj.next_page_number }}" class="btn call-to-action m-1">NEXT &raquo;</a>
+            </li>
+            {% endif %}
+        </ul>
+        </div>
+    {% else %}
+        <!-- If no favorite properties are found -->
+        <div class="alert alert-info" role="alert">
+        You haven't added any properties to your favorites yet. Check out some of our <a href="/property_listings" class="">Property Listings</a>
+        </div>
+    {% endif %}
+    </div>
 </div>
 {% endblock %}
 
