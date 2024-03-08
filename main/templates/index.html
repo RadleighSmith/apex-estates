@@ -9,7 +9,7 @@
     <!-- Hero Image -->
     <section class="hero-image-container">
         <img id="hero-image" class="img-fluid" src="{% static 'images/hero-image.jpg' %}" alt="">
-        <div class="hero-content">
+        <div class="hero-content mx-4">
             <h1>Welcome to Apex Estates, The Pinnacle of London Real Estate.</h1>
             <h2>Find Your Perfect Home Today.</h2>
             <a href="/property_listings" class="btn call-to-action">Property Listings</a>
@@ -70,13 +70,13 @@
     </div>
     <div class="container">
         <!-- Newsletter -->
-        <div class="row  align-items-center py-5">
-            <div class="col-md-6 text-center">
-                <h3 class="mb-4">Sign up for Exclusive Updates</h3>
+        <div class="row align-items-center my-5">
+            <div class="col-md-6 text-center border-md-end">
+                <h5 class="h2 mb-4 px-5">Sign up for Exclusive Updates</h5>
             </div>
-            <div class="col-md-6 p-5">
+            <div class="col-md-6 px-5">
                 <p>Stay in the loop with our latest offerings, property insights, and exclusive promotions by signing up for our newsletter. Subscribe now and let the journey to your dream home begin!</p>
-                <form method="post">
+                <form method="post" class="text-center">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <button type="submit" class="btn call-to-action">Sign Up</button>

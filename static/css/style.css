@@ -231,6 +231,18 @@ h2 {
     max-width: 1320px;
 }
 
+/* Newsletter Signup */
+
+.border-md-end{
+    border-right: 3px solid var(--beige)
+}
+
+@media (max-width: 768px){
+    .border-md-end {
+        border-right: none;
+    }
+}
+
 /* PROPERTY LISTINGS PAGE */
 
 /* Property Listing Cards */
