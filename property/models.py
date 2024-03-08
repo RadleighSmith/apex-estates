@@ -28,7 +28,7 @@ class Property(models.Model):
     favourite = models.ManyToManyField(User, related_name='favourite', blank=True)
     listed_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    slug = models.SlugField(unique=True, blank=True)
+    slug = models.SlugField(max_length=100, unique=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Properties"

@@ -7,3 +7,7 @@ class PropertyForm(forms.ModelForm):
     class Meta:
         model = Property
         fields = ['title', 'main_image', 'property_type', 'address', 'price', 'bedrooms', 'bathrooms', 'garage', 'parking', 'description']
+        widgets = {
+            'title': forms.TextInput(attrs={'maxlength': 200}),
+            'address': forms.TextInput(attrs={'maxlength': 100}),
+        }
