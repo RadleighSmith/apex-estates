@@ -10,7 +10,6 @@ from .forms import RegisterForm
 from main.models import Message
 from valuation.models import ValuationRequest
 
-# Create your views here.
 
 def sign_up(request):
     if request.method == 'POST':
@@ -41,11 +40,9 @@ def user_dashboard(request):
     user_messages = []
     requested_valuations = []
 
-    # Fetch messages if user is superuser or staff
     if request.user.is_superuser or request.user.is_staff:
         user_messages = Message.objects.all()
 
-    # Fetch valuation requests for all users
     requested_valuations = ValuationRequest.objects.all()
 
     return render(request, 'dashboard/dashboard.html', {
@@ -60,6 +57,7 @@ def delete_message(request, message_id):
     message = get_object_or_404(Message, pk=message_id)
     if request.method == 'POST':
         message.delete()
+        messages.success(request, 'Message Deleted')
         return redirect('dashboard')
 
 @login_required
@@ -68,4 +66,5 @@ def delete_valuation(request, valuation_id):
     valuation = get_object_or_404(ValuationRequest, pk=valuation_id)
     if request.method == 'POST':
         valuation.delete()
+        messages.success(request, 'Valuation Deleted')
         return redirect('dashboard')
