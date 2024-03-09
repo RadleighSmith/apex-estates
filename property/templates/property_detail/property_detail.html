@@ -4,116 +4,119 @@
 {% block title %}{{ property.title }}{% endblock %}
 
 {% block content %}
-<div class="container page-container py-3">
-  <!-- Title -->
-  <div class="row">
-    <div class="col-md-12 text-center mt-3">
-      <h1 class="border-bottom">{{ property.title }}</h1>
-    </div>
-    <div class="col-md-12 d-flex justify-content-center">
-      <a href="{% url 'property_listings' %}" class="btn call-to-action m-3">Back to Property Listings</a>
-      {% if user.is_superuser or user.is_staff %}
-        <a class="btn call-to-action m-3" href="{% url 'edit_property' property.slug %}">Edit this lisiting</a>
-      {% endif %}
-    </div>
-  </div>
-  <!-- Image -->
-  <div class="row">
-    <div class="col-md-12 text-center">
-      {% if "placeholder-home" in property.main_image.url %}
-      <img class="property-detail-img img-fluid" src="{% static 'images/placeholder-home.jpg' %}"
-        alt="placeholder image">
-      {% else %}
-      <img class="property-detail-img img-fluid" src="{{ property.main_image.url }}" alt="{{ property.title }}">
-      {% endif %}
-    </div>
-  </div>
-  <!-- Price, Address, and Listed On -->
-  <div class="row mt-3">
-    <div class="col-md-6">
-      <p>Address: <strong>{{ property.address }}</strong></p>
-    </div>
-    <div class="col-md-6 text-md-end">
-      {% if request.user.is_authenticated %}
-      {% if is_favourite %}
-      <span id="favourite-property" class="me-3"><a href="{% url 'favourite_property' property.slug %}"
-          class="text-danger"><i class="fa-solid fa-heart fa-lg"></i></a></span>
-      {% else %}
-      <span id="favourite-property" class="me-3"><a href="{% url 'favourite_property' property.slug %}"
-          class="text-muted"><i class="fa-regular fa-heart fa-lg"></i></a></span>
-      {% endif %}
-      {% endif %}
-      <p class="small-text mb-0">Listed on: {{ property.listed_on }}</p>
-    </div>
-  </div>
-  <!-- Price -->
-  <div class="row mt-3">
-    <div class="col-md-12">
-      <p class="formatted-price"><strong>£{{ property.formatted_price }}</strong></p>
-    </div>
-  </div>
-  <!-- Horizontal Rule -->
-  <div class="row mt-4">
-    <div class="col-md-12">
-      <hr class="horizontal-rule-2">
-    </div>
-  </div>
-  <!-- Property Features -->
-  <div class="row mt-3">
-    <div class="col-md-12">
-      <ul class="list-group list-group-horizontal d-flex flex-wrap w-100">
-        <li class="list-group-item flex-fill">Property Type: {{ property.get_property_type_display }}</li>
-        <li class="list-group-item flex-fill">Bedrooms: {{ property.bedrooms }}</li>
-        <li class="list-group-item flex-fill">Bathrooms: {{ property.bathrooms }}</li>
-        <li class="list-group-item flex-fill">Parking: {% if property.parking %}Yes{% else %}No{% endif %}</li>
-        <li class="list-group-item flex-fill">Garage: {% if property.garage %}Yes{% else %}No{% endif %}</li>
-      </ul>
-    </div>
-  </div>
-  <!-- Horizontal Rule -->
-  <div class="row mt-4">
-    <div class="col-md-12">
-      <hr class="horizontal-rule-2">
-    </div>
-  </div>
-  <!-- Description -->
-  <div class="row mt-3">
-    <div class="col-md-12">
-      <h5>Description</h5>
-      <p>{{ property.description|safe }}</p>
-    </div>
-  </div>
-  <!-- Back Button -->
-  <div class="row mt-3">
-    <div class="col-md-12 text-center">
-      <a href="{% url 'property_listings' %}" class="btn call-to-action">Back to Property Listings</a>
-      {% if user.is_superuser or user.is_staff %}
-       <button type="button" class="btn btn-danger m-3" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">Delete Property</button>
-      {% endif %}
-    </div>
-  </div>
-</div>
-
-<!-- Confirmation modal for deleting property -->
-<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm Delete</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>Are you sure you want to delete this property?</p>
-            <p><strong>{{ property.title }}</strong></p> 
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              <form method="POST" action="{% url 'delete_property' property.slug %}">
-                  {% csrf_token %}
-                  <button type="submit" class="btn btn-danger">Delete</button>
-              </form>
-          </div>
+<div class="container-fluid background-image-container">
+  <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Background Image">
+  <div class="container bg-white rounded shadow my-5 p-4">
+    <!-- Title -->
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <h1 class="border-bottom">{{ property.title }}</h1>
       </div>
+      <div class="col-md-12 d-flex justify-content-center">
+        <a href="{% url 'property_listings' %}" class="btn call-to-action m-3">Back to Property Listings</a>
+        {% if user.is_superuser or user.is_staff %}
+          <a class="btn call-to-action m-3" href="{% url 'edit_property' property.slug %}">Edit this lisiting</a>
+        {% endif %}
+      </div>
+    </div>
+    <!-- Image -->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        {% if "placeholder-home" in property.main_image.url %}
+        <img class="property-detail-img img-fluid" src="{% static 'images/placeholder-home.jpg' %}"
+          alt="placeholder image">
+        {% else %}
+        <img class="property-detail-img img-fluid" src="{{ property.main_image.url }}" alt="{{ property.title }}">
+        {% endif %}
+      </div>
+    </div>
+    <!-- Price, Address, and Listed On -->
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <p>Address: <strong>{{ property.address }}</strong></p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        {% if request.user.is_authenticated %}
+        {% if is_favourite %}
+        <span id="favourite-property" class="me-3"><a href="{% url 'favourite_property' property.slug %}"
+            class="text-danger"><i class="fa-solid fa-heart fa-lg"></i></a></span>
+        {% else %}
+        <span id="favourite-property" class="me-3"><a href="{% url 'favourite_property' property.slug %}"
+            class="text-muted"><i class="fa-regular fa-heart fa-lg"></i></a></span>
+        {% endif %}
+        {% endif %}
+        <p class="small-text mb-0">Listed on: {{ property.listed_on }}</p>
+      </div>
+    </div>
+    <!-- Price -->
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <p class="formatted-price"><strong>£{{ property.formatted_price }}</strong></p>
+      </div>
+    </div>
+    <!-- Horizontal Rule -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <hr class="horizontal-rule-2">
+      </div>
+    </div>
+    <!-- Property Features -->
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <ul class="list-group list-group-horizontal d-flex flex-wrap w-100">
+          <li class="list-group-item flex-fill">Property Type: {{ property.get_property_type_display }}</li>
+          <li class="list-group-item flex-fill">Bedrooms: {{ property.bedrooms }}</li>
+          <li class="list-group-item flex-fill">Bathrooms: {{ property.bathrooms }}</li>
+          <li class="list-group-item flex-fill">Parking: {% if property.parking %}Yes{% else %}No{% endif %}</li>
+          <li class="list-group-item flex-fill">Garage: {% if property.garage %}Yes{% else %}No{% endif %}</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Horizontal Rule -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <hr class="horizontal-rule-2">
+      </div>
+    </div>
+    <!-- Description -->
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <h5>Description</h5>
+        <p>{{ property.description|safe }}</p>
+      </div>
+    </div>
+    <!-- Back Button -->
+    <div class="row mt-3">
+      <div class="col-md-12 text-center">
+        <a href="{% url 'property_listings' %}" class="btn call-to-action">Back to Property Listings</a>
+        {% if user.is_superuser or user.is_staff %}
+        <button type="button" class="btn btn-danger m-3" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">Delete Property</button>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation modal for deleting property -->
+  <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to delete this property?</p>
+              <p><strong>{{ property.title }}</strong></p> 
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <form method="POST" action="{% url 'delete_property' property.slug %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
   </div>
 </div>
 {% endblock %}
