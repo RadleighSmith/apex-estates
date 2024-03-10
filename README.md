@@ -54,77 +54,93 @@ The primary aim of the Apex Estates project is to address the challenges in the 
 
 When crafting our site, we meticulously detail user stories and prioritize the development of essential components using the MoSCoW method. Guided by this approach, we carefully design every aspect with users in mind, ensuring that each feature serves a distinct purpose and enriches the overall user experience. Our focus on must-have and should-have requirements forms the foundation of our development strategy, allowing us to align seamlessly with the vision of Apex Estates. Through organized sprints and thoughtfully crafted epics, we are dedicated to creating a dynamic and user-centric online environment that sets the standard for luxury real estate exploration in London.
 
-#### Sprint 1: Basic User Functionality
+#### Sprint 1: Foundational Functionality
 <details>
-<summary>
-Epic 1: User Authentication
-</summary>
+<summary>Epic 1: User Authentication</summary>
 
-- User Story #2: User Registration
-    - As a **New User** I can **Register an Account** so that **I can Login to the site**
-- User Story #3: User Login
-    - As a **Registered User** I can **Login using my email and password** so that **access the site securely using my account**
-- User Story #4: User Logout
-    - As a **Logged In User** I can **Logout** so that **I can keep my account secure.**
+| User Story # | Title                   | Story (Content)                                                    | MoSCoW     | Story Points |
+|--------------|-------------------------|--------------------------------------------------------------------|------------|--------------|
+| 2            | User Registration       | As a New User I can Register an Account so that I can Login to the site | Must Have | 3            |
+| 3            | User Login              | As a Registered User I can Login using my email and password so that access the site securely using my account | Must Have | 2            |
+| 4            | User Logout             | As a Logged In User I can Logout so that I can keep my account secure. | Must Have | 1            |
 </details>
 
-#### Sprint 2: Property Management
 <details>
-<summary>
-Epic 2: Property CRUD Operations
-</summary>
+<summary>Epic 2: User Navigation</summary>
 
-- User Story #5: Agent Status
-    - As a **Sales Agent** I can **have the agent status** so that **I have full CRUD access over properties.**
-- User Story #6: Create Properties
-    - As a **Sales Agent** I can **Create property listings** so that **we can display current property listings**
-- User Story #7: Update Properties
-    - As a **Sales Agent** I can **Update property listings** so that **I can change / keep listings up to date.**
-- User Story #8: Remove Properties
-    - As a **Sales Agent** I can **Remove/Delete properties** so that **I can keep the site up to date with current sales.**
-- User Story #9: Read Property Listings
-    - As a **Site User** I can **Read property listings** so that **I can explore current property listings**
+| User Story # | Title                   | Story (Content)                                                    | MoSCoW     | Story Points |
+|--------------|-------------------------|--------------------------------------------------------------------|------------|--------------|
+| 26           | Navbar                  | As a Site User I can expect a navbar so that I can easily and intuitively navigate round the site | Must Have | 3            |
+| 27           | Footer                  | As a User I can expect a footer so that I can access important information and links regardless of my position on the webpage. | Must Have | 2            |
+
 </details>
 
-#### Sprint 3: Property Listings and Dashboard
+#### Sprint 2: Property App
 <details>
-<summary>
-Epic 3: New User Experience
-</summary>
+<summary>Epic 3: Property Management</summary>
 
-- User Story #18: Landing Page
-    - As a **Site User** I can **access the landing/home page** so that **I can navigate to other parts of the site**
-- User Story #1: View Paginated Property Lists
-    - As a **User** I can **see a paginated list of properties for sale** so that **I can select which one I would like to look at.**
-</details>
-<details>
-<summary>
-Epic 4: User Dashboard and Favorites
-</summary>
-
-- User Story #10: Favorite Properties
-    - As a **User** I can **favourite properties** so that **I can easily return to my favourite property listings**
-- User Story #11: User Dashboard
-    - As a **Signed-In User** I can **Display my personal dashboard** so that **I can display my favourite properties**
+| User Story # | Title                   | Story (Content)                                                    | MoSCoW     | Story Points |
+|--------------|-------------------------|--------------------------------------------------------------------|------------|--------------|
+| 5            | Agent Status            | As a Sales Agent I can have the agent status so that I have full CRUD access over properties and can view/delete messages and valuations | Must Have | 5            |
+| 6            | Create Properties       | As a Sales Agent I can Create property listings so that we can display current property listings | Must Have | 8            |
+| 7            | Update Properties       | As a Sales Agent I can Update property listings so that I can change / keep listings up to date | Must Have | 5            |
+| 8            | Remove Properties       | As a Sales Agent I can Remove/Delete properties so that I can keep the site up to date with current sales. | Must Have | 3            |
 </details>
 
-#### Sprint 4: Additional Features
 <details>
-<summary>
-Epic 5: Additional User Functionality
-</summary>
+<summary>Epic 4: Property Display</summary>
 
-- User Story #12: Password Reset
-    - As a **User** I can **Reset my password** so that **I can access my account if I have forgotten it or my password is no longer secure**
-- User Story #13: Valuation Request
-    - As a **Potential Seller** I can **Request a Valuation** so that **I can have my property valued**
-- User Story #14: Property Search
-    - As a **Site User** I can **Search Properties** so that **find what I am looking for**
-- User Story #16: About Us Page
-    - As a **Site User** I can **access an about us page** so that **I can learn more about the company**
-- User Story #17: Contact Us Page
-    - As a **Site User** I can **Access a Contact us page** so that **I can find out ways to get in contact or find the location of the office**
+| User Story # | Title                   | Story (Content)                                                    | MoSCoW     | Story Points |
+|--------------|-------------------------|--------------------------------------------------------------------|------------|--------------|
+| 1            | View Paginated Property Lists | As a User I can see a paginated list of properties for sale so that I can select which one I would like to look at. | Must Have | 3            |
+| 9            | Read Property Listings  | As a Site User I can Read property listings so that I can explore current property listings | Must Have | 2            |
+
 </details>
+
+#### Sprint 3: User Experience
+<details>
+<summary>Epic 5: User Experience</summary>
+
+| User Story # | Title                   | Story (Content)                                                    | MoSCoW     | Story Points |
+|--------------|-------------------------|--------------------------------------------------------------------|------------|--------------|
+| 18           | Landing Page            | As a Site User I can access the landing/home page so that I can navigate to other parts of the site | Must Have | 3            |
+| 16           | About Us Page           | As a Site User I can access an about us page so that I can learn more about the company | Must Have | 2            |
+| 17           | Contact Us Page         | As a Site User I can Access a Contact us page so that I can find out ways to get in contact, send a message or find the location of the office | Must Have | 2            |
+| 10           | Favourite Properties    | As a User I can favourite properties so that I can easily return to my favourite property listings | Should Have | 3            |
+| 11           | User Dashboard          | As a Signed-In User I can Display my personal dashboard so that I can display my favourite properties | Should Have | 5            |
+
+</details>
+
+#### Sprint 4: Additional Functionality & Product Refinement
+<details>
+<summary>Epic 6: Additional User Functionality</summary>
+
+| User Story # | Title                   | Story (Content)                                                    | MoSCoW     | Story Points |
+|--------------|-------------------------|--------------------------------------------------------------------|------------|--------------|
+| 25           | Agent Admin Dashboard   | As a Agent I can Display a admin dashboard so that I can read through user messages and valuation request and delete them once actioned | Should Have | 5            |
+| 13           | Valuation Request       | As a Potential Seller I can Request a Valuation so that I can have my property valued | Should Have | 5            |
+| 19           | Apply to Newsletter     | As a Site User I can Apply to the newsletter so that I can keep up to date with Apex Estates latest news | Could Have | TBD          |
+| 22           | User Messages           | As a Site User I can send agents a message so that I can receive personalised assistance with my enquiries | Could Have | TBD          |
+
+</details>
+
+#### Not Included in This Release
+<details>
+<summary>Not Included User Stories</summary>
+
+| User Story # | Title                   | Story (Content)                                                    | 
+|--------------|-------------------------|--------------------------------------------------------------------|
+| 12           | Password Reset          | As a User I can Reset my password so that I can access my account if I have forgotten it or my password is no longer secure |
+| 14           | Property Search         | As a Site User I can Search Properties so that find what I am looking for. |
+| 15           | Property Filter         | As a Site User I can filter property listings so that a number of different properties based on my filters |
+| 20           | Write Newsletter        | As a Agent I can Write a newsletter so that I can keep subscribed users up-to-date with the latest news |
+| 21           | Live Text Chat          | As a Signed In User I can have a live chat so that I can talk to an agent via text chat live |
+| 23           | Interactive Property Listing Map | As a User I can use an interactive map so that I can better understand the location of properties and search by using a map |
+| 24           | Image Gallery for property listings | As a User I can navigate through a selection of images so that I can better understand the property im looking at |
+| 28           | Change Email            | As a Authenticated User I can change my email so that I can keep my account information up-to-date. |
+| 29           | For Sale, Sold, Unpublished Listings | As a Agent I can set the state of a listing so that I can users informed about the availability and status of properties. |
+</details>
+
 
 <br>
 
