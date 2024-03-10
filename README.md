@@ -467,7 +467,23 @@ Complementing Montserrat, we've selected Lato for body text, known for its versa
 
 ### Current Features
 
-#### Header
+#### Navbar
+
+![Nav Bar Homepage](docs/screenshots/navbar/nav-bar-home.png)
+
+![Nav Bar Homepage User Logged In](docs/screenshots/navbar/nav-bar-home-user.png)
+
+![Nav Bar Homepage Admin Logged In](docs/screenshots/navbar/nav-bar-home-admin.png)
+
+![Nav Bar All Pages other than Homepage](docs/screenshots/navbar/nav-bar-grey.png)
+
+![Nav Bar Collapsed](docs/screenshots/navbar/nav-bar-collapsed.png)
+
+![Nav Bar Offcanvas](docs/screenshots/navbar/nav-bar-offcanvas.png)
+
+![Nav Bar Offcanvas User Logged In](docs/screenshots/navbar/nav-bar-offcanvas-user.png)
+
+![Nav Bar Offcanvas Admin Logged In](docs/screenshots/navbar/nav-bar-offcanvas-admin.png)
 
 #### Footer
 
