@@ -22,6 +22,25 @@ Live site: Link to go here!
 
 - [The Surface Plane](#the-surface-plane)
 
+[Features](#features)
+
+- [Current Features](#current-features)
+
+- [Future Features](#future-features)
+
+[Languages](#languages)
+
+[Frameworks](#frameworks)
+
+[Libraries](#libraries)
+
+[Testing](#testing)
+
+[Bugs & Fixes](#bugs--fixes)
+
+[Deployment](#deployment)
+
+[Credits](#credits)
 
 
 ## Planning
@@ -443,3 +462,57 @@ In crafting our website's visual identity, we've carefully curated typography to
 Complementing Montserrat, we've selected Lato for body text, known for its versatility and legibility. Lato's clean and rounded letterforms provide a comfortable reading experience, enhancing comprehension and engagement with our content. Whether users are browsing lengthy descriptions or informative articles, Lato ensures clarity and ease of reading, contributing to a seamless user experience.
 
 ---
+
+## Features
+
+### Current Features
+
+#### Header
+
+#### Footer
+
+#### Landing Page
+
+#### Property Lisitings
+
+#### Property Details
+
+#### Create Property Listing Page
+
+#### Edit Property Listing Page
+
+#### About Us
+
+#### Contact Us
+
+#### Request Valuation
+
+#### Log In
+
+#### Register
+
+#### Dashboard
+
+#### Admin Dashboard
+
+
+---
+
+### Future Features
+
+
+---
+
+## Languages
+
+## Frameworks
+
+## Libraries
+
+## Testing
+
+## Bugs & Fixes
+
+## Deployment
+
+## Credits
