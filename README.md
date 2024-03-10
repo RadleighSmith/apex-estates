@@ -198,6 +198,59 @@ Mobile
 </details>
 
 <br>
+
+Property Listings Page
+
+<details>
+<summary>
+Desktop
+</summary>
+
+![Desktop Property Lisitings Wireframes](docs/wireframes/desktop/property-listings-page.png)
+</details>
+<details>
+<summary>
+Tablet
+</summary>
+ 
+![Tablet Property Lisitings Wireframes](docs/wireframes/tablet/property-listings-page-tablet.png)
+</details>
+<details>
+<summary>
+Mobile
+</summary>
+
+![Mobile Property Lisitings Wireframes](docs/wireframes/mobile/property-listings-page-mobile.png)
+</details>
+
+<br>
+
+Property Detail Page
+
+<details>
+<summary>
+Desktop
+</summary>
+
+![Desktop Property Detail Wireframes](docs/wireframes/desktop/property-detail.png)
+</details>
+<details>
+<summary>
+Tablet
+</summary>
+ 
+![Tablet Landing Page Wireframes](docs/wireframes/tablet/property-detail-page-tablet.png)
+</details>
+<details>
+<summary>
+Mobile
+</summary>
+
+![Mobile Landing Page Wireframes](docs/wireframes/mobile/property-detail-mobile.png)
+</details>
+
+<br>
+
 About Us Page
 
 <details>
@@ -323,29 +376,41 @@ Mobile
 </details>
 
 <br>
-Account / Dashboard Page
+Dashboard Page
 
 <details>
 <summary>
 Desktop
 </summary>
 
-![Desktop Dashboard Page Wireframes](docs/wireframes/desktop/dashboard-page.png)
+![Desktop Dashboard Page Wireframes](docs/wireframes/desktop/dashboard.png)
 </details>
 <details>
 <summary>
 Tablet
 </summary>
 
-![Tablet Dashboard Page Wireframes](docs/wireframes/tablet/dashboard-page-tablet.png)
+![Tablet Dashboard Page Wireframes](docs/wireframes/tablet/dashboard-tablet.png)
 </details>
 <details>
 <summary>
 Mobile
 </summary>
 
-![Mobile Dashboard Page Wireframes](docs/wireframes/mobile/dashboard-page-mobile.png)
+![Mobile Dashboard Page Wireframes](docs/wireframes/mobile/dashboard-mobile.png)
 </details>
+
+<br>
+Admin Dashboard
+
+<details>
+<summary>
+Desktop
+</summary>
+
+![Desktop Admin Dashboard Page Wireframes](docs/wireframes/desktop/admin-dashboard.png)
+</details>
+
 
 ### The Surface Plane
 
@@ -364,7 +429,7 @@ Finally, to introduce subtle variation and soften the overall look, we're introd
 Overall, our carefully curated color scheme aims to create a harmonious and visually appealing experience for our users, balancing contrast, readability, and engagement throughout the website.
 
 
-In order to ensure that our chosen color scheme meets accessibility standards and provides optimal readability for all users, we employ a contrast grid to evaluate the contrast ratios between text and background colors. This grid allows us to assess the color combinations used throughout the website and verify that they adhere to accessibility guidelines.
+In order to ensure that our chosen color scheme meets accessibility standards and provides optimal readability for all users, we employed a contrast grid from [eightshapes](https://contrast-grid.eightshapes.com/) to evaluate the contrast ratios between text and background colors. This grid allows us to assess the color combinations used throughout the website and verify that they adhere to accessibility guidelines.
 
 ![Contrast Grid Screenshot](docs/colour-scheme/contrast-grid-screenshot.png)
 
