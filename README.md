@@ -469,23 +469,65 @@ Complementing Montserrat, we've selected Lato for body text, known for its versa
 
 #### Navbar
 
+Our navigation bar is meticulously crafted to enhance user experience at every turn. It gracefully combines aesthetic appeal with practical functionality, featuring transparency on the homepage for a captivating touch against the hero image, while adopting a sleek dark grey color scheme on other pages to maintain consistency. Catering to different user roles, it offers tailored navigation options, ensuring seamless access to relevant features and information based on individual needs and preferences.
+
+
+##### Navbar Homepage
+
 ![Nav Bar Homepage](docs/screenshots/navbar/nav-bar-home.png)
+
+##### Navbar Homepage User Logged In
 
 ![Nav Bar Homepage User Logged In](docs/screenshots/navbar/nav-bar-home-user.png)
 
+##### Navbar Homepage Admin Logged In
+
 ![Nav Bar Homepage Admin Logged In](docs/screenshots/navbar/nav-bar-home-admin.png)
+
+##### Navbar all other pages User Logged In
 
 ![Nav Bar All Pages other than Homepage](docs/screenshots/navbar/nav-bar-grey.png)
 
+##### Navbar Collapsed
+
 ![Nav Bar Collapsed](docs/screenshots/navbar/nav-bar-collapsed.png)
+
+##### Navbar Offcanvas
 
 ![Nav Bar Offcanvas](docs/screenshots/navbar/nav-bar-offcanvas.png)
 
+##### Navbar Offcanvas User Logged In
+
 ![Nav Bar Offcanvas User Logged In](docs/screenshots/navbar/nav-bar-offcanvas-user.png)
+
+##### Navbar Offcanvas Admin Logged In
 
 ![Nav Bar Offcanvas Admin Logged In](docs/screenshots/navbar/nav-bar-offcanvas-admin.png)
 
+
 #### Footer
+
+Our footer is a comprehensive hub of essential information and connectivity, featuring:
+
+- Contact section: Providing our address, email, and phone number.
+- Opening hours: Offering clarity on our service availability.
+- Links section: Curated resources for seamless navigation.
+- Social media links: Allowing user to connect with us across different sites.
+- Copyright and educational disclaimer.
+
+
+##### Footer Desktop
+
+![Footer Desktop](docs/screenshots/footer/footer-desktop.png)
+
+##### Footer Tablet
+
+![Footer Tablet](docs/screenshots/footer/footer-tablet.png)
+
+##### Footer Mobile
+
+![Footer Mobile](docs/screenshots/footer/footer-mobile.png)
+
 
 #### Landing Page
 
