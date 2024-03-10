@@ -118,9 +118,9 @@ When crafting our site, we meticulously detail user stories and prioritize the d
 | User Story # | Title                   | Story (Content)                                                    | MoSCoW     | Story Points |
 |--------------|-------------------------|--------------------------------------------------------------------|------------|--------------|
 | 25           | Agent Admin Dashboard   | As a Agent I can Display a admin dashboard so that I can read through user messages and valuation request and delete them once actioned | Should Have | 5            |
-| 13           | Valuation Request       | As a Potential Seller I can Request a Valuation so that I can have my property valued | Should Have | 5            |
-| 19           | Apply to Newsletter     | As a Site User I can Apply to the newsletter so that I can keep up to date with Apex Estates latest news | Could Have | TBD          |
-| 22           | User Messages           | As a Site User I can send agents a message so that I can receive personalised assistance with my enquiries | Could Have | TBD          |
+| 13           | Valuation Request       | As a Potential Seller I can Request a Valuation so that I can have my property valued | Should Have | 3            |
+| 19           | Apply to Newsletter     | As a Site User I can Apply to the newsletter so that I can keep up to date with Apex Estates latest news | Could Have | 2          |
+| 22           | User Messages           | As a Site User I can send agents a message so that I can receive personalised assistance with my enquiries | Could Have | 3          |
 
 </details>
 
