@@ -726,7 +726,30 @@ Features:
 
 </details>
 
+---
+
 #### About Us
+
+The About Us page provides insight into Apex Estates and its dedicated team of professionals. Here, visitors can learn about our company's mission, values, and commitment to excellence in the real estate industry.
+
+<details>
+<summary>About Us Page Screenshots</summary>
+
+##### About Us Page Desktop
+
+![About Us Page Desktop](docs/screenshots/about-us/about-us.png)
+
+##### About Us Page Tablet
+
+![About Us Page Tablet](docs/screenshots/about-us/about-us-tablet.png)
+
+##### About Us Page Mobile
+
+![About Us Page Mobile](docs/screenshots/about-us/about-us-mobile.png)
+
+</details>
+
+---
 
 #### Contact Us
 
