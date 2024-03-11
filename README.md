@@ -513,6 +513,8 @@ Our navigation bar is meticulously crafted to enhance user experience at every t
 
 Our footer is a comprehensive hub of essential information and connectivity, featuring:
 
+Features:
+
 - **Contact section:** Providing our address, email, and phone number.
 - **Opening hours:** Offering clarity on our service availability.
 - **Links section:** Curated resources for seamless navigation.
@@ -546,7 +548,7 @@ As users scroll down the page, they encounter the 'Latest Properties' section, d
 
 We also encourage users who own properties to consider requesting a free valuation through our platform. Additionally, we feature a review of our company, followed by a signup form for our newsletter, providing users with the opportunity to stay updated on the latest developments and offerings.
 
-In summary:
+Features:
 
 - **Premium design elements:** Hero image featuring an orange sunset over the London skyline, echoing site colors.
 - **Latest Properties section:** Displaying four newest listings with clickable cards for easy access.
@@ -574,7 +576,7 @@ In summary:
 
 ---
 
-#### Property Lisitings
+#### Property Listings
 
 The Property Listings page stands as the cornerstone of our platform, fulfilling our core mission of providing users with an extensive array of properties available for sale. With a user-centric design featuring eight listings per page, our interface ensures clarity and ease of navigation. Pagination buttons are intelligently integrated to appear only when needed, streamlining the browsing experience. For logged-in users, the option to favorite properties directly from the listings page enhances interaction and facilitates efficient organization of preferences. Additionally, agents and administrators can seamlessly add new property listings, ensuring our database remains up-to-date with the latest offerings.
 
@@ -613,7 +615,52 @@ Features:
 
 </details>
 
+---
+
 #### Property Details
+
+The Property Detail Page offers users a deeper exploration of their selected property, accessed by interacting with any property card across the site. Upon arrival, users are greeted with a comprehensive overview, including a larger feature image capturing the essence of the property, along with essential details such as price, listed date, and property type. Additionally, users can conveniently favorite the property for future reference. A concise summary provides key information, including the property's type, number of bedrooms and bathrooms, and whether it offers parking or a garage. Further details are provided in the description section, styled using Summernote, offering a rich and engaging narrative that paints a vivid picture of the property's unique features and attributes. If the user is an admin or an agent, they are able to edit or delete the relevant property listing. If the agent or admin selects delete, it will prompt for confirmation to ensure they are sure they want to delete the property.
+
+**Features:**
+
+- **Detailed Overview:** Presents users with a comprehensive look at their chosen property, featuring a larger feature image, price, listed date, and property type.
+  
+- **Convenient Interaction:** Users can easily favorite the property directly from the page for future reference.
+  
+- **Concise Summary:** Highlights essential information including property type, bedroom and bathroom count, and parking/garage availability.
+  
+- **Styled Description:** Utilizes Summernote to present a richly styled description, enhancing the narrative and showcasing the property's unique features and attributes.
+  
+- **Admin/Agent Functionality:** Provides admins and agents with convenient access to edit and delete property listings directly from this page, ensuring efficient management and updates.
+
+<details>
+<summary>Property Details Screenshots</summary>
+
+##### Property Details Page Desktop
+
+![Property Details Page Desktop](docs/screenshots/property-details/property-details.png)
+
+##### Property Details Page Desktop User Logged In
+
+![Property Details Page Desktop User Logged In](docs/screenshots/property-details/property-details-user.png)
+
+##### Property Details Page Desktop Admin Logged In
+
+![Property Details Page Desktop Admin Logged In](docs/screenshots/property-details/property-details-admin.png)
+
+##### Property Details Page Desktop Deletion Example
+
+![Property Details Page Desktop Deletion Example](docs/screenshots/property-details/property-details-deletion.png)
+
+##### Property Details Page Tablet
+
+![Property Details Page Tablet](docs/screenshots/property-details/property-details-tablet.png)
+
+##### Property Details Page Mobile
+
+![Property Details Page Mobile](docs/screenshots/property-details/property-details-mobile.png)
+
+</details>
 
 #### Create Property Listing Page
 
