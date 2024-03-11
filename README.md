@@ -662,7 +662,38 @@ The Property Detail Page offers users a deeper exploration of their selected pro
 
 </details>
 
+---
+
 #### Create Property Listing Page
+
+The Create Property page is accessible only to admins and agents. This feature allows these users to create a listing in the database directly from the front end. Once the listing is created and submitted, the information is immediately uploaded to the database. Consequently, the new listing becomes visible on the user's listings page, ensuring that the property is available for viewing by potential buyers without delay.
+
+- **Exclusive Access:** Limited to admins and agents, providing them with the ability to create property listings.
+
+- **Seamless Integration:** Enables users to input property details directly on the front end, with immediate upload to the database upon submission.
+
+- **Image Upload:** Integration with Cloudinary allows users to upload property images easily, enhancing listing visual appeal and attractiveness.
+
+- **Rich Description:** Utilizes Summernote for the property description field, enabling users to format and style descriptions with ease.
+
+<details>
+<summary>Create Property Listings Screenshots</summary>
+
+##### Create Property Listing Desktop
+
+![Create Property Listing Desktop](docs/screenshots/create-property/create-property-listing.png)
+
+##### Create Property Listing Tablet
+
+![Create Property Listing Tablet](docs/screenshots/create-property/create-property-listing-tablet.png)
+
+##### Create Property Listing Mobile
+
+![Create Property Listing Mobile](docs/screenshots/create-property/create-property-listing-mobile.png)
+
+</details>
+
+---
 
 #### Edit Property Listing Page
 
