@@ -753,6 +753,36 @@ The About Us page provides insight into Apex Estates and its dedicated team of p
 
 #### Contact Us
 
+The Contact Us page serves as a hub for users to connect with Apex Estates through various channels. At the top of the page, visitors will find essential contact information, including email, phone number, address, and links to our social media profiles. Additionally, a Google Map integration provides users with a visual representation of our location. Below this section or to the side depending on screen size is a "Send Us a Message" form, which offers a convenient way for users to reach out to us directly. The form prompts users to provide their first name, last name, email address, and message, enabling seamless communication between our team and our clients. We strive to make it easy for users to get in touch with us, whether they have inquiries, feedback, or are interested in our services.
+
+Features:
+
+- **Comprehensive Contact Information:** Provides users with essential contact details, including email, phone number, address, and social media links, ensuring multiple channels for communication.
+
+- **Interactive Google Map Integration:** Offers users a visual representation of our location, enhancing accessibility and providing easy navigation.
+
+- **User-Friendly Message Form:** Enables users to send messages directly to Apex Estates by filling out a simple form with their first name, last name, email address, and message, facilitating efficient communication.
+
+<details>
+
+<summary>Contact Us Page Screenshots</summary>
+
+##### Contact Us Page Desktop
+
+![Contact Us Page Desktop](docs/screenshots/contact-us/contact-us.png)
+
+##### Contact Us Page Tablet
+
+![Contact Us Page Tablet](docs/screenshots/contact-us/contact-us-tablet.png)
+
+##### Contact Us Page Mobile
+
+![Contact Us Page Mobile](docs/screenshots/contact-us/contact-us-mobile.png)
+
+</details>
+
+---
+
 #### Request Valuation
 
 #### Log In
