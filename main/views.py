@@ -17,9 +17,13 @@ def home(request):
 
     if request.method == 'POST':
         form = NewsletterSubscriptionForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'You have successfully signed up for the newsletter!')
+        try:
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'You have successfully signed up for the newsletter!')
+                return redirect('home')
+        except ValueError:
+            messages.error(request, 'You have already signed up for the newsletter!')
             return redirect('home')
     else:
         form = NewsletterSubscriptionForm()

@@ -11,7 +11,7 @@ class Message(models.Model):
         return f"{self.first_name} {self.last_name}"
     
 class NewsletterSignUp(models.Model):
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     sign_up_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
