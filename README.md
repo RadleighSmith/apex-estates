@@ -558,15 +558,60 @@ In summary:
 <details>
 <summary>Landing Page Screenshots</summary>
 
+##### Landing Page Desktop
+
 ![Landing Page Desktop](docs/screenshots/landing-page/landing-page.png)
 
+##### Landing Page Tablet
+
 ![Landing Page Tablet](docs/screenshots/landing-page/landing-page-tablet.png)
+
+##### Landing Page Mobile
 
 ![Landing Page Mobile](docs/screenshots/landing-page/landing-page-mobile.png)
 
 </details>
 
+---
+
 #### Property Lisitings
+
+The Property Listings page stands as the cornerstone of our platform, fulfilling our core mission of providing users with an extensive array of properties available for sale. With a user-centric design featuring eight listings per page, our interface ensures clarity and ease of navigation. Pagination buttons are intelligently integrated to appear only when needed, streamlining the browsing experience. For logged-in users, the option to favorite properties directly from the listings page enhances interaction and facilitates efficient organization of preferences. Additionally, agents and administrators can seamlessly add new property listings, ensuring our database remains up-to-date with the latest offerings.
+
+Features:
+
+- **Comprehensive Listings:** Each page presents users with eight meticulously curated property listings or cards, offering a rich selection while maintaining clarity and ease of navigation.
+
+- **Pagination:** Navigation is optimized through an intuitive pagination system. Pagination buttons dynamically appear only when necessary, ensuring a fluid browsing experience without unnecessary clutter.
+
+- **User Interaction:** Logged-in users benefit from seamless interaction by favoriting properties directly from the listings page. This feature simplifies the process of saving and organizing preferred properties for future reference.
+
+- **Agent/Admin Privileges:** Agents and administrators enjoy the convenience of adding new property listings directly from this centralized hub. This capability ensures our listings remain up-to-date and reflective of the latest offerings in the market.
+
+<details>
+<summary>Property Listings Screenshots</summary>
+
+##### Property Listings Desktop
+
+![Property Listings Page Desktop](docs/screenshots/property-listings/property-listings-page.png)
+
+##### Property Listings Desktop User Logged In
+
+![Property Listings Page Desktop User Logged In](docs/screenshots/property-listings/property-listings-page-user.png)
+
+##### Property Listings Desktop Admin Logged In
+
+![Property Listings Page Desktop Admin Logged In](docs/screenshots/property-listings/property-listings-page-admin.png)
+
+##### Property Listings Desktop Admin Logged In
+
+![Property Listings Page Tablet](docs/screenshots/property-listings/property-listings-page-tablet.png)
+
+##### Property Listings Desktop Admin Logged In
+
+![Property Listings Page Mobile](docs/screenshots/property-listings/property-listings-page-mobile.png)
+
+</details>
 
 #### Property Details
 
