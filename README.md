@@ -697,6 +697,35 @@ The Create Property page is accessible only to admins and agents. This feature a
 
 #### Edit Property Listing Page
 
+The Edit Property Listing feature empowers admins and agents with exclusive access to efficiently manage property listings directly from the front end. Leveraging this functionality, users can seamlessly modify property details, ensuring accuracy and relevance in real-time. With the convenience of front-end editing, updates to property information are promptly reflected in the database, guaranteeing consistency across all platforms. Integrated with Cloudinary, users can effortlessly change the featured image, enhancing the visual appeal of listings. Additionally, the use of Summernote for description editing facilitates the creation of rich, formatted property descriptions, enabling agents to showcase the unique features and attributes of each listing effectively.
+
+Features:
+
+- **Admin/Agent Privilege:** Reserved for admins and agents, granting them exclusive access to edit property listings.
+
+- **Front-End Editing:** Allows users to modify property details directly on the front end, facilitating convenient updates.
+
+- **Seamless Database Integration:** Changes made to property listings are immediately reflected in the database upon submission.
+
+- **Enhanced Functionality:** Provides flexibility for admins and agents to manage property listings efficiently, ensuring accuracy and relevance.
+
+<details>
+<summary>Edit Property Listings Screenshots</summary>
+
+##### Edit Property Listing Desktop
+
+![Edit Property Listing Desktop](docs/screenshots/edit-property/edit-property.png)
+
+##### Edit Property Listing Tablet
+
+![Edit Property Listing Tablet](docs/screenshots/edit-property/edit-property-tablet.png)
+
+##### Edit Property Listing Mobile
+
+![Edit Property Listing Mobile](docs/screenshots/edit-property/edit-property-mobile.png)
+
+</details>
+
 #### About Us
 
 #### Contact Us
