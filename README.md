@@ -461,7 +461,6 @@ In crafting our website's visual identity, we've carefully curated typography to
 
 Complementing Montserrat, we've selected Lato for body text, known for its versatility and legibility. Lato's clean and rounded letterforms provide a comfortable reading experience, enhancing comprehension and engagement with our content. Whether users are browsing lengthy descriptions or informative articles, Lato ensures clarity and ease of reading, contributing to a seamless user experience.
 
----
 
 ## Features
 
@@ -471,6 +470,8 @@ Complementing Montserrat, we've selected Lato for body text, known for its versa
 
 Our navigation bar is meticulously crafted to enhance user experience at every turn. It gracefully combines aesthetic appeal with practical functionality, featuring transparency on the homepage for a captivating touch against the hero image, while adopting a sleek dark grey color scheme on other pages to maintain consistency. Catering to different user roles, it offers tailored navigation options, ensuring seamless access to relevant features and information based on individual needs and preferences.
 
+<details>
+<summary>Navbar Screenshots</summary>
 
 ##### Navbar Homepage
 
@@ -504,17 +505,22 @@ Our navigation bar is meticulously crafted to enhance user experience at every t
 
 ![Nav Bar Offcanvas Admin Logged In](docs/screenshots/navbar/nav-bar-offcanvas-admin.png)
 
+</details>
+
+---
 
 #### Footer
 
 Our footer is a comprehensive hub of essential information and connectivity, featuring:
 
-- Contact section: Providing our address, email, and phone number.
-- Opening hours: Offering clarity on our service availability.
-- Links section: Curated resources for seamless navigation.
-- Social media links: Allowing user to connect with us across different sites.
-- Copyright and educational disclaimer.
+- **Contact section:** Providing our address, email, and phone number.
+- **Opening hours:** Offering clarity on our service availability.
+- **Links section:** Curated resources for seamless navigation.
+- **Social media links:** Allowing user to connect with us across different sites.
+- **Copyright and educational disclaimer.**
 
+<details>
+<summary>Footer Screenshots</summary>
 
 ##### Footer Desktop
 
@@ -528,8 +534,37 @@ Our footer is a comprehensive hub of essential information and connectivity, fea
 
 ![Footer Mobile](docs/screenshots/footer/footer-mobile.png)
 
+</details>
+
+---
 
 #### Landing Page
+
+The landing page serves as the initial point of entry for users visiting our site. It features several design elements that reflect the premium nature of our platform. Our hero image, showcasing an orange sunset over the London skyline, was selected for its incorporation of our site's colors, which are echoed in our call-to-action buttons throughout the site.
+
+As users scroll down the page, they encounter the 'Latest Properties' section, displaying the four most recently listed properties. Users can click on these cards to access more details or even add them to their favorites if they're logged in. Below this, we present another call-to-action prompting users to explore our listings page, as this is the primary function of our site.
+
+We also encourage users who own properties to consider requesting a free valuation through our platform. Additionally, we feature a review of our company, followed by a signup form for our newsletter, providing users with the opportunity to stay updated on the latest developments and offerings.
+
+In summary:
+
+- **Premium design elements:** Hero image featuring an orange sunset over the London skyline, echoing site colors.
+- **Latest Properties section:** Displaying four newest listings with clickable cards for easy access.
+- **Call-to-action for Listings page:** Directing users to explore our primary site function.
+- **Free valuation prompt:** Encouraging property owners to request a valuation through our platform.
+- **Company review:** Providing users with insight into our company's reputation and credibility.
+- **Newsletter signup form:** Allowing users to stay updated on the latest developments and offerings.
+
+<details>
+<summary>Landing Page Screenshots</summary>
+
+![Landing Page Desktop](docs/screenshots/landing-page/landing-page.png)
+
+![Landing Page Tablet](docs/screenshots/landing-page/landing-page-tablet.png)
+
+![Landing Page Mobile](docs/screenshots/landing-page/landing-page-mobile.png)
+
+</details>
 
 #### Property Lisitings
 
