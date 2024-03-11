@@ -10,78 +10,80 @@
     <h1 class="border-bottom my-3">Welcome, {{ user.first_name }}!</h1>
 
     {% if user.is_superuser or user.is_staff %}
-    <!-- User Messages Table -->
-    <h2 class="m-3 text-center">User Messages</h2>
-    <div class="table-responsive">
-        <table class="table table-striped table-hover align-middle">
-            <thead class="table-dark text-center">
-                <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Message</th>
-                    <th>Sent On</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for message in user_messages %}
+    <div class="d-none d-lg-block">
+        <!-- User Messages Table -->
+        <h2 class="m-3 text-center">User Messages</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark text-center">
                     <tr>
-                        <td>{{ forloop.counter }}</td>
-                        <td>{{ message.first_name }}</td>
-                        <td>{{ message.last_name }}</td>
-                        <td>{{ message.email }}</td>
-                        <td>{{ message.message }}</td>
-                        <td>{{ message.created_at }}</td>
-                        <td>
-                            <form action="{% url 'delete_message' message.id %}" method="post">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
-                        </td>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                        <th>Sent On</th>
+                        <th>Actions</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    <div class="horizontal-rule-2 my-4"></div>
-    <!-- Valuation Requests Table -->
-    <h2 class="m-3 text-center">Valuation Requests</h2>
-    <div class="table-responsive">
-        <table class="table table-striped table-hover align-middle">
-            <thead class="table-dark text-center">
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Contact Number</th>
-                    <th>Property Address</th>
-                    <th>Email</th>
-                    <th>Property Type</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for valuation_request in requested_valuations %}
+                </thead>
+                <tbody>
+                    {% for message in user_messages %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ message.first_name }}</td>
+                            <td>{{ message.last_name }}</td>
+                            <td>{{ message.email }}</td>
+                            <td>{{ message.message }}</td>
+                            <td>{{ message.created_at }}</td>
+                            <td>
+                                <form action="{% url 'delete_message' message.id %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="horizontal-rule-2 my-4"></div>
+        <!-- Valuation Requests Table -->
+        <h2 class="m-3 text-center">Valuation Requests</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark text-center">
                     <tr>
-                        <td>{{ forloop.counter }}</td>
-                        <td>{{ valuation_request.name }}</td>
-                        <td>{{ valuation_request.contact_number }}</td>
-                        <td>{{ valuation_request.property_address }}</td>
-                        <td>{{ valuation_request.email }}</td>
-                        <td>{{ valuation_request.property_type }}</td>
-                        <td>
-                            <form action="{% url 'delete_valuation' valuation_request.id %}" method="post">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
-                        </td>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Contact Number</th>
+                        <th>Property Address</th>
+                        <th>Email</th>
+                        <th>Property Type</th>
+                        <th>Actions</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {% for valuation_request in requested_valuations %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ valuation_request.name }}</td>
+                            <td>{{ valuation_request.contact_number }}</td>
+                            <td>{{ valuation_request.property_address }}</td>
+                            <td>{{ valuation_request.email }}</td>
+                            <td>{{ valuation_request.property_type }}</td>
+                            <td>
+                                <form action="{% url 'delete_valuation' valuation_request.id %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="horizontal-rule-2 my-4"></div>
     </div>
-    <div class="horizontal-rule-2 my-4"></div>
     {% endif %}
     <!-- Check if there are favorite properties -->
     {% if page_obj %}
