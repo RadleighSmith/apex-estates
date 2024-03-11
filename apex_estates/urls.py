@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import handler404, handler500
+from .views import apex_404_page, apex_500_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,3 +28,11 @@ urlpatterns = [
     path('', include('valuation.urls')),
     path('', include('django.contrib.auth.urls')),
 ]
+
+# Admin Site title
+admin.site.site_header = "Apex Estates"
+admin.site.site_title = "Apex Estates Administration"
+
+# Error Pages
+handler404 = apex_404_page
+handler500 = apex_500_page
