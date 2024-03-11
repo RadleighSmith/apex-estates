@@ -4,8 +4,8 @@
 {% block title %}Error 500{% endblock %}
 
 {% block content %}
-<div class="container-fluid background-image-container">
-    <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Background Image">
+<div class="container-fluid background-image-container d-flex justify-content-center align-items-center">
+    <img class="background-image position-absolute top-0 left-0 w-100 h-100" src="{% static 'images/background.jpg' %}" alt="Background Image">
     <div class="container bg-white shadow rounded my-5 p-4 text-center">
         <h1 class="border-bottom">Error 500: Internal Server Error</h1>
         <i class="fa-solid fa-house-crack fa-beat fa-2xl mt-5"></i>
