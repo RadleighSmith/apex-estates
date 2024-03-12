@@ -944,9 +944,35 @@ In this section we will outline upcoming improvements and features designed to e
 
 ## Languages
 
-## Frameworks
+HTML, CSS, JavaScript, Python
 
-## Libraries
+## Frameworks and Libraries
+
+| Framework/Library       | Description                                      |
+|-------------------------|--------------------------------------------------|
+| asgiref                 | ASGI (Asynchronous Server Gateway Interface) - A low-level library for building ASGI applications. |
+| bleach                  | HTML sanitizer - A tool for sanitizing and cleaning HTML input. |
+| certifi                 | Python SSL certificate authority - A collection of CA certificates for Python SSL verification. |
+| charset-normalizer      | Charset normalization - A library for normalizing and converting character encodings. |
+| cloudinary              | Cloud-based image and video management - A platform for storing, managing, and delivering images and videos. |
+| crispy-bootstrap5       | Bootstrap 5 integration for Django Crispy Forms - Simplifies integration of Bootstrap 5 styles with Django forms. |
+| dj-database-url         | Database configuration helper for Django - Parses database connection URLs for Django applications. |
+| Django                  | High-level Python web framework - A powerful web framework for building web applications in Python. |
+| django-crispy-forms     | DRY forms for Django apps - Simplifies form rendering and validation in Django applications. |
+| django-summernote       | WYSIWYG editor for Django - Integrates the Summernote What You See Is What You Get editor into Django forms. |
+| gunicorn                | Python WSGI HTTP server - A Python HTTP server for running WSGI applications. |
+| idna                    | Internationalized Domain Names in Applications - A library for handling IDNA (Internationalized Domain Names in Applications) encoding and decoding. |
+| psycopg2                | PostgreSQL adapter for Python - Provides Python bindings for PostgreSQL database connections. |
+| requests                | HTTP library for Python - Simplifies making HTTP requests in Python. |
+| setuptools              | Library for packaging Python projects - Facilitates the distribution of Python packages. |
+| six                     | Python 2 and 3 compatibility utilities - Provides utilities for writing code that is compatible with both Python 2 and Python 3. |
+| sqlparse                | SQL parser for Python - Parses SQL queries and statements in Python. |
+| urllib3                 | HTTP library for Python - Provides a Python HTTP client for making HTTP requests. |
+| webencodings            | Character encoding aliases for Python - Provides character encoding aliases for Python applications. |
+| whitenoise              | Static file serving for Python web applications - Simplifies serving static files in Python web applications. |
+| Bootstrap 5             | Front-end framework for building responsive websites - A popular framework for building responsive and mobile-first websites. |
+| jQuery 3.6.0            | JavaScript library for DOM manipulation - Simplifies DOM manipulation and event handling in JavaScript. |
+
 
 ## Testing
 
