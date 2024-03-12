@@ -30,9 +30,7 @@ Live site: Link to go here!
 
 [Languages](#languages)
 
-[Frameworks](#frameworks)
-
-[Libraries](#libraries)
+[Frameworks and Libraries](#frameworks-and-libraries)
 
 [Testing](#testing)
 
@@ -976,7 +974,71 @@ HTML, CSS, JavaScript, Python
 
 ## Testing
 
+Please the [TESTING.md](TESTING.md) file for all the testing and validation.
+
 ## Bugs & Fixes
+
+### Bug: *Property Price Display Issue*
+
+**Problem:**
+
+The issue arose when attempting to display property prices on the homepage's latest properties cards. Despite the property prices being correctly displayed on the property listings page, they were not appearing on the latest properties cards of the homepage. These two sections are part of different Django apps, with the property listings page residing in the property app and the homepage in the main app.
+
+**Cause:**
+
+The absence of price information on the latest properties cards of the homepage was due to the context data passed to the homepage template. Unlike the property listings page, the homepage's view function did not include the formatted price information for each property in the context data.
+
+**Fix:**
+
+Modifications were made to the view function responsible for rendering the homepage (home view). Specifically, the home view was updated to retrieve the latest properties from the database and format their prices using the intcomma filter. By iterating over the queryset of latest properties and formatting their prices, the view ensured that the formatted price information was included in the context data passed to the homepage template. Consequently, the property prices started appearing correctly on the latest properties cards of the homepage.
+
+---
+
+### Bug: *Incorrect Favorite Button Redirection*
+
+**Problem:**
+
+Selecting the favorite button on a property card redirected users to the property details page instead of keeping them on the property listings page with the correct pagination. This behavior deviated from the intended user flow, causing confusion and disrupting the browsing experience.
+
+**Cause:**
+
+The incorrect redirection behavior occurred because the favorite button's URL was configured to direct users to the property details page. As a result, when users clicked the favorite button on a property card, they were redirected to the property details page, disrupting their browsing flow and removing them from the property listings page.
+
+**Fix:**
+
+The redirection logic for the favorite button was modified to keep users on the property listings page with the correct pagination. Instead of redirecting users to the property details page, the favorite button now redirects users back to the property listings page. Additionally, the code ensures that the pagination parameters are preserved during redirection, allowing users to seamlessly return to their previous pagination state after interacting with the favorite button on a property card. With this fix, the browsing experience is enhanced, and users can efficiently manage their favorite properties without disruption.
+
+---
+
+### Bug: *Navbar Alignment Issue*
+
+**Problem:**
+
+The central section of the navbar encountered alignment discrepancies, leading to an overall misalignment issue.
+
+**Cause:**
+
+The misalignment stemmed from the presence of unnecessary classes (such as text-center, m-4, col-11) and a convoluted structure in the original codebase. These elements contributed to the complexity of the layout, resulting in misalignment.
+
+**Fix:**
+
+To address this, several steps were taken. First, the unnecessary classes, including text-center, m-4, and col-11, were removed from the navbar, simplifying its structure. Next, the structure of the navbar underwent reorganization to eliminate redundant divs, streamlining the layout. Additionally, Bootstrap flexbox classes (d-flex, justify-content-between, ms-auto) were implemented to effectively manage alignment and positioning within the navbar. Finally, adjustments were made to the offcanvas body structure to ensure proper alignment of navbar items within the offcanvas, contributing to a cohesive layout.
+
+---
+
+### Bug: *Address Length DataError*
+
+**Problem:**
+
+When the address provided exceeds 50 characters, despite setting the address field to allow a maximum of 100 characters, Django raises a DataError during the save operation.
+
+**Cause:**
+
+Django's SlugField defaults to a maximum length of 50 characters. When the slugify() function generates a slug based on the address, it surpasses this limit if the address exceeds 50 characters. Consequently, Django raises a DataError because the generated slug exceeds the field's length constraint.
+
+**Fix:**
+
+To rectify this issue, explicitly set max_length=100 for the SlugField. This adjustment ensures that the SlugField can accommodate slugs derived from addresses of up to 100 characters, aligning with the maximum length allowed for the address field. As a result, instances with longer addresses can be saved without triggering a DataError.
 
 ## Deployment
 
