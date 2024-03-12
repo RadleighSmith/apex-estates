@@ -144,6 +144,10 @@ When crafting our site, we meticulously detail user stories and prioritize the d
 </details>
 
 #### Not Included in This Release
+
+
+For further details regarding this section, please refer to the [Future Features](#future-features) section for additional information and insights.
+
 <details>
 <summary>Not Included User Stories</summary>
 
@@ -916,10 +920,24 @@ Features
 
 </details>
 
-
 ---
 
 ### Future Features
+
+In this section we will outline upcoming improvements and features designed to enhance the platforms experience.
+
+| Feature                               | Description                                                      |
+|---------------------------------------|------------------------------------------------------------------|
+| Password Reset                        | Users can reset their password conveniently from the login page or dashboard by receiving a verification email.  |
+| Property Search                       | Enhances user experience on the property listings page by enabling location-based searches with filters for price range, bedrooms, and title.  |
+| Property Filter                       | Provides users with the ability to refine property listings based on property type (e.g., apartment, semi-detached), streamlining their search process.  |
+| Write Newsletter                      | Empowers agents to craft and distribute newsletters effortlessly using collected subscriber data, fostering engagement and communication with users.  |
+| Live Text Chat                        | Facilitates real-time communication between users and agents via a user-friendly pop-up chat feature, offering immediate assistance and support. |
+| Interactive Property Listings Map     | Introduces an interactive map view option on the property listings page, allowing users to explore listings spatially for a more immersive browsing experience. |
+| Image Gallery for Property Listings   | Simplifies property exploration for users by enabling agents to upload multiple images for each listing, presenting them in an intuitive carousel format for easy navigation. |
+| Change Email                          | Enhances user account management by enabling email address updates directly from the user dashboard, ensuring seamless control and customization of user information. |
+| For Sale, Sold, Unpublished Listings  | Provides agents with comprehensive control over property listings, enabling them to mark properties as sold or unpublished as needed, thereby optimizing listing management and user experience. |
+| Account Deletion                      | Allows users to permanently delete their account from the platform, providing a streamlined process for account management and data privacy. |
 
 
 ---
