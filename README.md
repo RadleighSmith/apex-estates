@@ -516,9 +516,13 @@ Our footer is a comprehensive hub of essential information and connectivity, fea
 Features:
 
 - **Contact section:** Providing our address, email, and phone number.
+
 - **Opening hours:** Offering clarity on our service availability.
+
 - **Links section:** Curated resources for seamless navigation.
+
 - **Social media links:** Allowing user to connect with us across different sites.
+
 - **Copyright and educational disclaimer.**
 
 <details>
@@ -551,10 +555,15 @@ We also encourage users who own properties to consider requesting a free valuati
 Features:
 
 - **Premium design elements:** Hero image featuring an orange sunset over the London skyline, echoing site colors.
+
 - **Latest Properties section:** Displaying four newest listings with clickable cards for easy access.
+
 - **Call-to-action for Listings page:** Directing users to explore our primary site function.
+
 - **Free valuation prompt:** Encouraging property owners to request a valuation through our platform.
+
 - **Company review:** Providing users with insight into our company's reputation and credibility.
+
 - **Newsletter signup form:** Allowing users to stay updated on the latest developments and offerings.
 
 <details>
@@ -785,7 +794,51 @@ Features:
 
 #### Request Valuation
 
-#### Log In
+Our request valuation page features a simple form where users can input their name, contact number, property address, and email, along with the option to select their property type before submitting their information for valuation by an agent.
+
+<details>
+
+<summary>Request Valuation Page Screenshots</summary>
+
+##### Request Valutation Page Desktop
+
+![Request Valutation Page Desktop](docs/screenshots/request-valutation/request-valuation-desktop.png)
+
+##### Request Valutation Page Tablet
+
+![Request Valutation Page Tablet](docs/screenshots/request-valutation/request-valuation-tablet.png)
+
+##### Request Valuation Page Mobile
+
+![Request Valutation Page Mobile](docs/screenshots/request-valutation/request-valuation-mobile.png)
+
+</details>
+
+---
+
+#### Login
+
+Our login page, powered by Django's built-in authentication system, offers a seamless login experience with fields for username and password, including a link if the user does not yet have an account to sign up.
+
+<details>
+
+<summary>Login Page Screenshots</summary>
+
+##### Login Page Desktop
+
+![Login Page Desktop](docs/screenshots/login/login-page.png)
+
+##### Login Page Tablet
+
+![Login Page Tablet](docs/screenshots/login/login-page-tablet.png)
+
+##### Login Page Mobile
+
+![Login Page Mobile](docs/screenshots/login/login-page-mobile.png)
+
+</details>
+
+---
 
 #### Register
 
