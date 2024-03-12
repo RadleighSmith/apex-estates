@@ -862,10 +862,59 @@ Our register page offers a comprehensive registration process, featuring fields 
 
 </details>
 
+---
 
-#### Dashboard
+#### User Dashboard
+
+Our user dashboard provides a seamless experience for users to access and manage their favorited properties. With an organized pagination system, users can effortlessly navigate through their favorite listings, with each page showcasing up to 4 property cards, ensuring a user-friendly experience
+
+<details>
+
+<summary>User Dashboard Screenshots</summary>
+
+##### User Dashboard Desktop
+
+![User Dashboard Desktop](docs/screenshots/dashboard/dashboard.png)
+
+##### User Dashboard Tablet
+
+![User Dashboard Tablet](docs/screenshots/dashboard/dashboard-tablet.png)
+
+##### User Dashboard Mobile
+
+![User Dashboard Mobile](docs/screenshots/dashboard/dashboard-mobile.png)
+
+</details>
+
+---
 
 #### Admin Dashboard
+
+#### User Dashboard
+
+Our admin dashboard is meticulously crafted for agents, equipping them with the tools to efficiently review and manage user messages and valuations. Embracing a responsive design philosophy, our dashboard dynamically adjusts its layout to accommodate smaller screens, enabling agents to stay informed and productive whether they're in the office or on the move.
+
+Features
+
+- Responsive table design ensures usability across all device sizes.
+
+- Read and delete functionalities enable agents to manage user messages and valuation requests efficiently.
+
+- Agents can conveniently favorite properties for easy tracking and reference.
+
+<details>
+
+<summary>Admin Dashboard Screenshots</summary>
+
+##### User Dashboard Desktop
+
+![Admin Dashboard Desktop](docs/screenshots/admin-dashboard/admin-dashboard.png)
+
+![Admin Dashboard Tablet](docs/screenshots/admin-dashboard/admin-dashboard-tablet.png)
+
+![Admin Dashboard Mobile](docs/screenshots/admin-dashboard/admin-dashboard-mobile.png)
+
+</details>
 
 
 ---
