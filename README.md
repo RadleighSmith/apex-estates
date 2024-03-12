@@ -36,7 +36,7 @@ Live site: Link to go here!
 
 [Bugs & Fixes](#bugs--fixes)
 
-[Deployment](#deployment)
+[Deployment, Cloning and Forking](#deployment-cloning-and-forking)
 
 [Credits](#credits)
 
@@ -1040,6 +1040,77 @@ Django's SlugField defaults to a maximum length of 50 characters. When the slugi
 
 To rectify this issue, explicitly set max_length=100 for the SlugField. This adjustment ensures that the SlugField can accommodate slugs derived from addresses of up to 100 characters, aligning with the maximum length allowed for the address field. As a result, instances with longer addresses can be saved without triggering a DataError.
 
-## Deployment
+## Deployment, Cloning and Forking
+
+### Heroku Deployment:
+
+This website has been deployed using Heroku.
+
+Deployment Instructions:
+
+1. In Heroku, navigate to the dashboard and click on the "New" button in the top right corner, then select "Create New App."
+
+2. Provide a unique name for your app and choose the correct region based on your location. Click "Create App" to proceed.
+
+3. Once your app is created, go to the settings tab.
+
+4. Click on "Reveal Config Vars" to add any necessary keys for the application. For this project, keys such as `DISABLE_COLLECTSTATIC`, `DATABASE_URL`, `SECRET_KEY` and `CLOUDINARY_URL` were added, along with all key-value pairs from the env.py file.
+
+5. Click on "Add Buildpack" to install any dependencies required. In this project, the "python" buildpack was installed.
+
+6. Proceed to the "Deploy" tab. Select the deployment method, such as GitHub. Connect to your GitHub repository by searching for it and connecting to it.
+
+7. For manual deployment, click on "Deploy Branch." Once the deployment is complete, a success message will appear, indicating that your app was successfully deployed. Click the "View" button to access the deployed page and make note of its URL.
+
+8. Optionally, you can set up automatic deployment for continuous integration.
+
+9. If you encounter issues with CSS not displaying correctly on the deployed site, running the following command in your workspace may help: `./manage.py collectstatic`
+
+10. Before final deployment, ensure to set Debug mode back to False.
+
+---
+
+*Don't forget to perform the sacred ritual of offering a sacrifice to the Coding Gods for smooth deployment. A cup of coffee!!*
+
+*Please note this step is not required, but highly recommended for optimal coding karma.*
+
+---
+
+### Cloning this Repository:
+
+To clone this repository and start working on it, follow these instructions:
+
+1. Navigate to the GitHub repository and locate the green "Code" button.
+
+2. Click on the button to reveal the repository's link, and copy it.
+
+3. Open your preferred IDE or local coding environment and use the copied link to clone the repository. For example, in VSCode, you can click on "Clone Git Repository..." and paste the link when prompted. In CodeAnywhere, click on "Add new workspace" and select "Create from your project repository," then paste the link.
+
+4. If you're using VSCode, it's recommended to create a virtual environment. You can do this by running the command `python3 -m venv .venv` and activating the environment with `source .venv/bin/activate`.
+
+5. Install all dependencies listed in the requirements.txt file using the command ```pip3 install -r requirements.txt```.
+
+6. Create an env.py file in the main directory and enter key data (`DATABASE_URL, SECRET_KEY, CLOUDINARY_URL`) using `os.environ.setdefault()`.
+
+7. Ensure that both the virtual environment and env.py are named in the .gitignore file to avoid committing sensitive information.
+
+8. In settings.py, set Debug to `True` while developing and consider using Django's built-in SQLite database for testing purposes.
+
+9. Finally, verify that everything is working by running the program with the command `python3 manage.py runserver`.
+
+---
+
+### Forking from the Repository:
+
+1. Navigate to the GitHub repository and locate the branch symbol along with the number of existing branches.
+
+2. Click on the symbol to access details about the current branches, then click the green "New branch" button.
+
+3. Enter a name for the new branch and click the green "create new branch" button.
+
+4. Your new branch should now be visible on the screen.
+
+5. Click on the new branch and follow the cloning instructions to open and work on this branch.
+
 
 ## Credits
