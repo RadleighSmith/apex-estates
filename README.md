@@ -842,6 +842,27 @@ Our login page, powered by Django's built-in authentication system, offers a sea
 
 #### Register
 
+Our register page offers a comprehensive registration process, featuring fields for first name, last name, email, and password with checks for password strength. Users can confidently create their accounts and proceed to registration with ease, while those with existing accounts can conveniently access the login page via a provided link.
+
+<details>
+
+<summary>Register Page Screenshots</summary>
+
+##### Register Page Desktop
+
+![Register Page Desktop](docs/screenshots/register/register-page.png)
+
+##### Register Page Tablet
+
+![Register Page Tablet](docs/screenshots/register/register-page-tablet.png)
+
+##### Register Page Mobile
+
+![Register Page Mobile](docs/screenshots/register/register-page-mobile.png)
+
+</details>
+
+
 #### Dashboard
 
 #### Admin Dashboard
