@@ -2,10 +2,10 @@
 
 <div class="col-xxl-3 col-md-6 mb-3 d-flex justify-content-center align-items-center">
     <div class="card m-3">
-        <a href="{% url 'property_detail' slug=property.slug %}" class="card-link">
+        <a href="{% url 'property_detail' slug=property.slug %}" class="card-link" aria-label="Opens {{ property.address }}">
             <div class="card-image-container">
                 {% if "placeholder-home" in property.main_image.url %}
-                    <img src="{% static 'images/placeholder-home.jpg' %}" alt="placeholder image">
+                    <img src="{% static 'images/placeholder-home.jpg' %}" alt="Awaiting Property Picture">
                 {% else %}
                     <img src="{{ property.main_image.url }}" alt="{{ property.title }}">
                 {% endif %}
