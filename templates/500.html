@@ -9,8 +9,8 @@
     <div class="container bg-white shadow rounded my-5 p-4 text-center">
         <h1 class="border-bottom">Error 500: Internal Server Error</h1>
         <i class="fa-solid fa-house-crack fa-beat fa-2xl mt-5"></i>
-        <p class="p-3 h4">Sorry, something went wrong on our end. Please try again later.</p>
-        <a class="btn call-to-action" href="/">Click Here to return home</a>
+        <h2 class="p-3 h4">Sorry, something went wrong on our end. Please try again later.</h2>
+        <a class="btn call-to-action" aria-label="Go to Homepage" href="{% url 'home' %}">Return home</a>
     </div>
 </div>
 {% endblock %}

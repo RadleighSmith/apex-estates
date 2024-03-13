@@ -12,7 +12,8 @@
         <div class="bg-white p-4 rounded shadow">
             <h1 class="mb-4 text-center">Sign up</h1>
             <form method="POST">
-                {% csrf_token %}{{form|crispy}}
+                {% csrf_token %}
+                {{form|crispy}}
                 <div class="text-center d-grid gap-2">
                     <button type="submit" class="btn call-to-action">Register</button>
                 </div>
