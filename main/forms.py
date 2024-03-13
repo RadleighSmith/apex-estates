@@ -10,3 +10,6 @@ class NewsletterSubscriptionForm(forms.ModelForm):
     class Meta:
         model = NewsletterSignUp
         fields = ['email']
+        widgets = {
+            'email': forms.EmailInput(attrs={'autocomplete': 'on'})
+        }
