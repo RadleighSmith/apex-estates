@@ -21,9 +21,9 @@
                 <span>{{ property.bathrooms }} <i class="fa-solid fa-toilet"></i></span>
                 {% if request.user.is_authenticated %}
                     {% if property.is_favourite %}
-                        <span><a href="{% url 'favourite_property' property.slug %}" class="text-danger"><i class="fa-solid fa-heart fa-lg"></i></a></span>
+                        <span><a href="{% url 'favourite_property' property.slug %}" class="text-danger" aria-label="Remove from favorites"><i class="fa-solid fa-heart fa-lg"></i></a></span>
                     {% else %}
-                        <span><a href="{% url 'favourite_property' property.slug %}" class="text-muted"><i class="fa-regular fa-heart fa-lg"></i></a></span>
+                        <span><a href="{% url 'favourite_property' property.slug %}" class="text-muted" aria-label="Add to favorites"><i class="fa-regular fa-heart fa-lg"></i></a></span>
                     {% endif %}
                 {% endif %}
             </div>
