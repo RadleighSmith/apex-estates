@@ -11,13 +11,14 @@
     <div class="container bg-white rounded shadow my-5 p-4">
         <div class="row text-center p-4">
             <h1 class="border-bottom">Property Valuation</h1>
-            <p>Our experienced valuation specialists are ready to provide you with an accurate assessment. Whether you're
+            <p class="mt-4">Our experienced valuation specialists are ready to provide you with an accurate assessment. Whether you're
                 selling or simply curious, fill out the form below to get started on your personalized valuation journey. At
                 Apex Estates, we're here to help you unlock the potential of your property in today's dynamic real estate
                 market.</p>
         </div>
         <div class="row pb-5">
             <div class="col-md-8 offset-md-2">
+                <h2 class="m-2 h3 text-center">Unlock Your Property's Value</h2>
                 <form method="post" action="{% url 'valuation_request' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
