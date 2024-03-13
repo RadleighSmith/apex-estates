@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="container-fluid background-image-container">
-  <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Background Image">
+  <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Modern Apartment Background">
   <div class="container bg-white rounded shadow my-5 p-4">
     <!-- Title -->
     <div class="row">
@@ -39,10 +39,10 @@
         {% if request.user.is_authenticated %}
         {% if is_favourite %}
         <span id="favourite-property" class="me-3"><a href="{% url 'favourite_property' property.slug %}"
-            class="text-danger"><i class="fa-solid fa-heart fa-lg"></i></a></span>
+            class="text-danger" aria-label="Remove from favorites"><i class="fa-solid fa-heart fa-lg"></i></a></span>
         {% else %}
         <span id="favourite-property" class="me-3"><a href="{% url 'favourite_property' property.slug %}"
-            class="text-muted"><i class="fa-regular fa-heart fa-lg"></i></a></span>
+            class="text-muted" aria-label="Add to favorites"><i class="fa-regular fa-heart fa-lg"></i></a></span>
         {% endif %}
         {% endif %}
         <p class="small-text mb-0">Listed on: {{ property.listed_on }}</p>
@@ -81,14 +81,13 @@
     <!-- Description -->
     <div class="row mt-3">
       <div class="col-md-12">
-        <h5>Description</h5>
+        <h2 class="h3 pb-2">Description</h2>
         {{ property.description|safe }}
       </div>
     </div>
-    <!-- Back Button -->
+    <!-- Delete Button -->
     <div class="row mt-3">
       <div class="col-md-12 text-center">
-        <a href="{% url 'property_listings' %}" class="btn call-to-action">Back to Property Listings</a>
         {% if user.is_superuser or user.is_staff %}
         <button type="button" class="btn btn-danger m-3" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">Delete Property</button>
         {% endif %}
