@@ -42,6 +42,10 @@ During our validation process, our pages underwent rigorous scrutiny, resulting 
 
 ### CSS Validation
 
+To ensure the quality and consistency of our website's styling, we utilized the W3C CSS Validation Service. This tool allowed us to thoroughly check our CSS code against established standards, ensuring it meets best practices and specifications.
+
+![CSS Validation Image](docs/screenshots/w3c-css-validation.png)
+
 ### Python Validation
 
 ### JavaScript Validation
