@@ -383,6 +383,16 @@ h2 {
     border: none;
 }
 
+/* EDIT PROPERTY PAGE */
+
+.edit-img{
+    max-width: 100%;
+    max-height: 40rem;
+    border: 1px solid var(--beige);
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 /* ABOUT PAGE */
 
 .agent-img {
@@ -390,8 +400,6 @@ h2 {
     max-width: 100px; 
     box-shadow: 0 0 20px var(--orange);
 }
-
-/* LOGON AND REGISTER PAGES */
 
 /* CONTACT US PAGE */
 
