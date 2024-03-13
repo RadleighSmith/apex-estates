@@ -11,20 +11,21 @@
                 <p><i class="fas fa-phone me-2"></i><a class="text-decoration-none text-white" href="tel:07123456789" aria-label="Phone: 07123 456789">07123 456789</a></p>                    
             </div>
             <!-- Opening Hours -->
-            <div class="col-md-4 mb-4 text-center">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Opening Hours</h6>
-                <table class="table table-dark">
+            <div class="col-md-4 mb-4 text-center" aria-labelledby="opening-hours-heading">
+                <div id="opening-hours-details" class="sr-only">Details about opening hours</div>
+                <h6 id="opening-hours-heading" class="text-uppercase mb-4 font-weight-bold">Opening Hours</h6>
+                <table class="table table-dark" aria-describedby="opening-hours-details">
                     <tbody>
                         <tr>
-                            <td>Mon - Fri:</td>
+                            <th scope="row">Mon - Fri:</th>
                             <td>8am - 6pm</td>
                         </tr>
                         <tr>
-                            <td>Sat:</td>
+                            <th scope="row">Sat:</th>
                             <td>9am - 4pm</td>
                         </tr>
                         <tr>
-                            <td>Sun:</td>
+                            <th scope="row">Sun:</th>
                             <td>Closed</td>
                         </tr>
                     </tbody>
