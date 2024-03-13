@@ -2,7 +2,14 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
+
 class RegisterForm(UserCreationForm):
+    """
+    Custom registration form that extends Django's UserCreationForm
+    and adds additional fields for first name, last name, and email.
+
+    Upon saving, it sets the username as the email address provided.
+    """
     first_name = forms.CharField(required=True)
     last_name = forms.CharField(required=True)
     email = forms.EmailField(required=True)
