@@ -407,19 +407,35 @@ h2 {
     box-shadow: 0 0 2px var(--black);
 }
 
-/* Dashboard */
+/* Admin Dashboard Table  */
 
-/* For smaller screens */
-@media (max-width: 768px) {
-    .table-responsive {
-        overflow-x: auto;
-    }
+.table-responsive {
+    overflow-y: auto;
+    max-height: 400px;
 }
 
-/* For larger screens */
-@media (min-width: 768px) {
-    .table-responsive {
-        overflow-y: auto;
-        max-height: 400px;
+@media screen and (max-width: 991px) {
+    .admin-table thead {
+        display: none;
+    }
+
+    .admin-table tr {
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .admin-table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-align: left;
+        padding-right: 1em;
     }
 }
