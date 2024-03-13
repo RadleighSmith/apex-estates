@@ -35,20 +35,20 @@
             <div class="col-md-4 text-center">
                 <h3 class="h6 text-uppercase mb-4 font-weight-bold">Links</h3>
                 <ul class="list-unstyled mb-0">
-                    <li>
-                        <a href="/" class="text-decoration-none text-white" aria-label="Go to Homepage">Home</a>
+                    <li class="m-1">
+                        <a href="{% url 'home' %}" class="text-decoration-none text-white {% if request.path == '/' %}border-bottom{% endif %}" aria-label="Go to Homepage">Home</a>
                     </li>
-                    <li>
-                        <a href="/property_listings" class="text-decoration-none text-white" aria-label="Go to Property Listings page">Property Listings</a>
+                    <li class="m-1">
+                        <a href="{% url 'property_listings' %}" class="text-decoration-none text-white {% if request.path == '/property_listings/' %}border-bottom{% endif %}" aria-label="Go to Property Listings page">Property Listings</a>
                     </li>
-                    <li>
-                        <a href="/about_us" class="text-decoration-none text-white" aria-label="Go to About Us page">About Us</a>
+                    <li class="m-1">
+                        <a href="{% url 'about_us' %}" class="text-decoration-none text-white {% if request.path == '/about_us/' %}border-bottom{% endif %}" aria-label="Go to About Us page">About Us</a>
                     </li>
-                    <li>
-                        <a href="/contact_us" class="text-decoration-none text-white" aria-label="Go to Contact Us page">Contact Us</a>
+                    <li class="m-1">
+                        <a href="{% url 'contact_us' %}" class="text-decoration-none text-white {% if request.path == '/contact_us/' %}border-bottom{% endif %}" aria-label="Go to Contact Us page">Contact Us</a>
                     </li>
-                    <li>
-                        <a href="/request_valuation" class="text-decoration-none text-white" aria-label="Go to Request Valuation page">Request Valuation</a>
+                    <li class="m-1">
+                        <a href="{% url 'valuation_request' %}" class="text-decoration-none text-white {% if request.path == '/request_valuation/' %}border-bottom{% endif %}" aria-label="Go to Request Valuation page">Request Valuation</a>
                     </li>
                 </ul>
             </div>
