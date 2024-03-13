@@ -4,11 +4,11 @@
     <nav class="navbar navbar-expand-xl navbar-dark text-center {% if request.path == '/' %}navbar-home{% else %}navbar-colour{% endif %}">
         <div class="container-fluid px-3">
             <!-- Logo -->
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="/" aria-label="Go to the homepage">
                 <img id="navbar-logo" src="{% static 'images/apex-logo-coloured.png' %}" alt="Apex Estates Logo">
             </a>
             <!-- Toggle Button -->
-            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -19,7 +19,7 @@
                     <!-- Sidebar Logo -->
                    <a href="{% url 'home' %}">
                     <img class="offcanvas-img" id="offcanvasDarkNavbarLabel" alt="Apex Estates White Logo"
-                    src="{% static 'images/apex-logo-white.png' %}">
+                    src="{% static 'images/apex-logo-white.png' %}" aria-label="Go to the homepage">
                    </a>
                    <button type="button" class="btn-close btn-close-white shadow-none mx-2" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
@@ -28,23 +28,23 @@
                 <div class="offcanvas-body pt-0 align-items-center d-flex flex-column flex-xl-row">
                     <ul class="navbar-nav mx-auto align-items-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
+                            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/" aria-label="Go to the homepage">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == '/property_listings/' %}active{% endif %}"
-                                href="/property_listings">Property Listings</a>
+                                href="/property_listings" aria-label="Go to the property listings">Property Listings</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == '/about_us/' %}active{% endif %}"
-                                href="/about_us">About Us</a>
+                                href="/about_us" aria-label="Go to the about us page">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == '/contact_us/' %}active{% endif %}"
-                                href="/contact_us">Contact Us</a>
+                                href="/contact_us" aria-label="Go to the contact us page">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == '/request_valuation/' %}active{% endif %}"
-                                href="/request_valuation">Request Valuation</a>
+                                href="/request_valuation" aria-label="Go to the request valuation page">Request Valuation</a>
                         </li>
                     </ul>
                     <!-- User Auth -->
@@ -53,25 +53,25 @@
                             {% if user.is_authenticated %}
                             <li class="navbar-text">Logged in as | {{user.first_name}}</li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/logout">Logout</a>
+                                <a class="nav-link" href="/logout" aria-label="Logout">Logout</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn call-to-action btn-nav {% if request.path == '/dashboard/' %}active{% endif %}"
-                                    href="/dashboard">Dashboard</a>
+                                    href="/dashboard" aria-label="Go to the dashboard">Dashboard</a>
                             </li>
                             {% if user.is_superuser or user.is_staff %}
                             <li class="nav-item">
-                                <a class="nav-link btn call-to-action btn-nav" href="/admin">Admin</a>
+                                <a class="nav-link btn call-to-action btn-nav" href="/admin" aria-label="Go to django admin page">Admin</a>
                             </li>
                             {% endif %}
                             {% else %}
                             <li class="nav-item">
                                 <a class="nav-link {% if request.path == '/login/' %}active{% endif %}"
-                                    href="/login">Log in</a>
+                                    href="/login" aria-label="Go to the login page">Log in</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn call-to-action btn-nav {% if request.path == '/sign_up/' %}active{% endif %}"
-                                    href="/sign_up">Register</a>
+                                    href="/sign_up" aria-label="Go to the register page">Register</a>
                             </li>
                             {% endif %}
                         </ul>
