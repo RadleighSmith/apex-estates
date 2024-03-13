@@ -37,7 +37,7 @@
                     <td data-label="Actions">
                         <form action="{% url 'delete_message' message.id %}" method="post">
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="submit" class="btn btn-danger" aria-label="delete message">Delete</button>
                         </form>
                     </td>
                 </tr>
@@ -73,7 +73,7 @@
                     <td data-label="Actions">
                         <form action="{% url 'delete_valuation' valuation_request.id %}" method="post">
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="submit" class="btn btn-danger" aria-label="delete valuation request">Delete</button>
                         </form>
                     </td>
                 </tr>
