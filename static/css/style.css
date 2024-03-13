@@ -18,6 +18,8 @@
     --beige: #E0E0DB;
     --red: #dc3545;
     
+    --faded-black: rgba(0,0,0,0.6);
+    
     /* Global Button Styling */
 
     --call-to-action: #f5793a;
@@ -205,11 +207,14 @@ h2 {
 
 .hero-content {
     position: absolute;
-    bottom: 10%;
+    max-width: 700px;
+    bottom: 6%;
     left: 5%;
+    right: 5%;
+    border-radius: 1rem;
+    background-color: var(--faded-black);
     color: var(--white);
 }
-
 .hero-content h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -241,7 +246,7 @@ h2 {
 }
 
 .overlay-background {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--faded-black);
     color: var(--white);
 }
 
@@ -255,9 +260,18 @@ h2 {
     border-right: 3px solid var(--beige)
 }
 
+/* Index Page Media Queries */
+
 @media (max-width: 768px){
     .border-md-end {
         border-right: none;
+    }
+}
+
+@media (max-width: 600px){
+    .hero-content {
+        left: 0;
+        right: 0;
     }
 }
 
