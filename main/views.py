@@ -7,6 +7,13 @@ from .forms import MessageForm, NewsletterSubscriptionForm
 
 
 def home(request):
+    """
+    View function for the home page.
+
+    Renders the home page with the latest properties and a newsletter
+    subscription form. If the form is submitted successfully, the user
+    is signed up for the newsletter.
+    """
     latest_properties = Property.objects.order_by('-listed_on')[:4]
     for property in latest_properties:
         property.formatted_price = intcomma(property.price)
@@ -38,10 +45,20 @@ def home(request):
 
 
 def about(request):
+    """
+    View function for the about page.
+
+    Renders the about page.
+    """
     return render(request, 'about.html')
 
 
 def contact(request):
+    """
+    View function for the contact page.
+
+    Renders the contact page with a message form.
+    """
     form = MessageForm()
     return render(request, 'contact.html', {
         'form': form
@@ -49,6 +66,12 @@ def contact(request):
 
 
 def send_message(request):
+    """
+    View function to handle sending a message.
+
+    If the request method is POST and the form is valid, the message is saved.
+    Otherwise, an error message is displayed.
+    """
     if request.method == 'POST':
         form = MessageForm(request.POST)
         if form.is_valid():
