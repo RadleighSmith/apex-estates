@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import sys
+from django.contrib import messages
+import cloudinary
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -54,12 +56,14 @@ INSTALLED_APPS = [
     'valuation',
 ]
 
+# Crispy Forms settings
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
-
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
+# Crispy Forms settings
 SUMMERNOTE_THEME = 'bs5'
 
+# Middleware configuration
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -71,8 +75,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# Root URL configuration
 ROOT_URLCONF = 'apex_estates.urls'
 
+# Template configuration
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -92,27 +98,19 @@ TEMPLATES = [
 WSGI_APPLICATION = 'apex_estates.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+# Database configuration
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 if 'test' in sys.argv:
     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
+
+# CSRF trusted origins
 CSRF_TRUSTED_ORIGINS = ["https://*.herokuapp.com"]
 
 
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
+# Password validation settings
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -141,6 +139,18 @@ USE_I18N = True
 USE_TZ = True
 
 
+# Message tags mapping
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-secondary',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
+
+# Cloudinary configuration for secure URLs
+cloudinary.config(secure=True)
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
@@ -153,5 +163,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Login and logout redirect URLs
 LOGIN_REDIRECT_URL = '/dashboard'
 LOGOUT_REDIRECT_URL = '/login'
