@@ -284,6 +284,151 @@ Each user story's acceptance criteria has been thoroughly tested to ensure compl
 
 ## Lighthouse Testing
 
+In order to ensure optimal performance and accessibility of our website across various devices and browsers, we employed lighthouse testing as a meticulous measure of quality assurance.
+
+**Screenshots of each page:**
+
+**Landing Page**
+
+- Desktop
+
+![Landing Page Desktop](docs/screenshots/lighhouse-testing/landing-page/landing-page-desktop.png)
+
+- Mobile
+
+![Landing Page Mobile](docs/screenshots/lighhouse-testing/landing-page/landing-page-mobile.png)
+
+**Property Listings Page**
+
+- Desktop
+
+![Property Listings Page Desktop](docs/screenshots/lighhouse-testing/property-listings/listings-page-destop.png)
+
+- Mobile
+
+![Property Listings Page Mobile](docs/screenshots/lighhouse-testing/property-listings/listings-page-mobile.png)
+
+**Property Details Page**
+
+- Desktop
+
+![Property Details Page Desktop](docs/screenshots/lighhouse-testing/property-details/property-detail-desktop.png)
+
+- Mobile
+
+![Property Details Page Mobile](docs/screenshots/lighhouse-testing/property-details/property-detail-mobile.png)
+
+**Create Property Page**
+
+- Desktop
+
+![Create Property Page Desktop](docs/screenshots/lighhouse-testing/create-property/create-listing-desktop.png)
+
+- Mobile
+
+![Create Property Page Mobile](docs/screenshots/lighhouse-testing/create-property/create-listing-mobile.png)
+
+**Edit Property Page**
+
+- Desktop
+
+![Edit Property Page Desktop](docs/screenshots/lighhouse-testing/edit-property/edit-page-desktop.png)
+
+- Mobile
+
+![Edit Property Page Mobile](docs/screenshots/lighhouse-testing/edit-property/edit-page-mobile.png)
+
+**About Us Page**
+
+- Desktop
+
+![About Us Page Desktop](docs/screenshots/lighhouse-testing/about-us/about-page-desktop.png)
+
+- Mobile
+
+![About Us Page Mobile](docs/screenshots/lighhouse-testing/about-us/about-page-mobile.png)
+
+**Contact Us Page**
+
+- Desktop
+
+![Contact Us Page Desktop](docs/screenshots/lighhouse-testing/contact-us/contact-page-desktop.png)
+
+- Mobile
+
+![Contact Us Page Mobile](docs/screenshots/lighhouse-testing/contact-us/contact-page-mobile.png)
+
+**Valuation Request Page**
+
+- Desktop
+
+![Valuation Request Page Desktop](docs/screenshots/lighhouse-testing/request-valutation/valuation-page-desktop.png)
+
+- Mobile
+
+![Valuation Request Page Mobile](docs/screenshots/lighhouse-testing/request-valutation/valuation-page-mobile.png)
+
+**Login Page**
+
+- Desktop
+
+![Login Page Desktop](docs/screenshots/lighhouse-testing/login/login-page-desktop.png)
+
+- Mobile
+
+![Login Page Mobile](docs/screenshots/lighhouse-testing/login/login-page-mobile.png)
+
+**Register Page**
+
+- Desktop
+
+![Register Page Desktop](docs/screenshots/lighhouse-testing/register/register-page-desktop.png)
+
+- Mobile
+
+![Register Page Mobile](docs/screenshots/lighhouse-testing/register/register-page-mobile.png)
+
+**Admin Dashboard Page**
+
+- Desktop
+
+![Admin Dashboard Desktop](docs/screenshots/lighhouse-testing/admin-dashboard/admin-dashboard-desktop.png)
+
+- Mobile
+
+![Admin Dashboard Mobile](docs/screenshots/lighhouse-testing/admin-dashboard/admin-dashboard-mobile.png)
+
+**Dashboard Page**
+
+- Desktop
+
+![Dashboard Page Desktop](docs/screenshots/lighhouse-testing/dashboard/dashboard-desktop.png)
+
+- Mobile
+
+![Dashboard Page Mobile](docs/screenshots/lighhouse-testing/dashboard/dashboard-mobile.png)
+
+**404 Page**
+
+- Desktop
+
+![404 Page Desktop](docs/screenshots/lighhouse-testing/error-pages/404-page-desktop.png)
+
+- Mobile
+
+![404 Page Mobile](docs/screenshots/lighhouse-testing/error-pages/404-page-mobile.png)
+
+**500 Page**
+
+- Desktop
+
+![500 Page Desktop](docs/screenshots/lighhouse-testing/error-pages/500-page-desktop.png)
+
+- Mobile
+
+![500 Page Mobile](docs/screenshots/lighhouse-testing/error-pages/500-page-mobile.png)
+
+
 ---
 
 ## Device Testing
