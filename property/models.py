@@ -3,6 +3,7 @@ from django.utils.text import slugify
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+
 PROPERTY_TYPE_CHOICES= (
     (0, "Detached House"),
     (1, "Semi-Detached House"),
@@ -13,6 +14,7 @@ PROPERTY_TYPE_CHOICES= (
     (6, "Penthouse"),
     (7, "Townhouse"),
 )
+
 
 class Property(models.Model):
     title = models.CharField(default="Title", max_length=200, unique=True)
