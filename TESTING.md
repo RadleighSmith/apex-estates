@@ -1,5 +1,7 @@
 # Testing and Code Validation
 
+[Return to README](README.md)
+
 ## Contents
 
 [Code Validation](#code-validation)
@@ -41,6 +43,7 @@ During our validation process, our pages underwent rigorous scrutiny, resulting 
 | 404.html             | PASS      | |
 | 500.html             | PASS      | |
 
+[Return to contents](#contents)
 
 ### CSS Validation
 
@@ -49,6 +52,8 @@ To ensure the quality and consistency of our website's styling, we utilized the 
 During our CSS testing phase, we're pleased to report that no errors were detected in our CSS file. 
 
 ![CSS Validation Image](docs/screenshots/w3c-css-validation.png)
+
+[Return to contents](#contents)
 
 ### Python Validation
 
@@ -113,6 +118,7 @@ During our Python validation phase, we employed [CI's Python linter](https://pep
 | urls.py       | PASS        |
 | views.py      | PASS        |
 
+[Return to contents](#contents)
 
 ---
 
@@ -132,6 +138,7 @@ The testing of this file proceeded without encountering any issues.
 
 ![JShint Cards Testing Result](docs/screenshots/jshint-cards-js-file.png)
 
+[Return to contents](#contents)
 
 ## Accessibility Testing
 
@@ -158,6 +165,9 @@ Please see the table below outlining these:
 | dashboard.html       | PASS      | |
 | 404.html             | PASS      | |
 | 500.html             | PASS      | |
+
+
+[Return to contents](#contents)
 
 ### WAVE Screenshots
 
@@ -188,6 +198,8 @@ Please see the table below outlining these:
 ![Wave Error 404 Page Testing](docs/screenshots/wave-testing/wave-404.png)
 
 ![Wave Error 500 Page Testing](docs/screenshots/wave-testing/wave-500.png)
+
+[Return to contents](#contents)
 
 --- 
 
@@ -279,6 +291,8 @@ Each user story's acceptance criteria has been thoroughly tested to ensure compl
 | | | |AC 3: The footer should display the opening hours of Apex Estates.|PASS|
 | | | |AC 4: The footer should contain links to useful pages on the website.|PASS|
 | | | |AC 5: The footer should include social media icons or links to Apex Estates' profiles on social media platforms.|PASS|
+
+[Return to contents](#contents)
 
 ---
 
@@ -428,6 +442,7 @@ In order to ensure optimal performance and accessibility of our website across v
 
 ![500 Page Mobile](docs/screenshots/lighhouse-testing/error-pages/500-page-mobile.png)
 
+[Return to contents](#contents)
 
 ---
 

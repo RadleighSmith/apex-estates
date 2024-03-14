@@ -463,6 +463,7 @@ In crafting our website's visual identity, we've carefully curated typography to
 
 Complementing Montserrat, we've selected Lato for body text, known for its versatility and legibility. Lato's clean and rounded letterforms provide a comfortable reading experience, enhancing comprehension and engagement with our content. Whether users are browsing lengthy descriptions or informative articles, Lato ensures clarity and ease of reading, contributing to a seamless user experience.
 
+[Return to contents](#contents)
 
 ## Features
 
@@ -918,6 +919,8 @@ Features
 
 </details>
 
+[Return to contents](#contents)
+
 ---
 
 ### Future Features
@@ -937,6 +940,7 @@ In this section we will outline upcoming improvements and features designed to e
 | For Sale, Sold, Unpublished Listings  | Provides agents with comprehensive control over property listings, enabling them to mark properties as sold or unpublished as needed, thereby optimizing listing management and user experience. |
 | Account Deletion                      | Allows users to permanently delete their account from the platform, providing a streamlined process for account management and data privacy. |
 
+[Return to contents](#contents)
 
 ---
 
@@ -971,10 +975,13 @@ HTML, CSS, JavaScript, Python
 | Bootstrap 5             | Front-end framework for building responsive websites - A popular framework for building responsive and mobile-first websites. |
 | jQuery 3.6.0            | JavaScript library for DOM manipulation - Simplifies DOM manipulation and event handling in JavaScript. |
 
+[Return to contents](#contents)
 
 ## Testing
 
 Please the [TESTING.md](TESTING.md) file for all the testing and validation.
+
+[Return to contents](#contents)
 
 ## Bugs & Fixes
 
@@ -1039,6 +1046,8 @@ Django's SlugField defaults to a maximum length of 50 characters. When the slugi
 **Fix:**
 
 To rectify this issue, explicitly set max_length=100 for the SlugField. This adjustment ensures that the SlugField can accommodate slugs derived from addresses of up to 100 characters, aligning with the maximum length allowed for the address field. As a result, instances with longer addresses can be saved without triggering a DataError.
+
+[Return to contents](#contents)
 
 ## Deployment, Cloning and Forking
 
@@ -1112,5 +1121,6 @@ To clone this repository and start working on it, follow these instructions:
 
 5. Click on the new branch and follow the cloning instructions to open and work on this branch.
 
+[Return to contents](#contents)
 
 ## Credits
