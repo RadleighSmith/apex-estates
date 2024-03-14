@@ -10,7 +10,7 @@
 
 [Lighthouse Testing](#Lighthouse-testing)
 
-[Device Testing Testing](#device-testing)
+[Device and Browser Testing Testing](#device-and-browser-testing)
 
 
 ## Code Validation
@@ -431,4 +431,24 @@ In order to ensure optimal performance and accessibility of our website across v
 
 ---
 
-## Device Testing
+## Device and Browser Testing
+
+Testing is essential to ensure our Apex Estates Django estate agent site performs flawlessly. We rigorously examine every aspect, from property listings to user interactions, ensuring seamless functionality across devices.
+
+We conducted extensive testing throughout the development process on a diverse range of devices and browsers.
+
+Macbook Pro 14" (M2) Safari, - Chrome, Safari and Firefox
+
+Windows PC (Windows 11) on a 1440p 27" monitor - Chrome, Firefox and Edge
+
+iPad Air (5th Gen) - Safari and Chrome
+
+iPad Pro (4th Gen) - Safari and Chrome
+
+iPhone 13 Pro Max - Safari and Chrome
+
+iPhone 11 - Safari and Chrome
+
+In cases where I didn't have direct access to a specific device, I leveraged Google Chrome dev tools to emulate the desired environment. This allowed me to conduct real-time testing in responsive dimensions, ensuring a seamless experience across a wide range of user scenarios
+
+[Return to contents](#contents)
