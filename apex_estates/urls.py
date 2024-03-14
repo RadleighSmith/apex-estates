@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.conf.urls import handler404, handler500
 from .views import apex_404_page, apex_500_page
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
