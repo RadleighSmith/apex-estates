@@ -52,9 +52,86 @@ During our CSS testing phase, we're pleased to report that no errors were detect
 
 ### Python Validation
 
-### JavaScript Validation
+During our Python validation phase, we employed [CI's Python linter](https://pep8ci.herokuapp.com/#) to ensure that all our Python code adheres to the PEP8 standards.
+
+#### Account App
+| FILE          | PASS/FAIL |
+|---------------|-----------|
+| init.py       | PASS      |
+| admin.py      | PASS      |
+| apps.py       | PASS      |
+| forms.py      | PASS      |
+| models.py     | PASS      |
+| signals.py    | PASS      |
+| tests.py      | PASS      |
+| urls.py       | PASS      |
+| views.py      | PASS      |
+
+#### Apex Estates Project
+| FILE          | PASS/FAIL |
+|---------------|-----------|
+| init.py       | PASS      |
+| asgi.py       | PASS      |
+| settings.py   | PASS      |
+| urls.py       | PASS      |
+| views.py      | PASS      |
+| wsgi.py       |           |
+
+#### Main App
+| FILE          | PASS / FAIL |
+|---------------|-------------|
+| init.py       | PASS        |
+| admin.py      | PASS        |
+| apps.py       | PASS        |
+| forms.py      | PASS        |
+| models.py     | PASS        |
+| test.py       | PASS        |
+| urls.py       | PASS        |
+| views.py      | PASS        |
+
+#### Property App
+| FILE          | PASS / FAIL |
+|---------------|-------------|
+| init.py       | PASS        |
+| admin.py      | PASS        |
+| apps.py       | PASS        |
+| forms.py      | PASS        |
+| models.py     | PASS        |
+| tests.py      | PASS        |
+| urls.py       | PASS        |
+| views.py      | PASS        |
+
+#### Valuation App
+| FILE          | PASS / FAIL |
+|---------------|-------------|
+| init.py       | PASS        |
+| admin.py      | PASS        |
+| apps.py       | PASS        |
+| forms.py      | PASS        |
+| models.py     | PASS        |
+| tests.py      | PASS        |
+| urls.py       | PASS        |
+| views.py      | PASS        |
+
 
 ---
+
+### JavaScript Validation
+
+During the validation of our JavaScript files, we utilized [JSHint](https://jshint.com/).
+
+#### Property Description JS File
+
+During testing of this file, we observed that JSHint flagged undefined variables. This occurred because the file utilizes jQuery.
+
+![JShint Property Description Testing Result](docs/screenshots/jshint-property-description-js-file.png)
+
+#### Cards JS File
+
+The testing of this file proceeded without encountering any issues.
+
+![JShint Cards Testing Result](docs/screenshots/jshint-cards-js-file.png)
+
 
 ## Accessibility Testing
 
