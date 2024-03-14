@@ -22,6 +22,9 @@ def sign_up(request):
     successful sign-up, a success message is displayed. If the form data is
     invalid, an error message is displayed to prompt the user to try again.
     """
+    if request.user.is_authenticated:
+        return redirect('/dashboard')  
+
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
@@ -42,7 +45,7 @@ def sign_up(request):
     return render(request, 'registration/sign_up.html', {'form': form})
 
 
-@login_required
+@login_required(login_url='/login')
 def user_dashboard(request):
     """
     View function for user dashboard.
