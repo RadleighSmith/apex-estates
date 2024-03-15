@@ -1177,3 +1177,74 @@ To clone this repository and start working on it, follow these instructions:
 [Return to contents](#contents)
 
 ## Credits
+
+- I enhanced my understanding of User Authentication by watching and following along with a [TechwithTim](https://www.youtube.com/watch?v=WuyKxdLcw3w)'s Youtube tutorial.
+
+- I revisited the [Code Institute](https://codeinstitute.net/) 'I think therefore I Blog' learning curriculum from Code Institute to refresh my understanding and further solidify my grasp of the material.
+
+- The Code Institute Slack community helped me resolve an issue I encountered with Cloudinary. By securely importing the configuration into the settings file, I successfully rectified the problem highlighted by Lighthouse, which indicated that Cloudinary was being served as HTTP instead of HTTPS.
+
+- [Django Documentation](https://docs.djangoproject.com/) was extensively utilized throughout this project to ensure the correct implementation of Django's models and built-in functions.
+
+- [Bootstrap Documentation](https://getbootstrap.com/docs/) was thoroughly referenced throughout this project to effectively utilize its components and design principles.
+
+### Image Credits:
+
+**Images:**
+
+We primarily used Unsplash for our images. However, all images are used within compliance with the licences and are properly attributed to their respective authors.
+
+- Placeholder Home: [PNG Egg](https://www.pngegg.com/en/png-neput)
+- Hero Image: [Richard R. Schünemann on Unsplash](https://unsplash.com/photos/landscape-photography-of-a-city--5y9Rse5ifk)
+- Modern Living Image: [Robbie Duncan on Unsplash](https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-large-window-BxleF4zbbT8)
+- London Alley Image: [Brad Starkey on Unsplash](https://unsplash.com/photos/green-plant-on-brown-wooden-table-rCuHu2yxyLU)
+- Review Image: [Bruno Martins on Unsplash](https://unsplash.com/photos/white-and-brown-concrete-building-beside-brown-leaf-tree-under-clear-blue-sky-GkZvxVsHYWw)
+- About Us Image: [Amy Hirschi on Unsplash](https://unsplash.com/photos/man-facing-a-woman-izxMVv2Z9dw)
+- Background Image: [Huy Nguyen on Unsplash](https://unsplash.com/photos/white-ceramic-sink-near-brown-wooden-table-9vvp_nuVaJk)
+
+**Agent Images:**
+- Max Turner: [LinkedIn Sales Solutions on Unsplash](https://unsplash.com/photos/man-standing-beside-wall-pAtA8xe_iVM)
+- Lily Evans: [PodMatch on Unsplash](https://unsplash.com/photos/woman-in-black-blazer-smiling-2mMhaoBGjCs)
+- Owen Baker: [Andrew Power on Unsplash](https://unsplash.com/photos/man-wearing-black-suit-y9L5-wmifaY)
+- Mia Hart: [Christina on Unsplash](https://unsplash.com/photos/shallow-focus-photo-of-woman-in-gray-jacket-0Zx1bDv5BNY)
+- Jake Foster: [PodMatch on Unsplash](https://unsplash.com/photos/man-in-gray-suit-jacket-sitting-on-gray-concrete-bench-5gwZIKmtkIo)
+- Zoe Carr: [Amy Hirschi on Unsplash](https://unsplash.com/photos/woman-standing-by-wall-holding-mug-b3AYk8HKCl0)
+- Alex Martin: [Itay Verchik on Unsplash](https://unsplash.com/photos/man-wearing-gray-blazer-G3ZAhAJ2ojc)
+- Lucy Shaw: [Christina on Unsplash](https://unsplash.com/photos/woman-on-focus-photography-SJvDxw0azqw)
+
+**Listing Title Images:**
+- Elegant Georgian Townhouse: [Jamie Street on Unsplash](https://unsplash.com/photos/black-steel-barricade-h6mj_9bCvBk)
+- Contemporary City Apartment: [Luke Richardson on Unsplash](https://unsplash.com/photos/high-rise-building-near-body-of-water-Lx4OtAqlfO4)
+- Charming Mews House with Private Garden: [Anthony Breesy on Unsplash](https://unsplash.com/photos/white-bicycle-beside-fence-PfYCAwGLMWY)
+- Modern Riverside Apartment with Balcony: [Nick Fewings on Unsplash](https://unsplash.com/photos/a-body-of-water-with-a-factory-in-the-background-fd2NxyED__o)
+- Elegant Victorian Townhouse in Kensington: [Josh Kirk on Unsplash](https://unsplash.com/photos/a-street-with-trees-and-buildings-on-the-side-tDi4dGMsh_U)
+- Stylish City Apartment with Spectacular Views: [Evgeny Klimenchenko on Unsplash](https://unsplash.com/photos/city-skyline-across-body-of-water-during-daytime-O-J600qm45U)
+- Regal Period Residence in Kensington Gardens: [Robert Bye on Unsplash](https://unsplash.com/photos/man-and-woman-walking-beside-building-VKps-Rx6a-k)
+- Modern Riverside Townhouse in Battersea: [Benjamin Cheng on Unsplash](https://unsplash.com/photos/a-tall-white-building-sitting-next-to-a-street-light-TX_YNP21gqY)
+- Victorian Splendor in Primrose Hill: [Sara Groblechner on Unsplash](https://unsplash.com/photos/photography-of-multicolored-building-during-daytime-_B-qMJfLPKk)
+- Contemporary Mews House in Notting Hill: [Lawrence Chismorie on Unsplash](https://unsplash.com/photos/a-crosswalk-in-front-of-a-row-of-multi-colored-buildings-8gzPYm3bFCY)
+- Enchanting Wizarding Residence in Diagon Alley: [Aditya Vyas on Unsplash](https://unsplash.com/photos/red-wooden-door-with-glass-3yfE6tF6N24)
+- Riverside Penthouse with Panoramic Views in Chelsea: [Mostafa Sadadel on Unsplash](https://unsplash.com/photos/inside-condominium-unit-cHjAxnJk_wQ)
+
+
+### Acknowledgments:
+
+* **Code Institute**
+
+    A heartfelt thank you goes out to the entire team at Code Institute for igniting my passion and guiding me on the path to becoming a proficient full-stack software developer. Their meticulously crafted lessons and unwavering support have been instrumental in shaping my journey, and I am deeply grateful for their dedication.
+
+* **Richard Wells - Code Institute Mentor**
+
+    I am immensely fortunate to have Richard as my mentor throughout this course. His guidance has been a beacon of light during challenging moments, ensuring I stay focused and empowered to overcome obstacles. I am truly indebted to him for his invaluable support and expertise.
+
+* **Stack Overflow Community**
+
+    I extend my gratitude to the vibrant Stack Overflow community for being an endless source of knowledge and assistance. Their collective wisdom has been pivotal in resolving countless coding dilemmas and expanding my understanding of software development.
+
+* **My Family**
+
+    I extend my heartfelt appreciation to my family for their unwavering support throughout this journey. Though they may not be versed in coding, their encouragement and willingness to assist have been indispensable in bringing this project to fruition.
+
+* **My Girlfriend, Ciara**
+
+    I am profoundly grateful to Ciara for her unwavering support since the inception of this project. Her patience, understanding, and unwavering belief in me have been the driving force behind my success so far.
