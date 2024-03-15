@@ -11,12 +11,12 @@
 {% block content %}
 <div class="container-fluid background-image-container">
     <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Modern Apartment Background">
-    <div class="container bg-white rounded shadow my-5 p-4">
-        <h1 class="mb-4 text-center border-bottom">Create Property Listing</h1>
-        <form method="POST" enctype="multipart/form-data" class="px-5">
+    <div class="container bg-white rounded shadow my-5 p-2">
+        <h1 class="m-4 text-center border-bottom">Create Property Listing</h1>
+        <form method="POST" enctype="multipart/form-data" class="px-md-5 px-3">
             {% csrf_token %}
             {{ form|crispy }}
-            <div class="text-center d-grid gap-2 py-3">
+            <div class="text-center d-grid gap-2 py-3 px-5">
                 <button type="submit" class="btn call-to-action auth-btn">Create</button>
             </div>
         </form>
