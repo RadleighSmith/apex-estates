@@ -53,7 +53,7 @@
                             {% if user.is_authenticated %}
                             <li class="navbar-text">Logged in as <span aria-hidden="true">&#124;</span> {{user.first_name}}</li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'logout' %}" aria-label="Logout">Logout</a>
+                                <a class="nav-link my-3" href="{% url 'logout' %}" aria-label="Logout">Logout</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn call-to-action btn-nav {% if request.path == '/dashboard/' %}active{% endif %}"
