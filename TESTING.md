@@ -334,6 +334,8 @@ In order to ensure optimal performance and accessibility of our website across v
 
 **Create Property Page**
 
+It's worth noting that the accessibility and SEO scores may appear lower due to the implementation of Summernote, a rich text editor. However, it's crucial to understand that this aspect is largely out of our control and has minimal to no impact on the end-user experience.
+
 - Desktop
 
 ![Create Property Page Desktop](docs/screenshots/lighhouse-testing/create-property/create-listing-desktop.png)
@@ -343,6 +345,8 @@ In order to ensure optimal performance and accessibility of our website across v
 ![Create Property Page Mobile](docs/screenshots/lighhouse-testing/create-property/create-listing-mobile.png)
 
 **Edit Property Page**
+
+It's worth noting that the accessibility and SEO scores may appear lower due to the implementation of Summernote, a rich text editor. However, it's crucial to understand that this aspect is largely out of our control and has minimal to no impact on the end-user experience.
 
 - Desktop
 
