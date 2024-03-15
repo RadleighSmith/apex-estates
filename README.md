@@ -32,6 +32,8 @@ Live site: Link to go here!
 
 [Frameworks and Libraries](#frameworks-and-libraries)
 
+[Tools Used](#tools-used)
+
 [Testing](#testing)
 
 [Bugs & Fixes](#bugs--fixes)
@@ -181,6 +183,8 @@ Each element within the diagram is positioned to depict the flow of information 
 #### Database Plan
 
 This diagram offers a comprehensive overview of our database structure, crafted using [DrawSQL](https://drawsql.app/). It provides a visual representation of the relationships between various entities and the flow of data within our system.
+
+We've opted for PostgreSQL as our database solution due to its robust features, reliability, and cost-effectiveness as an open-source relational database system. To facilitate our hosting needs, we've selected ElephantSQL, a trusted platform known for its seamless PostgreSQL hosting services. This strategic choice ensures that our database management is efficient, secure, and scalable, aligning perfectly with our business objectives.
 
 ![Apex Estates Database Diagram](docs/diagrams/database-diagram.png)
 
@@ -977,6 +981,44 @@ HTML, CSS, JavaScript, Python
 
 [Return to contents](#contents)
 
+## Tools Used
+
+[Visual Studio Code](https://code.visualstudio.com/): My primary IDE for project development.
+
+[GitHub](https://github.com/): Hosts the project repository for collaborative viewing.
+
+[git](https://git-scm.com/): Manages project versions for efficient tracking.
+
+[Uizard](https://app.uizard.io/): Used for crafting intuitive wireframes.
+
+[DrawSQL](https://drawsql.app/): A visual tool for planning and mapping the database structure.
+
+[LucidChart](https://www.lucidchart.com/): Used to create comprehensive platform navigation diagrams.
+
+[Eightshapes Contrast Grid](https://contrast-grid.eightshapes.com/): Ensures color accessibility with precision.
+
+[Cloudinary](https://cloudinary.com/): A versatile API platform for image and video manipulation.
+
+[ElephantSQL](https://www.elephantsql.com/): Hosts the PostgreSQL database for efficient data storage.
+
+[Heroku](https://www.heroku.com/): Deploys and hosts the project seamlessly.
+
+[Image Resizer](https://imageresizer.com/): Efficiently scales down images for used for optimal ReadMe image presentation.
+
+[Optimazilla](https://imagecompressor.com/): Compresses images without compromising quality.
+
+[ChatGBT](https://chat.openai.com/): Utilized for generating property listings, user messages, and valuation requests.
+
+[W3C HTML Validator](https://validator.w3.org/#validate_by_uri): Ensures HTML code adheres to standards.
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/): Validates CSS code for consistency and correctness.
+
+[CI Python Linter](https://pep8ci.herokuapp.com/): Verifies Python code integrity for clean and maintainable scripts.
+
+[JShint](https://jshint.com/): Guarantees JavaScript code quality with thorough analysis.
+
+
+
 ## Testing
 
 Please the [TESTING.md](TESTING.md) file for all the testing and validation.
@@ -1046,6 +1088,17 @@ Django's SlugField defaults to a maximum length of 50 characters. When the slugi
 **Fix:**
 
 To rectify this issue, explicitly set max_length=100 for the SlugField. This adjustment ensures that the SlugField can accommodate slugs derived from addresses of up to 100 characters, aligning with the maximum length allowed for the address field. As a result, instances with longer addresses can be saved without triggering a DataError.
+
+### Known Issues:
+
+During testing, three known issues were identified, requiring attention in the next development cycle. Due to time constraints, these issues could not be addressed promptly. While our team has raised these concerns, completing them within the allotted timeframe proved challenging. However, we remain committed to resolving these issues to ensure the product's stability and user satisfaction.
+
+| Issue | Description | Status |
+|-------|-------------|--------|
+| Navbar | When the user is logged out, the middle links on the navbar move slightly on larger screens. | Deferred due to time constraints; higher priority tasks took precedence. |
+| Messages | Messages on the homepage can overlap the offcanvas navbar, attributed to the navbar's absolute positioning. Z-index adjustments were attempted but unsuccessful. | Deferred due to time constraints; more urgent issues required immediate attention. |
+| Newsletter Signup Error Message | When a user signs up for the newsletter, no message is displayed at the top of the screen if they receive an error indicating they are already signed up. | Deferred due to time constraints; focus was prioritized on core functionality. |
+
 
 [Return to contents](#contents)
 
