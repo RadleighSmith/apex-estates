@@ -1099,6 +1099,30 @@ Django's SlugField defaults to a maximum length of 50 characters. When the slugi
 
 To rectify this issue, explicitly set max_length=100 for the SlugField. This adjustment ensures that the SlugField can accommodate slugs derived from addresses of up to 100 characters, aligning with the maximum length allowed for the address field. As a result, instances with longer addresses can be saved without triggering a DataError.
 
+---
+
+### Bug: *Incorrect Error Handling in Newsletter Subscription Form*
+
+**Problem:**
+
+Users were not receiving the correct error messages when attempting to subscribe to the newsletter using an email address already existing in the database.
+
+**Cause:**
+
+The error handling logic in the home view was not appropriately handling the scenario where the user's email address already existed in the database. This led to inconsistent error messaging and confusion for users attempting to subscribe.
+
+**Fix:**
+
+To address this issue, the error handling logic in the home view was revised. The following steps were taken:
+
+- We improved the error handling logic to ensure that the correct error messages are displayed based on the outcome of the form submission and the existence of the email address in the database.
+
+- Before validating the form, we checked if the email address already exists in the database. If it does, we displayed the error message "You have already signed up for the newsletter!" and redirected the user back to the home page.
+
+- After confirming that the email address does not exist in the database, we proceeded with form validation. If the form is valid, the user is successfully subscribed to the newsletter, and a success message is displayed. If the form validation fails for other reasons, the error message "Invalid email address!" is displayed.
+
+---
+
 ### Known Issues:
 
 During testing, three known issues were identified, requiring attention in the next development cycle. Due to time constraints, these issues could not be addressed promptly. While our team has raised these concerns, completing them within the allotted timeframe proved challenging. However, we remain committed to resolving these issues to ensure the product's stability and user satisfaction.
@@ -1107,8 +1131,6 @@ During testing, three known issues were identified, requiring attention in the n
 |-------|-------------|--------|
 | Navbar | When the user is logged out, the middle links on the navbar move slightly on larger screens. | Deferred due to time constraints; higher priority tasks took precedence. |
 | Messages | Messages on the homepage can overlap the offcanvas navbar, attributed to the navbar's absolute positioning. Z-index adjustments were attempted but unsuccessful. | Deferred due to time constraints; more urgent issues required immediate attention. |
-| Newsletter Signup Error Message | When a user signs up for the newsletter, no message is displayed at the top of the screen if they receive an error indicating they are already signed up. | Deferred due to time constraints; focus was prioritized on core functionality. |
-
 
 [Return to contents](#contents)
 

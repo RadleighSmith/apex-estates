@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.humanize.templatetags.humanize import intcomma
 from property.models import Property
+from .models import NewsletterSignUp
 from .forms import MessageForm, NewsletterSubscriptionForm
 
 
@@ -25,16 +26,18 @@ def home(request):
 
     if request.method == 'POST':
         form = NewsletterSubscriptionForm(request.POST)
+        email = form['email'].value()
+        if NewsletterSignUp.objects.filter(email=email).exists():
+            messages.error(request, 'You have already signed up for the '
+                           'newsletter!')
+            return redirect('home')
         if form.is_valid():
-            try:
-                form.save()
-                messages.success(request, 'You have successfully signed up '
-                                 'for the newsletter!')
-                return redirect('home')
-            except ValueError:
-                messages.error(request, 'You have already signed up for '
-                               'the newsletter!')
-                return redirect('home')
+            form.save()
+            messages.success(request, 'You have successfully signed up for '
+                             'the newsletter!')
+            return redirect('home')
+        else:
+            messages.error(request, 'Invalid email address!')
     else:
         form = NewsletterSubscriptionForm()
 
