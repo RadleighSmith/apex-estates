@@ -2,11 +2,11 @@
 
 # Apex Estates
 
-Image of Site to go here!
+![Site Image](docs/screenshots/site-image.png)
 
 Apex Estates is tailored for those in pursuit of luxury living in London, providing a curated selection of homes with personalized features for an unparalleled experience.
 
-Live site: Link to go here!
+Live site: [Apex Estates](https://apex-estates-49762cd93db3.herokuapp.com/)
 
 ## Contents
 
