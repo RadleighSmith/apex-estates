@@ -923,6 +923,16 @@ Features
 
 </details>
 
+#### Design Changes
+
+Throughout the development process, several design changes were implemented for various reasons.
+
+One significant alteration was the decision to remove the Agent app and utilize Django's built-in groups instead. This adjustment was made due to the realization that utilizing Django's groups functionality would effectively achieve the same objective, streamlining the implementation process and improving overall efficiency.
+
+Another significant alteration was that we opted against implementing form autocompletion for logged-in users, including areas such as newsletter sign-ups, user messages, or valuation requests. This decision was driven by the potential complexities that could arise if an agent is currently engaged with a client.
+
+Allowing autocompletion in these scenarios could lead to awkward situations and potential misunderstandings. By deliberately refraining from this feature, we prioritize clarity and prevent inadvertent actions that may disrupt ongoing client-agent interactions.
+
 [Return to contents](#contents)
 
 ---
