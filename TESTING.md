@@ -80,7 +80,7 @@ During our Python validation phase, we employed [CI's Python linter](https://pep
 | settings.py   | PASS      |
 | urls.py       | PASS      |
 | views.py      | PASS      |
-| wsgi.py       |           |
+| wsgi.py       | PASS      |
 
 #### Main App
 | FILE          | PASS / FAIL |
