@@ -1007,6 +1007,8 @@ HTML, CSS, JavaScript, Python
 
 [Eightshapes Contrast Grid](https://contrast-grid.eightshapes.com/): Ensures color accessibility with precision.
 
+[Google Maps](https://www.google.com/maps): Used Google Maps for integrating an interactive map
+
 [Cloudinary](https://cloudinary.com/): A versatile API platform for image and video manipulation.
 
 [ElephantSQL](https://www.elephantsql.com/): Hosts the PostgreSQL database for efficient data storage.

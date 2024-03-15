@@ -142,7 +142,7 @@ The testing of this file proceeded without encountering any issues.
 
 ## Accessibility Testing
 
-When conducting accessibility testing, we employed the Chrome extension called Wave. This valuable tool helped us assess the accessibility of our website by highlighting any potential issues related to web content accessibility guidelines (WCAG). By utilizing Wave, we were able to identify areas where improvements could be made to enhance the accessibility of our website for all users, including those with disabilities.
+When conducting accessibility testing, we employed the Chrome extension called [Wave](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh). This valuable tool helped us assess the accessibility of our website by highlighting any potential issues related to web content accessibility guidelines (WCAG). By utilizing Wave, we were able to identify areas where improvements could be made to enhance the accessibility of our website for all users, including those with disabilities.
 
 Please see the table below outlining these:
 
@@ -167,9 +167,7 @@ Please see the table below outlining these:
 | 500.html             | PASS      | |
 
 
-[Return to contents](#contents)
-
-### WAVE Screenshots
+Please see below screenshots of the accessibility testing:
 
 ![Wave Homepage Testing](docs/screenshots/wave-testing/wave-homepage.png)
 
