@@ -100,7 +100,11 @@ WSGI_APPLICATION = 'apex_estates.wsgi.application'
 
 # Database configuration
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=True  # <-- Enforce SSL for Supabase
+    )
 }
 if 'test' in sys.argv:
     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
